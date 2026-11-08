@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="color-scheme" content="only light">
+<title>蝦app</title>
+<meta name="theme-color" content="#B2B1AA">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="蝦app">
+<meta name="build-version" content="20261108-sync">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAnElEQVR4nOWVSw6AIAwFW6Nn0PPoufU8egZNcFHTRYOkkFRAZsWCQOY9PuicA0s609UBoNdMOpaBBuN6xm5gbpA7IgpHJMOJEeHcMhm8teoVCvP7khERAPb5mVbiPUDxFokjSEzbRQNWITRC9ZesikiJN7HPDTSELYVH/SWrfjQBh6A5EYUZRNVLNFJyQjJMYTe5yT855bGLwtzgBnPiPDcd22hLAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACR0lEQVR4nO3dwU3DQBRF0RhBDVAP1A31QA0gmQa4YhaxJuOcs7bASFd/80Sy7ft+gb88zH4Bbpc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDtLj7Be4sq+3p8Enn9+/D32TE3A5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SGussnO31vHfPm6JTdjlIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIE1eZQcHz7lb6xIL6hFcDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xr9Dbts2+OTn6+hfdLdz2jiXgyQOkjhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg7Tt+371H3rEp7oOevn4GXxyfL8dd7Kl1+UgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgnW2VPZm5M6/LQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQTpklT2ZJUbmI/Zbl4MkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xvfKzjU+eC6x345zOUjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEj3u8ousaD6BGNulDhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg3S24W2JOe0ye1Eb5HKQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQ7verQ8f32yUW1CO4HCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKT7XWX5l8tBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRB+gXCaD1f7bk96QAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACeElEQVR4nO3dQUrEQBBAUSN6Bj2PnlvPo2dQaJduk/k0kw7vrZuhBz616YJsY4wHuNXjvS/A2gREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCRP977AXN/vz/sPv3z8zLvJVZlAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIJL11jnOsKFx6A6HLLdSYgKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREMkpXuPP8MB+6BrLvZnPYwKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASE6xznHItm37D3+9HfiDljRuYAKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASLYxxqSfnvdBif1eP3/3Hz60+7HftbdETCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQycXXOa7tDIsiJhCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkUx8jb+w5RYN5r3bm0AkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkilfh7i8Q9sRy+1+HGICkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEisc/xbbu/CtzJYnoBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiOTi6xw2NGYzgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZBtj3PsOZ7H/6X65N/N5TCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiXUOEhOIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERPIH6Fc9d13R//MAAAAASUVORK5CYII=">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+html,body{height:100%;background:#C3C2BB}
+body{font-family:"Helvetica Neue",Arial,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#C3C2BB;color:#15140F;min-height:100vh;display:flex;justify-content:center}
+#app{width:100%;max-width:460px;min-height:100vh;background:#C3C2BB;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
+button,input,textarea{font-family:inherit;outline:none;-webkit-appearance:none;appearance:none}
+button{background:none;border:none}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
+.hdr{display:flex;align-items:flex-start;justify-content:space-between;padding:18px 20px 10px}
+.hdr-title{font-size:13px;font-weight:700;letter-spacing:1.5px}
+.hdr-date{font-size:10px;color:#807F78;margin-top:2px;letter-spacing:1px}
+.hdr-right{display:flex;align-items:center;gap:12px}
+
+.hdr-clock{font-size:11px;color:#807F78;letter-spacing:1px}
+.nav{display:flex;gap:4px}
+.nbtn{border:none;border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;background:transparent;color:#807F78}
+.nbtn.on{background:#15140F;color:#F4F3EF}
+.bio{display:flex;align-items:flex-end;gap:24px;padding:0 20px 12px;border-bottom:1.5px solid #15140F}
+.bio-item{}
+.bio-lbl{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#807F78}
+.bio-val{font-size:13px;font-weight:700;letter-spacing:.5px;margin-top:2px}
+.cards{border-top:1.5px solid #15140F}
+.card{border-bottom:1.5px solid #15140F;transition:background .15s}
+.card.closed{background:#C3C2BB}
+.card.open{background:#AEADA6}
+.chdr{width:100%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:20px;text-align:left;color:#15140F}
+.ctitle{font-size:38px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:#15140F}
+.csum-val{display:flex;align-items:flex-end;gap:6px;justify-content:flex-end;white-space:nowrap}
+.csum-val .n{font-size:30px;font-weight:250;letter-spacing:-1.5px}
+.csum-val .u{font-size:11px;color:#807F78;font-weight:500}
+.csum-status{display:flex;align-items:center;gap:5px;justify-content:flex-end;margin-top:3px}
+.dot{width:7px;height:7px;border-radius:50%;background:#9FF700;flex-shrink:0}
+.dot.alert{background:#E84204}
+.stxt{font-size:10.5px;font-weight:700;letter-spacing:1px;color:#9FF700;white-space:nowrap}
+.stxt.alert{color:#E84204}
+.norec{font-size:11px;color:#807F78;letter-spacing:1px}
+.cbody{padding:2px 20px 22px}
+.cfooter{font-size:10.5px;color:#807F78;letter-spacing:1px;padding:14px 20px;border-bottom:1.5px solid #15140F}
+.ey{font-size:9.5px;font-weight:700;letter-spacing:2px;color:#807F78;margin-bottom:9px}
+.pills{display:flex;gap:7px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border-radius:999px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.5px;white-space:nowrap;border:1.5px solid #15140F;background:transparent;color:#15140F}
+.pill.on{background:#15140F;color:#F4F3EF}
+.pill.acc{background:#E84204;border-color:#E84204;color:#15140F}
+.pill.oc{background:transparent}
+.bbtn{width:100%;padding:15px 18px;border:none;background:#15140F;color:#F4F3EF;font-size:14px;font-weight:700;letter-spacing:1px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center}
+.bbtn.ghost{background:transparent;color:#15140F;border:1.5px solid #15140F}
+.bbtn:disabled{opacity:.35;cursor:default}
+.bare{border:none;border-bottom:2px solid #15140F;background:transparent;color:#15140F;width:100%;display:block}
+.bare::placeholder{color:#C3C2BB}
+.tarea{width:100%;border:1.5px solid rgba(0,0,0,.16);padding:12px;font-size:14px;min-height:54px;resize:vertical;background:#DDDCD6;color:#15140F}
+.cnt{width:100%;border:none;background:#15140F;color:#F4F3EF;cursor:pointer;text-align:left;padding:20px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;touch-action:manipulation}
+.cnt-top{display:flex;justify-content:space-between;width:100%;position:relative;z-index:1}
+.cnt-lbl{font-size:9.5px;font-weight:700;letter-spacing:2px;opacity:.7}
+.cnt-time{font-size:13px;font-weight:500}
+.cnt-num{font-size:120px;font-weight:200;letter-spacing:-5px;line-height:.85;position:relative;z-index:1}
+.cnt-hint{font-size:11.5px;font-weight:500;opacity:.8;position:relative;z-index:1}
+.cnt-flash{position:absolute;inset:0;background:#E84204;z-index:0;opacity:0;pointer-events:none}
+@keyframes tapflash{0%{opacity:.4}100%{opacity:0}}
+.res-hdr{background:#15140F;color:#F4F3EF;padding:18px 20px}
+.res-lbl{font-size:9.5px;font-weight:700;letter-spacing:2px;opacity:.7;margin-bottom:4px}
+.res-row{display:flex;align-items:flex-end;gap:10px}
+.res-num{font-size:90px;font-weight:200;letter-spacing:-4px;line-height:.8}
+.g{height:18px}.gsm{height:10px}
+.log-wrap{padding:6px 0 32px}
+.log-tabs{display:flex;gap:6px;padding:0 18px 8px;flex-wrap:wrap;align-items:center}
+.log-hero{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 18px 4px}
+.add-btn{width:46px;height:46px;border-radius:50%;border:none;background:#15140F;color:#F4F3EF;font-size:22px;font-weight:300;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.log-chart{padding:8px 14px 0}
+.log-stats{display:flex;gap:8px;padding:12px 14px 0}
+.stat{flex:1;background:#B8B7B0;padding:14px 14px 16px;position:relative}
+.stat-lbl{font-size:10px;font-weight:700;letter-spacing:1px;color:#807F78}
+.stat-val{display:flex;align-items:flex-end;gap:4px;margin-top:8px}
+.stat-n{font-size:36px;font-weight:200;letter-spacing:-2px;line-height:.9}
+.stat-u{font-size:10px;color:#807F78;margin-bottom:4px}
+.stat-arr{position:absolute;top:14px;right:14px;color:#E84204;font-size:14px}
+.log-act{padding:14px 18px 0;display:flex;flex-direction:column;gap:8px}
+.rlist{margin-top:14px}
+.rrow{display:flex;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid rgba(0,0,0,.1);background:#F5F4F0;color:#15140F}
+.rrow.today{background:#DDDCD6}
+.rn{font-size:28px;font-weight:250;letter-spacing:-1.5px;color:#15140F}
+.ru{font-size:9px;font-weight:700;color:#807F78;margin-left:2px}
+.rinfo{flex:1;min-width:0}
+.rt1{font-size:13px;font-weight:700;color:#15140F}
+.rt2{font-size:11.5px;color:#807F78;margin-top:2px}
+.rnote{font-size:11.5px;color:#807F78;margin-top:2px;overflow-wrap:break-word}
+.delbtn{border:1.5px solid rgba(0,0,0,.18);background:transparent;color:#807F78;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.delbtn.cfm{border-color:#E84204;color:#E84204}
+.hint{font-size:12px;color:#807F78;line-height:1.7;margin-top:10px}
+.hint.alt{color:#E84204}
+.scale-row{display:flex;gap:8px;padding:8px 0;border-top:1px solid rgba(0,0,0,.1);font-size:12.5px;align-items:baseline}
+.scale-row:first-child{border-top:none}
+.scale-key{font-weight:700;white-space:nowrap;margin-right:10px}
+.scale-val{color:#807F78;margin-left:auto;text-align:right}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#15140F;color:#F4F3EF;padding:11px 20px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1px;z-index:100;white-space:nowrap;display:none}
+@keyframes toastin{from{transform:translate(-50%,12px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast"></div>
+<input type="file" id="imp" accept=".json" style="display:none">
+<script>
+'use strict';
+var KEY='shrimp-health-v3', ORG='#E84204', INK='#15140F';
+var STATES={asleep:'熟睡',awake:'清醒靜止',active:'活動後'};
+function judge(bpm,s){
+  if(bpm>40)return'high';
+  if(bpm===40)return'watch';
+  if(s==='asleep')return bpm<30?'ok':'watch';
+  if(s==='awake')return bpm<=30?'ok':'watch';
+  return'ok';
+}
+var LVL={ok:'正常範圍',watch:'偏高，請觀察',high:'危險，請聯絡獸醫'};
+var SH={ok:'正常',watch:'警告',high:'危險'};
+
+/* ── Data ── */
+var DEFAULT_PROFILE={birthday:'',baseWeight:null};
+var DEFAULT_EXAM={date:'',weight:null,diagnosis:'',notes:[],procyte:[],catalyst:[],imaging:[]};
+var D={breaths:[],weights:[],meds:[],vomits:[],foods:[],foodItems:[],profile:{birthday:'',baseWeight:null},exam:{date:'',weight:null,diagnosis:'',notes:[],procyte:[],catalyst:[],imaging:[]}};
+function baseW(){return D.profile&&typeof D.profile.baseWeight==='number'?D.profile.baseWeight:null;}
+function bdDisp(){var bd=D.profile&&D.profile.birthday;if(!bd)return'—';var d=new Date(bd);return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
+function load(){
+  try{var s=localStorage.getItem(KEY);if(s){var p=JSON.parse(s);D={breaths:p.breaths||[],weights:p.weights||[],meds:p.meds||[],vomits:p.vomits||[],foods:p.foods||[],foodItems:p.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,p.profile||{}),exam:Object.assign({},DEFAULT_EXAM,p.exam||{})};}}catch(e){}
+}
+function saveData(){
+  try{localStorage.setItem(KEY,JSON.stringify(D));}catch(e){toast('儲存失敗');}
+  syncOnLocalChange();
+}
+
+/* ── 雲端同步 (私密 Gist) ── */
+var SYNC_FILE='shrimp_health_data.json';
+var SYNC_MARKER='ShrimpHealth Sync — do not delete';
+var SYNC_POLL_MS=15000;
+var _syncPat=localStorage.getItem('sync_pat')||'';
+var _syncGistId=localStorage.getItem('sync_gist_id')||'';
+var _syncBase=localStorage.getItem('sync_base')||'';
+var _lastSyncAt=localStorage.getItem('sync_last')||'';
+var _localDirty=false, _syncing=false, _pushTimer=null;
+
+function syncOn(){return !!_syncPat;}
+function ghHeaders(){return{'Authorization':'Bearer '+_syncPat,'Accept':'application/vnd.github+json','Content-Type':'application/json'};}
+function dataCount(o){return(o.breaths||[]).length+(o.weights||[]).length+(o.meds||[]).length+(o.vomits||[]).length+(o.foods||[]).length+(o.foodItems||[]).length;}
+function isBusyEditing(){
+  var ae=document.activeElement;
+  if(ae&&/^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName))return true;
+  if(BP==='counting'||BP==='result')return true;
+  var m=document.getElementById('syncModal');
+  if(m&&m.style.display==='flex')return true;
+  return false;
+}
+function gatherSync(){
+  return{app:'shrimp-health',_syncedAt:new Date().toISOString(),
+    breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exam:D.exam};
+}
+function applySync(o){
+  D={breaths:o.breaths||[],weights:o.weights||[],meds:o.meds||[],vomits:o.vomits||[],foods:o.foods||[],foodItems:o.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,o.profile||{}),exam:Object.assign({},DEFAULT_EXAM,o.exam||{})};
+  ['breaths','weights','meds','vomits','foods','foodItems'].forEach(function(k){
+    D[k].sort(function(a,b){return(a.ts||0)-(b.ts||0);});
+  });
+  try{localStorage.setItem(KEY,JSON.stringify(D));}catch(e){}
+}
+function _gistContent(g){
+  var f=g.files&&g.files[SYNC_FILE];
+  if(!f)return Promise.resolve(null);
+  if(f.truncated&&f.raw_url)return fetch(f.raw_url,{cache:'no-store'}).then(function(r){return r.text();});
+  return Promise.resolve(f.content);
+}
+function _gistGet(id){
+  return fetch('https://api.github.com/gists/'+id,{headers:ghHeaders(),cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('讀取失敗 '+r.status);return r.json();})
+    .then(_gistContent)
+    .then(function(c){try{return c?JSON.parse(c):null;}catch(e){return null;}});
+}
+function syncFindGist(){
+  if(_syncGistId)return Promise.resolve(_syncGistId);
+  return fetch('https://api.github.com/gists?per_page=100',{headers:ghHeaders(),cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('Token 無效或缺 gist 權限 '+r.status);return r.json();})
+    .then(function(list){
+      var found=list.find(function(g){return g.description===SYNC_MARKER||(g.files&&g.files[SYNC_FILE]);});
+      if(found){_syncGistId=found.id;localStorage.setItem('sync_gist_id',found.id);return found.id;}
+      return null;
+    });
+}
+function syncOnLocalChange(){
+  if(!syncOn())return;
+  _localDirty=true;
+  clearTimeout(_pushTimer);
+  _pushTimer=setTimeout(function(){syncPush({});},2500);
+  renderSyncModal();
+}
+function syncPush(opts){
+  opts=opts||{};
+  if(!syncOn()||_syncing)return Promise.resolve();
+  _syncing=true;renderSyncModal();
+  var payload=gatherSync(),payloadStr=JSON.stringify(payload,null,2);
+  return syncFindGist().then(function(id){
+    var chain=id?_gistGet(id):Promise.resolve(null);
+    return chain.then(function(remote){
+      var remoteAt=remote&&remote._syncedAt||'';
+      if(id&&remoteAt&&_syncBase&&remoteAt!==_syncBase){
+        if(opts.manual){
+          if(!confirm('雲端有其他裝置的新版本,確定用這台覆蓋雲端?\n(建議先「從雲端拉取」)'))return{skip:true};
+        }else{
+          toast('雲端有更新,請先拉取');return{skip:true};
+        }
+      }
+      var body={files:{}};body.files[SYNC_FILE]={content:payloadStr};
+      var url=id?'https://api.github.com/gists/'+id:'https://api.github.com/gists';
+      if(!id){body.description=SYNC_MARKER;body.public=false;}
+      return fetch(url,{method:id?'PATCH':'POST',headers:ghHeaders(),body:JSON.stringify(body)})
+        .then(function(r){if(!r.ok)throw new Error('上傳失敗 '+r.status);return r.json();})
+        .then(function(g){
+          if(!id){_syncGistId=g.id;localStorage.setItem('sync_gist_id',g.id);}
+          _syncBase=payload._syncedAt;localStorage.setItem('sync_base',_syncBase);
+          _lastSyncAt=payload._syncedAt;localStorage.setItem('sync_last',_lastSyncAt);
+          _localDirty=false;
+          return{ok:true};
+        });
+    });
+  }).then(function(res){
+    _syncing=false;renderSyncModal();
+    if(res&&res.ok&&opts.manual)toast('已上傳雲端');
+  }).catch(function(e){
+    _syncing=false;renderSyncModal();
+    if(opts.manual)toast(e&&e.message||'上傳失敗');
+  });
+}
+function syncPull(opts){
+  opts=opts||{};
+  if(!syncOn()||_syncing)return Promise.resolve();
+  return syncFindGist().then(function(id){
+    if(!id)return;
+    return _gistGet(id).then(function(remote){
+      if(!remote||!remote._syncedAt)return;
+      if(remote._syncedAt===_syncBase){if(opts.manual)toast('已是最新');return;}
+      if(opts.background&&(_localDirty||isBusyEditing()))return;
+      if(opts.manual&&_localDirty&&!confirm('這台有尚未上傳的變更,拉取會覆蓋掉,確定?'))return;
+      applySync(remote);
+      _syncBase=remote._syncedAt;localStorage.setItem('sync_base',_syncBase);
+      _lastSyncAt=remote._syncedAt;localStorage.setItem('sync_last',_lastSyncAt);
+      _localDirty=false;re();renderSyncModal();
+      if(opts.manual)toast('已從雲端更新');
+    });
+  }).catch(function(e){if(opts.manual)toast(e&&e.message||'拉取失敗');});
+}
+function syncEnable(pat){
+  pat=(pat||'').trim();
+  if(!pat){toast('請貼上 Token');return;}
+  _syncPat=pat;localStorage.setItem('sync_pat',pat);
+  _syncGistId='';_syncBase='';localStorage.removeItem('sync_gist_id');localStorage.removeItem('sync_base');
+  toast('驗證中…');
+  fetch('https://api.github.com/gists?per_page=100',{headers:ghHeaders(),cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('Token 無效或缺 gist 權限 '+r.status);return r.json();})
+    .then(function(list){
+      var found=list.find(function(g){return g.description===SYNC_MARKER||(g.files&&g.files[SYNC_FILE]);});
+      if(!found){
+        _syncBase='';return syncPush({manual:true}).then(function(){toast('已啟用雲端同步');renderSyncModal();});
+      }
+      _syncGistId=found.id;localStorage.setItem('sync_gist_id',found.id);
+      return _gistGet(found.id).then(function(o){
+        var remoteHas=o&&dataCount(o)>0,localHas=dataCount(D)>0;
+        if(remoteHas&&localHas){
+          if(confirm('雲端已有這個 app 的資料,這台也有紀錄。\n\n「確定」= 用雲端覆蓋這台\n「取消」= 用這台覆蓋雲端')){
+            _takeRemote(o);
+          }else{
+            _syncBase=o._syncedAt||'';localStorage.setItem('sync_base',_syncBase);
+            syncPush({manual:true});
+          }
+        }else if(remoteHas){
+          _takeRemote(o);
+        }else{
+          _syncBase=(o&&o._syncedAt)||'';
+          syncPush({manual:true}).then(function(){toast('已啟用雲端同步');renderSyncModal();});
+        }
+      });
+    })
+    .catch(function(e){toast(e&&e.message||'啟用失敗');renderSyncModal();});
+}
+function _takeRemote(o){
+  applySync(o);
+  _syncBase=o._syncedAt||'';localStorage.setItem('sync_base',_syncBase);
+  _lastSyncAt=_syncBase;localStorage.setItem('sync_last',_lastSyncAt);
+  _localDirty=false;re();toast('已啟用,採用雲端資料');renderSyncModal();
+}
+function syncDisable(){
+  if(!confirm('停用雲端同步? 本機資料會保留,只是不再自動同步。'))return;
+  _syncPat='';_syncGistId='';_syncBase='';_lastSyncAt='';_localDirty=false;
+  localStorage.removeItem('sync_pat');localStorage.removeItem('sync_gist_id');
+  localStorage.removeItem('sync_base');localStorage.removeItem('sync_last');
+  toast('已停用同步');re();renderSyncModal();
+}
+function fmtSyncTime(iso){if(!iso)return'—';var d=new Date(iso);return ff(d.getTime())+' '+ft(d.getTime());}
+function ensureSyncModal(){
+  var m=document.getElementById('syncModal');
+  if(m)return m;
+  m=document.createElement('div');m.id='syncModal';
+  m.style.cssText='position:fixed;inset:0;background:rgba(21,20,15,.55);display:none;align-items:flex-end;justify-content:center;z-index:200';
+  m.addEventListener('click',function(e){if(e.target===m)closeSync();});
+  var inner=document.createElement('div');inner.id='syncModalBody';
+  inner.style.cssText='width:100%;max-width:460px;background:#C3C2BB;border-top:1.5px solid #15140F;padding:22px 20px calc(22px + env(safe-area-inset-bottom));max-height:86vh;overflow:auto';
+  m.appendChild(inner);document.body.appendChild(m);
+  return m;
+}
+function openSync(){ensureSyncModal();renderSyncModal();document.getElementById('syncModal').style.display='flex';}
+function closeSync(){var m=document.getElementById('syncModal');if(m)m.style.display='none';}
+function renderSyncModal(){
+  var b=document.getElementById('syncModalBody');if(!b)return;
+  var h='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'+
+        '<div style="font-size:20px;font-weight:900;letter-spacing:-0.5px">雲端同步</div>'+
+        '<button class="pill" style="font-size:11px;padding:5px 13px" onclick="closeSync()">關閉</button></div>';
+  if(!syncOn()){
+    h+='<p class="hint" style="margin:4px 0 14px">貼上你的 GitHub Token(需 gist 權限)。資料會存到你帳號底下的「私密 Gist」,多台裝置自動同步。Token 只存在這台瀏覽器,不會外流。</p>'+
+       '<div class="ey">GITHUB TOKEN</div>'+
+       '<input id="syncPatInput" class="bare" placeholder="ghp_… 或 github_pat_…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="font-size:14px;padding:6px 0;margin:4px 0 16px">'+
+       '<button class="bbtn" onclick="syncEnable(document.getElementById(\'syncPatInput\').value)">啟用雲端同步 <span>→</span></button>'+
+       '<p class="hint" style="margin-top:14px">拿 Token:GitHub → Settings → Developer settings → Personal access tokens,建立時勾選 <b>gist</b> 權限即可。</p>';
+  }else{
+    var stt=_syncing?'同步中…':_localDirty?'有變更待上傳…':'已同步';
+    var dotC=_syncing||_localDirty?ORG:'#9FF700';
+    h+='<div style="display:flex;align-items:center;gap:8px;margin:10px 0 2px"><span style="width:8px;height:8px;border-radius:50%;background:'+dotC+';flex-shrink:0"></span><span style="font-size:13px;font-weight:700">'+stt+'</span></div>'+
+       '<p class="hint" style="margin:4px 0 16px">上次同步:'+fmtSyncTime(_lastSyncAt)+'</p>'+
+       '<button class="bbtn" style="margin-bottom:8px" onclick="syncPush({manual:true})">立即上傳 <span>↑</span></button>'+
+       '<button class="bbtn ghost" style="margin-bottom:8px" onclick="syncPull({manual:true})">從雲端拉取 <span>↓</span></button>'+
+       '<button class="bbtn ghost" style="border-color:'+ORG+';color:'+ORG+'" onclick="syncDisable()">停用同步</button>'+
+       '<p class="hint" style="margin-top:14px">每次記錄會自動上傳;切回畫面會自動抓最新。其他裝置貼同一組 Token 即可共用。</p>';
+  }
+  b.innerHTML=h;
+}
+function syncInit(){
+  if(syncOn())syncPull({background:true});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)syncPull({background:true});});
+  window.addEventListener('focus',function(){syncPull({background:true});});
+  setInterval(function(){if(!document.hidden)syncPull({background:true});},SYNC_POLL_MS);
+}
+
+/* ── Helpers ── */
+function pad(n){return String(n).padStart(2,'0');}
+function fd(ts){var d=new Date(ts);return (d.getMonth()+1)+'/'+d.getDate();}
+function ff(ts){var d=new Date(ts);return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
+function ft(ts){var d=new Date(ts);return pad(d.getHours())+':'+pad(d.getMinutes());}
+function filterByRange(recs){
+  if(CRANGE==='all')return recs;
+  var days=CRANGE==='7d'?7:30;
+  var cutoff=Date.now()-days*86400000;
+  return recs.filter(function(r){return r.ts>=cutoff;});
+}
+function setRange(r){CRANGE=r;CHARTSEL.breath=null;CHARTSEL.weight=null;re();}
+function setGran(g){GRAN=g;CHARTSEL.breath=null;CHARTSEL.weight=null;re();}
+function weekStart(ts){var d=new Date(ts);d.setHours(0,0,0,0);var wd=d.getDay();d.setDate(d.getDate()+(wd===0?-6:1-wd));return d.getTime();}
+function monthStart(ts){var d=new Date(ts);return new Date(d.getFullYear(),d.getMonth(),1).getTime();}
+function aggregateRecs(recs,field,period){
+  var sf=period==='month'?monthStart:weekStart;
+  var buckets={};
+  recs.forEach(function(r){
+    var k=sf(r.ts);
+    if(!buckets[k])buckets[k]={ts:k,sum:0,count:0,minTs:r.ts,maxTs:r.ts};
+    var b=buckets[k];b.sum+=r[field];b.count++;
+    if(r.ts<b.minTs)b.minTs=r.ts;
+    if(r.ts>b.maxTs)b.maxTs=r.ts;
+  });
+  var keys=Object.keys(buckets).map(Number).sort(function(a,b){return a-b;});
+  return keys.map(function(k){
+    var b=buckets[k],rec={id:(period==='month'?'mo':'wk')+'-'+k,ts:b.ts,count:b.count,minTs:b.minTs,maxTs:b.maxTs,agg:period};
+    rec[field]=b.sum/b.count;
+    return rec;
+  });
+}
+function nd(){var d=new Date();return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
+function nc(){var d=new Date();var h=d.getHours();var ap=h>=12?'pm':'am';h=h%12||12;return h+':'+pad(d.getMinutes())+' '+ap;}
+function uid(p){return p+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,6);}
+function norm(s){
+  if(!s)return'';
+  s=s.trim();
+  // 全形轉半形 (含全形空白)
+  s=s.replace(/[\uFF01-\uFF5E]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-0xFEE0);});
+  s=s.replace(/\u3000/g,' ');
+  s=s.toLowerCase();
+  s=s.replace(/\s+/g,'');
+  return s;
+}
+function foodSuggestions(type,field){
+  var src=type==='罐頭'?D.foods:D.foodItems;
+  var seen={},out=[];
+  src.filter(function(r){return r.type===type;}).forEach(function(r){
+    var v=r[field];if(!v)return;
+    var k=norm(v);
+    if(!seen[k]){seen[k]=true;out.push(v);}
+  });
+  return out;
+}
+function dateStr(ts){var d=new Date(ts||Date.now());return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function localTimeStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());}
+function todayMeds(){var t=dateStr();for(var i=D.meds.length-1;i>=0;i--){if((D.meds[i].date||dateStr(D.meds[i].ts))===t)return D.meds[i];}return null;}
+function catAge(){
+  var bd=D.profile&&D.profile.birthday;if(!bd)return'';
+  var born=new Date(bd),now=new Date();
+  var y=now.getFullYear()-born.getFullYear(),m=now.getMonth()-born.getMonth(),d=now.getDate()-born.getDate();
+  if(d<0){m--;var prev=new Date(now.getFullYear(),now.getMonth(),0);d+=prev.getDate();}
+  if(m<0){y--;m+=12;}
+  return y+'歲 '+m+'個月 '+d+'天';
+}
+
+/* ── State ── */
+var VIEW='home', OPEN=null, LTAB='breath', LCID=null, TOTOAST=null, LEDIT=null, FDETAIL=false, CRANGE='all', GRAN='raw';
+var CHARTSEL={breath:null,weight:null};
+function selPt(tab,id){CHARTSEL[tab]=(CHARTSEL[tab]===id)?null:id;re();}
+var BP='idle', BMODE='tap', BDUR=30, BCNT=0, BCNTREF=0, BTIME=30;
+var BBPM=null, BSTATE='asleep', BNOTE='', BMANUAL='', BTIMER=null;
+var WMODE='calc', WMYKG='', WCOMBO='', WKG='', WLOC='home', WCUSTOM='';
+var MMORN=0, MEVE=0, MNOTE='';
+var MAMORN=0, MAEVE=0; // 胺寶 ml (0.5ml 步進)
+var VCONTENT=[], VNOTE='', VTIME='';
+var FBRAND='', FFLAVOR='', FTYPE='罐頭', FFINISH=100, FSPEED='立刻', FLIKE='喜歡', FNOTE='';
+var FOODSUB='罐頭';
+
+/* ── Toast ── */
+function toast(msg){
+  var el=document.getElementById('toast');if(!el)return;
+  el.textContent=msg;el.style.display='block';el.style.animation='none';
+  void el.offsetWidth;el.style.animation='toastin .25s ease';
+  clearTimeout(TOTOAST);TOTOAST=setTimeout(function(){el.style.display='none';},2200);
+}
+
+/* ── Summaries ── */
+function bsum(){
+  if(!D.breaths.length)return{has:false};
+  var last=D.breaths[D.breaths.length-1];
+  var r=D.breaths.slice(-7).map(function(x){return x.bpm;});
+  var avg=Math.round(r.reduce(function(a,b){return a+b;},0)/r.length);
+  var lv=judge(last.bpm,last.state);
+  return{has:true,value:avg,unit:'次/分',status:SH[lv],alert:lv!=='ok'};
+}
+function wsum(){
+  if(!D.weights.length)return{has:false};
+  var last=D.weights[D.weights.length-1];
+  var pct=D.weights.length>=2?(last.kg-D.weights[D.weights.length-2].kg)/D.weights[D.weights.length-2].kg*100:0;
+  var al=pct<=-5;
+  return{has:true,value:last.kg.toFixed(2),unit:'kg',status:al?'下降警示':pct<-2?'下降':pct>2?'上升':'穩定',alert:al};
+}
+function msum(){
+  var tr=todayMeds();
+  if(!tr&&!D.meds.length)return{has:false};
+  if(tr){
+    var tot=(tr.morn||0)+(tr.eve||0);
+    var md=tr.morn>0,ed=tr.eve>0;
+    var aminoStr=(tr.aminoMorn||0)+(tr.aminoEve||0)>0?(' · 胺寶'+((tr.aminoMorn||0)+(tr.aminoEve||0))+'ml'):'';
+    return{has:true,value:tot,unit:'顆',status:(md&&ed?'早晚已餵':md?'早已餵':ed?'晚已餵':'未記錄')+aminoStr,alert:false};
+  }
+  var last=D.meds[D.meds.length-1];
+  return{has:true,value:(last.morn||0)+(last.eve||0),unit:'顆',status:'早'+(last.morn||0)+'晚'+(last.eve||0),alert:false};
+}
+function vsum(){
+  if(!D.vomits.length)return{has:false};
+  var today=dateStr();
+  var tc=D.vomits.filter(function(r){return (r.date||dateStr(r.ts))===today;}).length;
+  var last=D.vomits[D.vomits.length-1];
+  return{has:true,value:D.vomits.length,unit:'次',status:tc>0?'今日'+tc+'次':'最近'+fd(last.ts),alert:tc>=3};
+}
+function fsum(){
+  var totalCount=D.foods.length+D.foodItems.length;
+  if(!totalCount)return{has:false};
+  var today=dateStr();
+  var todayCount=D.foods.filter(function(r){return dateStr(r.ts)===today;}).length+
+    D.foodItems.filter(function(r){return dateStr(r.ts)===today;}).length;
+  return{has:true,value:todayCount,unit:'筆',status:todayCount>0?'今日已記':'尚未記錄今日',alert:false};
+}
+
+/* ── Pixel SVG ── */
+var GL={
+  '0':['01110','10001','10011','10101','11001','10001','01110'],
+  '1':['00100','01100','00100','00100','00100','00100','01110'],
+  '2':['01110','10001','00001','00010','00100','01000','11111'],
+  '3':['11110','00001','00001','01110','00001','00001','11110'],
+  '4':['00010','00110','01010','10010','11111','00010','00010'],
+  '5':['11111','10000','11110','00001','00001','10001','01110'],
+  '6':['00110','01000','10000','11110','10001','10001','01110'],
+  '7':['11111','00001','00010','00100','01000','01000','01000'],
+  '8':['01110','10001','10001','01110','10001','10001','01110'],
+  '9':['01110','10001','10001','01111','00001','00010','01100'],
+  '.':['00','00','00','00','00','00','11'],
+  '-':['00000','00000','00000','11111','00000','00000','00000'],
+  '%':['11000','11001','00010','00100','01000','10011','00011']
+};
+function pxsvg(text,px,color,accent){
+  var chars=String(text).split(''),x=0,rects=[];
+  chars.forEach(function(ch){
+    var g=GL[ch]||GL['-'],w=g[0].length;
+    g.forEach(function(row,ry){
+      row.split('').forEach(function(c,cx){
+        if(c==='1')rects.push('<rect x="'+(x+cx)*px+'" y="'+ry*px+'" width="'+px+'" height="'+px+'" fill="'+color+'"/>');
+      });
+    });
+    x+=w+1;
+  });
+  var tw=(x-1)*px,th=7*px;
+  var dot=accent?'<rect x="'+(tw+px*0.6)+'" y="0" width="'+(px*1.2)+'" height="'+(px*1.2)+'" fill="'+ORG+'"/>':'';
+  return '<svg viewBox="0 0 '+(tw+(accent?px*2:0))+' '+th+'" style="display:block;height:'+th+'px">'+rects.join('')+dot+'</svg>';
+}
+
+/* ── Chart tooltip helpers ── */
+function axisLabel(d){
+  if(d.agg==='month'){var dt=new Date(d.ts);return (dt.getFullYear()%100)+'/'+(dt.getMonth()+1);}
+  return fd(d.ts);
+}
+function tipPeriodLabel(d){
+  if(d.agg==='month'){var dt=new Date(d.ts);return dt.getFullYear()+'年'+(dt.getMonth()+1)+'月';}
+  if(d.agg==='week')return fd(d.minTs)+'–'+fd(d.maxTs);
+  return fd(d.ts)+' '+ft(d.ts);
+}
+function txtW(t,fs){
+  var w=0;
+  for(var i=0;i<t.length;i++){w+=(/[^\x00-\xff]/.test(t.charAt(i))?1:0.58);}
+  return w*fs;
+}
+function chartTip(W,Pt,px,py,lines){
+  var padX=9,padY=7,lh=13;
+  var maxW=0;
+  lines.forEach(function(l){var w=txtW(l.t,l.fs);if(w>maxW)maxW=w;});
+  var boxW=maxW+padX*2,boxH=padY*2+lines.length*lh-3;
+  var bx=px-boxW/2;if(bx<2)bx=2;if(bx+boxW>W-2)bx=W-2-boxW;
+  var above=true,by=py-10-boxH;
+  if(by<Pt-4){above=false;by=py+10;}
+  var s='<line x1="'+px.toFixed(1)+'" y1="'+py.toFixed(1)+'" x2="'+px.toFixed(1)+'" y2="'+(above?(by+boxH):by).toFixed(1)+'" stroke="'+INK+'" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>';
+  s+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+boxW.toFixed(1)+'" height="'+boxH.toFixed(1)+'" rx="5" fill="'+INK+'"/>';
+  lines.forEach(function(l,i){
+    var ty=by+padY+(i+1)*lh-3;
+    s+='<text x="'+(bx+boxW/2).toFixed(1)+'" y="'+ty.toFixed(1)+'" font-size="'+l.fs+'" font-weight="'+(l.b?700:600)+'" fill="'+(l.b?ORG:'#F4F3EF')+'" text-anchor="middle" opacity="'+(l.b?1:0.85)+'">'+l.t+'</text>';
+  });
+  return s;
+}
+
+/* ── Charts ── */
+function chartBreath(recs,selId){
+  var W=320,H=160,Pl=28,Pr=8,Pt=14,Pb=24,data=recs.slice(-40),n=data.length;
+  if(n<2)return'';
+  var vals=data.map(function(d){return d.bpm;});
+  var maxV=Math.max(50,Math.max.apply(null,vals))+4;
+  var minV=Math.max(0,Math.min.apply(null,vals)-4);
+  function fy(v){return Pt+(H-Pt-Pb)*(1-(v-minV)/(maxV-minV));}
+  function fx(i){return Pl+i*(W-Pl-Pr)/(Math.max(n-1,1));}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  // 軸線
+  s+='<line x1="'+Pl+'" y1="'+(H-Pb)+'" x2="'+(W-Pr)+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  s+='<line x1="'+Pl+'" y1="'+Pt+'" x2="'+Pl+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  // 參考線
+  [30,40].forEach(function(v){
+    if(v>minV&&v<maxV){
+      s+='<line x1="'+Pl+'" x2="'+(W-Pr)+'" y1="'+fy(v).toFixed(1)+'" y2="'+fy(v).toFixed(1)+'" stroke="rgba(21,20,15,0.18)" stroke-width="1" stroke-dasharray="3 3"/>';
+      s+='<text x="'+(Pl-4)+'" y="'+(fy(v)+3).toFixed(1)+'" font-size="9" font-weight="700" fill="rgba(21,20,15,0.4)" text-anchor="end">'+v+'</text>';
+    }
+  });
+  var pts=data.map(function(d,i){return fx(i).toFixed(1)+','+fy(d.bpm).toFixed(1);}).join(' ');
+  s+='<polyline points="'+pts+'" fill="none" stroke="'+ORG+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"/>';
+  var tipS='';
+  data.forEach(function(d,i){
+    var sel=(d.id===selId);
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(d.bpm).toFixed(1)+'" r="9" fill="transparent" style="cursor:pointer" onclick="selPt(\'breath\',\''+d.id+'\')"/>';
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(d.bpm).toFixed(1)+'" r="'+(sel?4.2:2.8)+'" fill="'+ORG+'"'+(sel?' stroke="#F4F3EF" stroke-width="1.4"':'')+' style="pointer-events:none"/>';
+    if(sel){
+      var valTxt=(d.agg?(Math.round(d.bpm*10)/10).toFixed(1):d.bpm)+' 次/分';
+      var lines=[{t:tipPeriodLabel(d),fs:9,b:false},{t:valTxt,fs:13,b:true}];
+      if(d.agg)lines.push({t:d.count+' 筆平均',fs:8.5,b:false});
+      tipS+=chartTip(W,Pt,fx(i),fy(d.bpm),lines);
+    }
+  });
+  [0,Math.floor((n-1)/2),n-1].filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(i){
+    s+='<text x="'+fx(i).toFixed(1)+'" y="'+(H-7)+'" font-size="9" font-weight="700" fill="#807F78" text-anchor="middle">'+axisLabel(data[i])+'</text>';
+  });
+  return s+tipS+'</svg>';
+}
+function chartWeight(recs,selId){
+  var W=320,H=160,Pl=28,Pr=8,Pt=14,Pb=24,data=recs.slice(-40),n=data.length;
+  if(n<2)return'';
+  var bw=baseW();
+  var vals=data.map(function(d){return d.kg;});if(bw!=null)vals=vals.concat([bw]);
+  var maxV=Math.max.apply(null,vals)+0.2,minV=Math.min.apply(null,vals)-0.2;
+  function fy(v){return Pt+(H-Pt-Pb)*(1-(v-minV)/(maxV-minV));}
+  function fx(i){return Pl+i*(W-Pl-Pr)/(Math.max(n-1,1));}
+  var by=bw!=null?fy(bw):0;
+  var s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  // 軸線
+  s+='<line x1="'+Pl+'" y1="'+(H-Pb)+'" x2="'+(W-Pr)+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  s+='<line x1="'+Pl+'" y1="'+Pt+'" x2="'+Pl+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  // 參考線
+  if(bw!=null){
+    s+='<line x1="'+Pl+'" x2="'+(W-Pr)+'" y1="'+by.toFixed(1)+'" y2="'+by.toFixed(1)+'" stroke="rgba(21,20,15,0.18)" stroke-width="1" stroke-dasharray="3 3"/>';
+    s+='<text x="'+(Pl-4)+'" y="'+(by+3).toFixed(1)+'" font-size="9" font-weight="700" fill="rgba(21,20,15,0.4)" text-anchor="end">'+bw.toFixed(1)+'</text>';
+  }
+  var pts=data.map(function(d,i){return fx(i).toFixed(1)+','+fy(d.kg).toFixed(1);}).join(' ');
+  s+='<polyline points="'+pts+'" fill="none" stroke="'+ORG+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"/>';
+  var tipS='';
+  data.forEach(function(d,i){
+    var sel=(d.id===selId);
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(d.kg).toFixed(1)+'" r="9" fill="transparent" style="cursor:pointer" onclick="selPt(\'weight\',\''+d.id+'\')"/>';
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(d.kg).toFixed(1)+'" r="'+(sel?4.2:2.8)+'" fill="'+ORG+'"'+(sel?' stroke="#F4F3EF" stroke-width="1.4"':'')+' style="pointer-events:none"/>';
+    if(sel){
+      var lines=[{t:tipPeriodLabel(d),fs:9,b:false},{t:d.kg.toFixed(2)+' kg',fs:13,b:true}];
+      if(d.agg)lines.push({t:d.count+' 筆平均',fs:8.5,b:false});
+      tipS+=chartTip(W,Pt,fx(i),fy(d.kg),lines);
+    }
+  });
+  [0,Math.floor((n-1)/2),n-1].filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(i){
+    s+='<text x="'+fx(i).toFixed(1)+'" y="'+(H-7)+'" font-size="9" font-weight="700" fill="#807F78" text-anchor="middle">'+axisLabel(data[i])+'</text>';
+  });
+  return s+tipS+'</svg>';
+}
+function chartVomit(recs){
+  var W=320,H=160,Pl=28,Pr=8,Pt=14,Pb=24,data=recs.slice(-40),n=data.length;
+  if(n<2)return'';
+  function getHour(r){return new Date(r.ts).getHours()+(new Date(r.ts).getMinutes()/60);}
+  function fy(v){return Pt+(H-Pt-Pb)*(1-v/24);}
+  function fx(i){return Pl+i*(W-Pl-Pr)/(Math.max(n-1,1));}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  // 軸線
+  s+='<line x1="'+Pl+'" y1="'+(H-Pb)+'" x2="'+(W-Pr)+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  s+='<line x1="'+Pl+'" y1="'+Pt+'" x2="'+Pl+'" y2="'+(H-Pb)+'" stroke="rgba(21,20,15,0.25)" stroke-width="1"/>';
+  // 參考線
+  [6,12,18].forEach(function(v){
+    s+='<line x1="'+Pl+'" x2="'+(W-Pr)+'" y1="'+fy(v).toFixed(1)+'" y2="'+fy(v).toFixed(1)+'" stroke="rgba(21,20,15,0.18)" stroke-width="1" stroke-dasharray="3 3"/>';
+    s+='<text x="'+(Pl-4)+'" y="'+(fy(v)+3).toFixed(1)+'" font-size="9" font-weight="700" fill="rgba(21,20,15,0.4)" text-anchor="end">'+v+'</text>';
+  });
+  var pts=data.map(function(d,i){return fx(i).toFixed(1)+','+fy(getHour(d)).toFixed(1);}).join(' ');
+  s+='<polyline points="'+pts+'" fill="none" stroke="'+ORG+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"/>';
+  data.forEach(function(d,i){
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(getHour(d)).toFixed(1)+'" r="2.8" fill="'+ORG+'"/>';
+  });
+  [0,Math.floor((n-1)/2),n-1].filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(i){
+    s+='<text x="'+fx(i).toFixed(1)+'" y="'+(H-7)+'" font-size="9" font-weight="700" fill="#807F78" text-anchor="middle">'+fd(data[i].ts)+'</text>';
+  });
+  return s+'</svg>';
+}
+function chartMeds(recs){
+  var W=320,H=168,Pl=24,Pr=8,Pt=20,Pb=24;
+  var data=recs.slice(-40);var n=data.length;
+  if(n<2)return'';
+  var maxP=Math.max.apply(null,data.map(function(r){return (r.morn||0)+(r.eve||0);}).concat([2]))+1;
+  var maxM=Math.max.apply(null,data.map(function(r){return (r.aminoMorn||0)+(r.aminoEve||0);}).concat([1]))+0.5;
+  var slotW=(W-Pl-Pr)/n;
+  var bw=Math.max(2,slotW*0.38);
+  function fyP(v){return Pt+(H-Pt-Pb)*(1-v/maxP);}
+  function fyM(v){return Pt+(H-Pt-Pb)*(1-v/maxM);}
+  function fx(i){return Pl+i*slotW;}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  // 圖例
+  s+='<rect x="'+Pl+'" y="4" width="8" height="7" fill="'+INK+'"/>'+
+     '<text x="'+(Pl+11)+'" y="11" font-size="8.5" font-weight="700" fill="#807F78">養氣(顆)</text>'+
+     '<rect x="'+(Pl+68)+'" y="4" width="8" height="7" fill="'+ORG+'"/>'+
+     '<text x="'+(Pl+79)+'" y="11" font-size="8.5" font-weight="700" fill="#807F78">胺寶(ml)</text>';
+  // 柱
+  data.forEach(function(r,i){
+    var pills=(r.morn||0)+(r.eve||0);
+    var ml=(r.aminoMorn||0)+(r.aminoEve||0);
+    var x=fx(i);
+    var yyP=fyP(pills);
+    s+='<rect x="'+(x+1).toFixed(1)+'" y="'+yyP.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+(H-Pb-yyP).toFixed(1)+'" fill="'+INK+'"/>';
+    if(ml>0){
+      var yyM=fyM(ml);
+      s+='<rect x="'+(x+bw+2).toFixed(1)+'" y="'+yyM.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+(H-Pb-yyM).toFixed(1)+'" fill="'+ORG+'"/>';
+    }
+  });
+  // 日期標籤
+  [0,Math.floor((n-1)/2),n-1].filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(i){
+    s+='<text x="'+(fx(i)+bw).toFixed(1)+'" y="'+(H-7)+'" font-size="9" font-weight="700" fill="#807F78" text-anchor="middle">'+fd(data[i].ts)+'</text>';
+  });
+  return s+'</svg>';
+}
+function chartVomit(recs){
+  var W=320,H=168,Pl=20,Pr=8,Pt=14,Pb=24;
+  var dayCounts={};
+  recs.forEach(function(r){var d=r.date||dateStr(r.ts);dayCounts[d]=(dayCounts[d]||0)+1;});
+  var days=Object.keys(dayCounts).sort();
+  if(days.length<2)return'';
+  var data=days.map(function(d){return{date:d,count:dayCounts[d]};});
+  var n=data.length;
+  var maxV=Math.max.apply(null,data.map(function(d){return d.count;}))+1;
+  function fy(v){return Pt+(H-Pt-Pb)*(1-v/maxV);}
+  function fx(i){return Pl+i*(W-Pl-Pr)/(Math.max(n-1,1));}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  var pts=data.map(function(d,i){return fx(i).toFixed(1)+','+fy(d.count).toFixed(1);}).join(' ');
+  s+='<polyline points="'+pts+'" fill="none" stroke="'+ORG+'" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.35"/>';
+  data.forEach(function(d,i){
+    s+='<circle cx="'+fx(i).toFixed(1)+'" cy="'+fy(d.count).toFixed(1)+'" r="2.8" fill="'+ORG+'"/>';
+  });
+  [0,Math.floor((n-1)/2),n-1].filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(i){
+    s+='<text x="'+fx(i).toFixed(1)+'" y="'+(H-7)+'" font-size="9" font-weight="700" fill="#807F78" text-anchor="middle">'+data[i].date.slice(5)+'</text>';
+  });
+  return s+'</svg>';
+}
+
+/* ── Exam Data ── */
+var TAG_COLORS={
+  '血糖':'#D4742A', '腎臟':'#4E7CB5', '肝臟':'#4E8C5A',
+  '心/肌':'#C04E4E', '血液':'#8B5E8B', '免疫':'#5A7A8C',
+  '凝血':'#8C5A5A', '骨髓':'#7A6A3E', '過敏':'#8C7A2A'
+};
+
+function examSt(item){
+  if(item.reportedNormal)return{text:'正常',color:'#4E8C5A'};
+  var v=item.value,lo=item.refLow,hi=item.refHigh;
+  if(lo===0&&v>=0&&v<=hi)return{text:'正常',color:'#4E8C5A'};
+  if(v>hi)return{text:'偏高',color:'#E84204'};
+  if(v<lo)return{text:'偏低',color:'#5B8FA8'};
+  return{text:'正常',color:'#4E8C5A'};
+}
+function barCSS(item){
+  var W=112;
+  var lo=item.refLow,hi=item.refHigh,mn=item.dispMin,mx=item.dispMax;
+  var p=function(v){return Math.max(0,Math.min(100,(v-mn)/(mx-mn)*100));};
+  var nL=p(lo),nW=p(hi)-nL,mP=Math.max(1,Math.min(97,p(item.value)));
+  var st=examSt(item);
+  return '<div style="width:'+W+'px;height:10px;background:#DDDCD6;border-radius:3px;position:relative;overflow:hidden;flex-shrink:0">'+
+    '<div style="position:absolute;left:'+nL.toFixed(1)+'%;width:'+nW.toFixed(1)+'%;top:0;height:100%;background:#4E8C5A;opacity:0.4"></div>'+
+    '<div style="position:absolute;left:'+mP.toFixed(1)+'%;width:4px;top:0;height:100%;background:'+st.color+';border-radius:2px;transform:translateX(-50%)"></div>'+
+  '</div>';
+}
+function examRow(item,idx){
+  var bt=idx>0?'border-top:1px solid rgba(0,0,0,.07);':'';
+  var bg=idx%2===0?'background:#F5F4F0;':'background:#EEEEED;';
+  var tagColor=TAG_COLORS[item.tag]||'#807F78';
+  var tagBadge=item.tag?'<span style="font-size:8px;font-weight:700;color:'+tagColor+';border:1px solid '+tagColor+';border-radius:2px;padding:1px 4px;margin-left:5px;white-space:nowrap">'+item.tag+'</span>':'';
+  var h='<div style="display:flex;align-items:center;padding:10px 20px;'+bt+bg+'">';
+  h+='<div style="flex:1;min-width:0;padding-right:8px">'+
+    '<span style="font-size:12px;font-weight:700;color:#15140F">'+item.code+'</span>'+tagBadge+
+    '<br><span style="font-size:10px;color:#807F78">'+item.name+'</span>';
+  if(item.note)h+='<div style="font-size:9.5px;color:#807F78;margin-top:2px;line-height:1.4">'+item.note+'</div>';
+  h+='</div>';
+  h+='<div style="flex-shrink:0;text-align:right">';
+  if(item.noBar){
+    h+='<span style="font-size:16px;font-weight:250;color:#807F78">'+item.value+'</span>';
+  }else{
+    var st=examSt(item);
+    h+='<div style="display:flex;align-items:baseline;justify-content:flex-end;gap:4px;margin-bottom:4px">'+
+      '<span style="font-size:17px;font-weight:250;letter-spacing:-0.5px;color:'+st.color+'">'+item.value+'</span>'+
+      '<span style="font-size:10px;color:#807F78">'+item.unit+'</span>'+
+      '<span style="font-size:10px;font-weight:700;color:'+st.color+'">'+st.text+'</span>'+
+    '</div>';
+    h+=barCSS(item);
+    h+='<div style="display:flex;justify-content:space-between;width:112px;font-size:8.5px;color:#AEADA6;margin-top:2px"><span>低</span><span>高</span></div>';
+  }
+  h+='</div></div>';
+  return h;
+}
+function renderExam(){
+  var ex=D.exam||{};
+  var hasAny=(ex.procyte&&ex.procyte.length)||(ex.catalyst&&ex.catalyst.length)||(ex.imaging&&ex.imaging.length)||ex.date||ex.diagnosis||(ex.notes&&ex.notes.length);
+  if(!hasAny){
+    return '<div style="padding:70px 28px;text-align:center">'+
+      '<div style="font-size:14px;font-weight:700;letter-spacing:1px;color:#15140F">尚無健檢資料</div>'+
+      '<p class="hint" style="margin-top:10px">用上方「還原」匯入含健檢的備份檔,或啟用雲端同步後會自動帶入。</p>'+
+    '</div>';
+  }
+  var h='<div style="padding-bottom:32px">';
+  h+='<div style="padding:16px 20px 14px;border-bottom:1.5px solid #15140F">'+
+    '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78">健康檢查 · EXAM</div>'+
+    '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:5px">'+
+      '<div style="font-size:24px;font-weight:300;letter-spacing:-0.5px">'+(ex.date||'—')+'</div>'+
+      (ex.weight!=null?'<div style="font-size:11px;color:#807F78;font-weight:700">體重 '+ex.weight.toFixed(2)+' kg</div>':'')+
+    '</div>'+
+  '</div>';
+  if(ex.procyte&&ex.procyte.length){
+    h+='<div style="padding:8px 20px;background:#DDDCD6;display:flex;align-items:center">'+
+      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78">ProCyte One · 血液學</div></div>';
+    ex.procyte.forEach(function(item,idx){h+=examRow(item,idx);});
+  }
+  if(ex.catalyst&&ex.catalyst.length){
+    h+='<div style="padding:8px 20px;background:#DDDCD6;border-top:1.5px solid #15140F;margin-top:2px;display:flex;align-items:center">'+
+      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78">Catalyst One · 生化</div></div>';
+    ex.catalyst.forEach(function(item,idx){h+=examRow(item,idx);});
+  }
+  if(ex.imaging&&ex.imaging.length){
+    h+='<div style="border-top:1.5px solid #15140F;padding:14px 20px 8px;margin-top:2px">'+
+      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78;margin-bottom:10px">影像檢查 · IMAGING</div>';
+    ex.imaging.forEach(function(im,i){
+      h+='<div style="display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-top:'+(i>0?'1px solid rgba(0,0,0,.08)':'none')+'">'+
+        '<span style="font-size:13px;font-weight:700;color:#15140F">'+im.area+'</span>'+
+        '<span style="font-size:12.5px;color:#807F78;text-align:right;max-width:60%">'+im.finding+'</span>'+
+      '</div>';
+    });
+    h+='</div>';
+  }
+  if(ex.diagnosis||(ex.notes&&ex.notes.length)){
+    h+='<div style="border-top:1.5px solid #15140F;padding:14px 20px">'+
+      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78;margin-bottom:10px">獸醫囑咐 · NOTES</div>'+
+      (ex.diagnosis?'<div style="font-size:13px;font-weight:700;margin-bottom:6px">'+ex.diagnosis+'</div>':'')+
+      ((ex.notes&&ex.notes.length)?'<div style="font-size:12.5px;color:#807F78;line-height:2">'+ex.notes.join('<br>')+'</div>':'')+
+    '</div>';
+  }
+  h+='</div>';
+  return h;
+}
+
+/* ── Render ── */
+function re(){
+  var app=document.getElementById('app');if(!app)return;
+  app.innerHTML=renderHdr()+(VIEW==='home'?renderHome():VIEW==='log'?renderLog():renderExam());
+}
+
+function renderHdr(){
+  return '<div class="hdr">'+
+    '<div>'+
+    '<div class="hdr-title">蝦app</div>'+
+    '<div class="hdr-date">'+nd()+'</div>'+
+    '</div>'+
+    '<div class="hdr-right">'+
+      '<div class="hdr-clock" id="clk">'+nc()+'</div>'+
+      '<nav class="nav">'+
+        '<button class="nbtn'+(VIEW==='home'?' on':'')+'" onclick="gv(\'home\')">首頁</button>'+
+        '<button class="nbtn'+(VIEW==='log'?' on':'')+'" onclick="gv(\'log\')">紀錄</button>'+
+        '<button class="nbtn'+(VIEW==='exam'?' on':'')+'" onclick="gv(\'exam\')">健檢</button>'+
+      '</nav>'+
+    '</div>'+
+  '</div>'+
+  '<div class="bio">'+
+    '<div class="bio-item"><div class="bio-lbl">生日</div><div class="bio-val">'+bdDisp()+'</div></div>'+
+    '<div class="bio-item"><div class="bio-lbl">年齡</div><div class="bio-val">'+(catAge()||'—')+'</div></div>'+
+    '<div style="margin-left:auto;display:flex;gap:6px;align-items:center">'+
+      '<button class="pill" style="font-size:10px;padding:4px 10px" onclick="expbk()">備份</button>'+
+      '<button class="pill" style="font-size:10px;padding:4px 10px" onclick="document.getElementById(\'imp\').click()">還原</button>'+
+      '<button class="pill'+(syncOn()?' acc':'')+'" style="font-size:10px;padding:4px 10px" onclick="openSync()">雲端</button>'+
+    '</div>'+
+  '</div>';
+}
+
+function renderHome(){
+  var bs=bsum(),ws=wsum(),ms=msum(),vs=vsum(),fs=fsum();
+  var cards=[
+    {id:'breath',en:'BREATH',sum:bs},
+    {id:'weight',en:'WEIGHT',sum:ws},
+    {id:'meds',en:'MEDS',sum:ms},
+    {id:'vomit',en:'VOMIT',sum:vs},
+    {id:'food',en:'FOOD',sum:fs}
+  ];
+  var h='<div class="cards">';
+  cards.forEach(function(c){
+    var io=OPEN===c.id;
+    h+='<div class="card '+(io?'open':'closed')+'">';
+    h+='<button class="chdr" onclick="tc(\''+c.id+'\')"><span class="ctitle">'+c.en+'</span>';
+    if(!io){
+      if(c.sum.has){
+        h+='<div>'+
+          '<div class="csum-val">'+pxsvg(String(c.sum.value),4,(c.sum.alert?ORG:INK),c.sum.alert)+'<span class="u">'+c.sum.unit+'</span></div>'+
+          '<div class="csum-status"><span class="dot'+(c.sum.alert?' alert':'')+'"></span><span class="stxt'+(c.sum.alert?' alert':'')+'">'+c.sum.status+'</span></div>'+
+        '</div>';
+      }else{
+        h+='<span class="norec">尚無紀錄 +</span>';
+      }
+    }
+    h+='</button>';
+    if(io){
+      var tool='';
+      if(c.id==='breath')tool=renderBreath();
+      else if(c.id==='weight')tool=renderWeight();
+      else if(c.id==='meds')tool=renderMeds();
+      else if(c.id==='vomit')tool=renderVomit();
+      else tool=renderFoodForm();
+      h+='<div class="cbody">'+tool+'</div>';
+    }
+    h+='</div>';
+  });
+  h+='<div class="cfooter">未來可加入更多卡片</div></div>';
+  return h;
+}
+
+/* ── Breath ── */
+function renderBreath(){
+  if(BP==='counting'){
+    return '<button class="cnt" onclick="btap()">'+
+      '<div class="cnt-flash" id="cfl"></div>'+
+      '<div class="cnt-top"><span class="cnt-lbl">COUNTING</span><span class="cnt-time" id="ctm">剩餘 '+BTIME+'s</span></div>'+
+      '<div class="cnt-num" id="cnum">'+BCNT+'</div>'+
+      '<div class="cnt-hint">蝦子每呼吸一次 → 點這整塊</div>'+
+    '</button><div class="gsm"></div>'+
+    '<button class="bbtn ghost" onclick="bcancel()">取消 CANCEL</button>';
+  }
+  if(BP==='result'){
+    var lv=judge(BBPM,BSTATE),hi=lv==='high';
+    return '<div class="res-hdr"><div class="res-lbl">RESULT / 測量結果</div>'+
+      '<div class="res-row"><span class="res-num">'+BBPM+'</span><span class="pill acc">次/分</span></div></div>'+
+      '<div class="gsm"></div>'+
+      '<span class="pill oc" style="border-color:'+(hi?ORG:INK)+';color:'+(hi?ORG:INK)+';margin-bottom:14px">'+LVL[lv]+'</span>'+
+      '<div class="ey">當時狀態 / STATE</div>'+
+      '<div class="pills" style="margin-bottom:4px" id="stbns">'+
+        Object.keys(STATES).map(function(k){return '<button class="pill'+(BSTATE===k?' on':'')+'" onclick="bss(\''+k+'\')">'+STATES[k]+'</button>';}).join('')+
+      '</div>'+
+      '<p class="hint alt" id="bhw" style="'+(BSTATE==='asleep'&&hi?'':'display:none')+'">熟睡 ≥40 次/分屬警訊,建議盡快聯絡獸醫。</p>'+
+      '<div class="g"></div><div class="ey">備註(選填)</div>'+
+      '<textarea class="tarea" placeholder="例:今天較熱⋯" oninput="BNOTE=this.value">'+BNOTE+'</textarea>'+
+      '<div class="g"></div><div style="display:flex;gap:8px">'+
+        '<button class="bbtn ghost" style="flex:1" onclick="breset()">重測</button>'+
+        '<button class="bbtn" style="flex:1" onclick="bsave()">儲存 SAVE</button>'+
+      '</div>';
+  }
+  var modeH=BMODE==='tap'?
+    '<div class="ey">計時長度 / DURATION</div>'+
+    '<div class="pills" style="margin-bottom:16px">'+[15,30,60].map(function(d){return '<button class="pill'+(BDUR===d?' on':'')+'" onclick="sbd('+d+')">'+d+'s</button>';}).join('')+'</div>'+
+    '<button class="bbtn" onclick="bstart()">開始計數 START</button>'+
+    '<p class="hint">在蝦子沒注意你時測最準,熟睡的數字最有參考價值。</p>'+
+    '<div class="g"></div><div class="ey">判讀標準</div>'+
+    '<div class="scale-row"><span class="scale-key">熟睡</span><span class="scale-val">&lt;30 正常 · 30–39 觀察 · ≥40 警訊</span></div>'+
+    '<div class="scale-row"><span class="scale-key">清醒靜止</span><span class="scale-val">20–30 正常 · 31–39 偏高 · ≥40 過高</span></div>'+
+    '<div class="scale-row"><span class="scale-key">活動後</span><span class="scale-val">僅供參考,安靜後重測</span></div>'
+    :
+    '<div class="ey">每分鐘次數 / BPM</div>'+
+    '<div style="display:flex;align-items:flex-end;gap:8px">'+
+      '<input type="number" inputmode="numeric" class="bare" value="'+BMANUAL+'" placeholder="40" oninput="BMANUAL=this.value" style="font-size:42px;font-weight:250;letter-spacing:-2px;padding:2px 0">'+
+      '<button class="pill on" onclick="bcm()">確認</button>'+
+    '</div><p class="hint">數 30 秒的話,記得 ×2 再輸入。</p>';
+  return '<div class="ey">方式 / MODE</div>'+
+    '<div class="pills" style="margin-bottom:16px">'+
+      '<button class="pill'+(BMODE==='tap'?' on':'')+'" onclick="sbm(\'tap\')">點按計數</button>'+
+      '<button class="pill'+(BMODE==='manual'?' on':'')+'" onclick="sbm(\'manual\')">手動輸入</button>'+
+    '</div>'+modeH;
+}
+
+/* ── Weight ── */
+function renderWeight(){
+  var last=D.weights.length?D.weights[D.weights.length-1]:null;
+  var fkg=NaN;
+  if(WMODE==='calc'){var my=parseFloat(WMYKG),combo=parseFloat(WCOMBO);if(!isNaN(my)&&!isNaN(combo)&&combo>my)fkg=Math.round((combo-my)*100)/100;}
+  else{fkg=Math.round(parseFloat(WKG)*100)/100;}
+  var valid=!isNaN(fkg)&&fkg>0.5&&fkg<20;
+  var diffH='';
+  if(valid&&last){
+    var diff=fkg-last.kg,pct=diff/last.kg*100,al=pct<=-5;
+    diffH='<div style="margin-top:12px"><span class="pill '+(al?'acc':'oc')+'" style="'+(al?'':'border-color:'+INK+';color:'+INK)+'">'+(diff>=0?'+':'')+diff.toFixed(2)+' kg · '+(pct>=0?'+':'')+pct.toFixed(1)+'%</span>'+
+      (pct<=-5?'<p class="hint alt">降幅 ≥5%,對腎貓是警訊,回診請主動告知。</p>':'')+
+      (pct>-5&&pct<=-2?'<p class="hint">體重往下走,建議拉近測量間隔、留意食慾。</p>':'')+
+    '</div>';
+  }
+  var calcH='<div class="ey">我的體重 (kg)</div>'+
+    '<input type="number" inputmode="decimal" step="0.1" class="bare" value="'+WMYKG+'" placeholder="55.0" oninput="WMYKG=this.value;wcalc()" style="font-size:38px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid #15140F;margin-bottom:16px">'+
+    '<div class="ey">抱著蝦子的體重 (kg)</div>'+
+    '<input type="number" inputmode="decimal" step="0.01" class="bare" value="'+WCOMBO+'" placeholder="61.2" oninput="WCOMBO=this.value;wcalc()" style="font-size:38px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid #15140F">'+
+    '<div style="margin-top:14px;padding:14px 16px;background:#AEADA6;display:flex;align-items:baseline;gap:8px">'+
+      '<span style="font-size:9.5px;font-weight:700;letter-spacing:2px;color:#807F78;white-space:nowrap">蝦子體重 =</span>'+
+      '<span id="wcalc-val" style="font-size:42px;font-weight:200;letter-spacing:-2px;line-height:1;color:'+(valid?INK:'#BEBDB6')+'">'+(valid?fkg.toFixed(2):'—')+'</span>'+
+      '<span style="font-size:14px;color:#807F78;font-weight:500">kg</span>'+
+    '</div>';
+  var directH='<div class="ey">今日體重 (kg)</div>'+
+    '<div style="display:flex;align-items:flex-end;gap:10px">'+
+      '<input type="number" inputmode="decimal" step="0.01" class="bare" value="'+WKG+'" placeholder="'+(baseW()!=null?baseW().toFixed(2):'0.00')+'" oninput="WKG=this.value;wdirect()" style="font-size:56px;font-weight:200;letter-spacing:-3px;padding:0">'+
+      '<span style="font-size:16px;color:#807F78;font-weight:500;margin-bottom:10px">kg</span>'+
+    '</div>';
+  return '<div class="ey">輸入方式</div>'+
+    '<div class="pills" style="margin-bottom:18px">'+
+      '<button class="pill'+(WMODE==='calc'?' on':'')+'" onclick="swmode(\'calc\')">抱著量(自動計算)</button>'+
+      '<button class="pill'+(WMODE==='direct'?' on':'')+'" onclick="swmode(\'direct\')">直接輸入</button>'+
+    '</div>'+
+    (WMODE==='calc'?calcH:directH)+
+    '<div id="wdiff">'+diffH+'</div>'+
+    '<div class="g"></div><div class="ey">測量方式備註</div>'+
+    '<div class="pills" id="wloc-pills">'+
+      '<button class="pill'+(WLOC==='home'?' on':'')+'" onclick="swl(\'home\')">在家抱著量</button>'+
+      '<button class="pill'+(WLOC==='clinic'?' on':'')+'" onclick="swl(\'clinic\')">醫院量</button>'+
+      '<button class="pill'+(WLOC==='custom'?' on':'')+'" onclick="swl(\'custom\')">自己輸入</button>'+
+    '</div>'+
+    '<div id="wcustom-wrap" style="'+(WLOC==='custom'?'':'display:none')+'">'+
+      '<input type="text" class="bare" placeholder="輸入備註⋯" value="'+WCUSTOM+'" oninput="WCUSTOM=this.value" style="font-size:14px;border-bottom:1.5px solid rgba(0,0,0,.18);padding:8px 0;margin-top:10px">'+
+    '</div>'+
+    '<div class="g"></div>'+
+    '<button class="bbtn" id="wsave" onclick="wsave()"'+(valid?'':' disabled')+'>儲存體重 SAVE</button>'+
+    '<p class="hint">固定同一台秤、同一時段量。腎貓每 1–2 週一次。'+(baseW()!=null?'基準 '+baseW().toFixed(2)+' kg,':'')+'降幅達 5% 應告知獸醫。</p>';
+}
+
+/* ── Meds ── */
+function renderMeds(){
+  var tr=todayMeds();
+  var sbar='';
+  if(tr){
+    if(tr.morn>0&&tr.eve>0)sbar='<div style="padding:10px 14px;background:#15140F;color:#F4F3EF;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早晚已記錄,可在下方修改</div>';
+    else if(tr.morn>0)sbar='<div style="padding:10px 14px;background:#AEADA6;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早餐已記 '+tr.morn+' 顆，記完晚餐再存一次</div>';
+  }
+  function stp(id,val,meal){
+    return '<div style="display:flex;align-items:center">'+
+      '<button onclick="adjm(\''+meal+'\',-1)" style="width:44px;height:44px;border:none;background:#C3C2BB;font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
+      '<span id="'+id+'" style="width:52px;text-align:center;font-size:32px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
+      '<button onclick="adjm(\''+meal+'\',1)" style="width:44px;height:44px;border:none;background:#C3C2BB;font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
+    '</div>';
+  }
+  return sbar+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'+
+      '<span style="font-size:13px;font-weight:700;letter-spacing:1px">養氣</span>'+
+      '<span style="font-size:10px;color:#807F78;letter-spacing:1px">寵特寶養氣 · Opti-Airwei</span>'+
+    '</div>'+
+    '<div style="height:1px;background:rgba(0,0,0,.1);margin-bottom:14px"></div>'+
+    '<div style="display:flex;gap:0;margin-bottom:18px">'+
+      '<div style="flex:1">'+
+        '<div class="ey">早餐</div>'+
+        stp('mmorn-val',MMORN,'morn')+
+        '<div style="font-size:10px;color:#807F78;margin-top:3px;padding-left:4px">顆</div>'+
+      '</div>'+
+      '<div style="width:1px;background:rgba(0,0,0,.1);margin:0 14px"></div>'+
+      '<div style="flex:1">'+
+        '<div class="ey">晚餐</div>'+
+        stp('meve-val',MEVE,'eve')+
+        '<div style="font-size:10px;color:#807F78;margin-top:3px;padding-left:4px">顆</div>'+
+      '</div>'+
+    '</div>'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;margin-top:4px">'+
+      '<span style="font-size:13px;font-weight:700;letter-spacing:1px">胺寶</span>'+
+      '<span style="font-size:10px;color:#807F78;letter-spacing:1px">每 5kg · 每次最多 2ml</span>'+
+    '</div>'+
+    '<div style="height:1px;background:rgba(0,0,0,.1);margin-bottom:14px"></div>'+
+    '<div style="display:flex;gap:0;margin-bottom:18px">'+
+      '<div style="flex:1">'+
+        '<div class="ey">早餐</div>'+
+        aminoStp('amino-morn-val',MAMORN,'morn')+
+        '<div style="font-size:10px;color:#807F78;margin-top:3px;padding-left:4px">ml</div>'+
+      '</div>'+
+      '<div style="width:1px;background:rgba(0,0,0,.1);margin:0 14px"></div>'+
+      '<div style="flex:1">'+
+        '<div class="ey">晚餐</div>'+
+        aminoStp('amino-eve-val',MAEVE,'eve')+
+        '<div style="font-size:10px;color:#807F78;margin-top:3px;padding-left:4px">ml</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="ey">備註(選填)</div>'+
+    '<textarea class="tarea" placeholder="例:今天拒食⋯" oninput="MNOTE=this.value" style="margin-bottom:14px">'+MNOTE+'</textarea>'+
+    '<button class="bbtn" onclick="msave()">'+(tr?'更新今日用藥':'儲存用藥 SAVE')+'</button>';
+}
+
+/* ── Vomit ── */
+var VPRESETS=[
+  '未消化食物','食物殘渣(半消化)','草/植物',
+  '透明黏液','白色泡沫','黃色胃液','黃綠色膽汁',
+  '毛球',
+  '含血絲','含異物','含寄生蟲'
+];
+function renderVomit(){
+  var timeVal=VTIME||localTimeStr();
+  var groups=[
+    {label:'食物類',items:['未消化食物','食物殘渣(半消化)','草/植物']},
+    {label:'液體類',items:['透明黏液','白色泡沫','黃色胃液','黃綠色膽汁']},
+    {label:'固體類',items:['毛球']},
+    {label:'警示類',items:['含血絲','含異物','含寄生蟲']}
+  ];
+  var groupH='';
+  groups.forEach(function(g){
+    var isAlert=g.label==='警示類';
+    groupH+='<div style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'#D64B3F':'#807F78')+';margin:12px 0 6px">'+g.label+'</div>'+
+      '<div class="pills">'+
+        g.items.map(function(p){
+          var on=VCONTENT.indexOf(p)>=0;
+          var style=isAlert?'border-color:'+(on?'#E84204':'#D64B3F')+';color:'+(on?'#F4F3EF':'#D64B3F')+';background:'+(on?'#E84204':'transparent')+';':'';
+          return '<button class="pill'+(on&&!isAlert?' on':'')+'" onclick="vtoggle(\''+p+'\')" style="'+style+'">'+p+'</button>';
+        }).join('')+
+      '</div>';
+  });
+  return '<div class="ey">嘔吐時間 / TIME</div>'+
+    '<input type="datetime-local" class="bare" value="'+timeVal+'" oninput="VTIME=this.value" style="font-size:15px;font-weight:600;padding:8px 0;border-bottom:2px solid #15140F;margin-bottom:4px">'+
+    '<div class="ey">內容物(可多選)</div>'+
+    '<div id="vpreset">'+groupH+'</div>'+
+    '<div class="ey" style="margin-top:16px">其他補充</div>'+
+    '<textarea class="tarea" placeholder="例:量多、連續嘔吐、有異味⋯" oninput="VNOTE=this.value" style="margin-bottom:14px">'+VNOTE+'</textarea>'+
+    '<button class="bbtn" onclick="vsave()">儲存紀錄 SAVE</button>';
+}
+
+/* ── Food ── */
+function renderFoodForm(){
+  var isCan=FTYPE==='罐頭';
+  var typeH='<div class="ey">類型 / TYPE</div>'+
+    '<div class="pills" style="margin-bottom:14px">'+
+      ['罐頭','飼料','零食'].map(function(t){return '<button class="pill'+(FTYPE===t?' on':'')+'" onclick="ftype(\''+t+'\')">'+t+'</button>';}).join('')+
+    '</div>';
+  var finishH='<div class="ey">吃完多少 / FINISH</div>'+
+    '<div class="pills" style="margin-bottom:14px">'+
+      [0,50,100].map(function(p){
+        var on=FFINISH===p;
+        var col=p===100?'#4E8C5A':p===0?'#D64B3F':INK;
+        var style=on?('border-color:'+col+';color:#F4F3EF;background:'+col+';'):('border-color:'+col+';color:'+col+';');
+        return '<button class="pill" onclick="ffinish('+p+')" style="'+style+'">'+p+'%</button>';
+      }).join('')+
+    '</div>';
+  var speedH='<div class="ey">食用速度 / SPEED</div>'+
+    '<div class="pills" style="margin-bottom:14px">'+
+      ['立刻','隔很久'].map(function(s){return '<button class="pill'+(FSPEED===s?' on':'')+'" onclick="fspeed(\''+s+'\')">'+s+'</button>';}).join('')+
+    '</div>';
+  var likeH='<div class="ey">喜歡嗎 / LIKE</div>'+
+    '<div class="pills" style="margin-bottom:14px">'+
+      ['喜歡','普通','不喜歡'].map(function(l){
+        var on=FLIKE===l;
+        var col=l==='喜歡'?'#4E8C5A':l==='不喜歡'?'#D64B3F':INK;
+        var style=on?('border-color:'+col+';color:#F4F3EF;background:'+col+';'):('border-color:'+col+';color:'+col+';');
+        return '<button class="pill" onclick="flike(\''+l+'\')" style="'+style+'">'+l+'</button>';
+      }).join('')+
+    '</div>';
+  var brandSugs=foodSuggestions(FTYPE,'brand');
+  var flavorSugs=foodSuggestions(FTYPE,'flavor');
+  var datalistH=
+    '<datalist id="brandlist">'+brandSugs.map(function(v){return '<option value="'+v.replace(/"/g,'&quot;')+'">';}).join('')+'</datalist>'+
+    '<datalist id="flavorlist">'+flavorSugs.map(function(v){return '<option value="'+v.replace(/"/g,'&quot;')+'">';}).join('')+'</datalist>';
+  return '<div style="padding:14px 18px 4px">'+
+    typeH+
+    datalistH+
+    '<div class="ey">品牌</div>'+
+    '<input type="text" class="bare" list="brandlist" value="'+FBRAND+'" placeholder="例:毛掌醫學" oninput="FBRAND=this.value" style="font-size:16px;font-weight:600;padding:8px 0;border-bottom:2px solid #15140F;margin-bottom:14px;width:100%">'+
+    '<div class="ey">口味</div>'+
+    '<input type="text" class="bare" list="flavorlist" value="'+FFLAVOR+'" placeholder="例:雞肉口味" oninput="FFLAVOR=this.value" style="font-size:16px;font-weight:600;padding:8px 0;border-bottom:2px solid #15140F;margin-bottom:14px;width:100%">'+
+    (isCan?(finishH+speedH):likeH)+
+    '<div class="ey">備註(選填)</div>'+
+    '<textarea class="tarea" placeholder="例:第一次吃接受度高⋯" oninput="FNOTE=this.value" style="margin-bottom:14px">'+FNOTE+'</textarea>'+
+    '<button class="bbtn" onclick="fsave()">儲存 SAVE</button>'+
+  '</div>';
+}
+
+function renderFoodLog(){
+  var subs=['罐頭','飼料','零食'];
+  var subTabsH='<div class="pills" style="padding:10px 18px 0;margin-bottom:4px">'+
+    subs.map(function(s){
+      var cnt=s==='罐頭'?D.foods.filter(function(r){return r.type===s;}).length:D.foodItems.filter(function(r){return r.type===s;}).length;
+      return '<button class="pill'+(FOODSUB===s?' on':'')+'" onclick="fsub(\''+s+'\')">'+s+' '+cnt+'</button>';
+    }).join('')+
+  '</div>';
+
+  if(FOODSUB!=='罐頭')return subTabsH+renderFoodItemList();
+
+  var items=D.foods.filter(function(r){return r.type===FOODSUB;});
+
+  // group by normalized brand+flavor (handles full-width/spacing/case variants)
+  var groups={};
+  items.forEach(function(r){
+    var key=norm(r.brand)+'｜'+norm(r.flavor);
+    if(!groups[key])groups[key]={brand:r.brand||'(未填品牌)',flavor:r.flavor,recs:[],labelCounts:{}};
+    groups[key].recs.push(r);
+    var labelKey=(r.brand||'(未填品牌)')+'｜'+(r.flavor||'');
+    groups[key].labelCounts[labelKey]=(groups[key].labelCounts[labelKey]||0)+1;
+  });
+  var groupArr=Object.keys(groups).map(function(k){return groups[k];});
+  groupArr.forEach(function(g){
+    // pick the most frequently used original spelling for display
+    var bestLabel=Object.keys(g.labelCounts).sort(function(a,b){return g.labelCounts[b]-g.labelCounts[a];})[0];
+    var parts=bestLabel.split('｜');
+    g.brand=parts[0];g.flavor=parts[1];
+    g.total=g.recs.length;
+    g.c100=g.recs.filter(function(r){return r.finish===100;}).length;
+    g.c50=g.recs.filter(function(r){return r.finish===50;}).length;
+    g.c0=g.recs.filter(function(r){return r.finish===0;}).length;
+    g.avgFinish=g.recs.reduce(function(a,r){return a+r.finish;},0)/g.total;
+    g.lastTs=Math.max.apply(null,g.recs.map(function(r){return r.ts;}));
+  });
+  groupArr.sort(function(a,b){return b.avgFinish-a.avgFinish||b.c100-a.c100||b.total-a.total;});
+
+  var statsH='';
+  if(groupArr.length){
+    statsH='<div style="padding:10px 18px 0">'+
+      groupArr.map(function(g){
+        var pct100=Math.round(g.c100/g.total*100);
+        return '<div style="padding:12px 0;border-top:1px solid rgba(0,0,0,.08)">'+
+          '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">'+
+            '<span style="font-size:13px;font-weight:700;color:'+INK+'">'+g.brand+(g.flavor?(' · '+g.flavor):'')+'</span>'+
+            '<span style="font-size:10px;color:#807F78;flex-shrink:0">餵了 '+g.total+' 次</span>'+
+          '</div>'+
+          '<div style="display:flex;gap:10px;margin-top:6px;font-size:11px">'+
+            '<span style="color:#4E8C5A;font-weight:700">100% × '+g.c100+'</span>'+
+            '<span style="color:'+INK+'">50% × '+g.c50+'</span>'+
+            '<span style="color:#D64B3F;font-weight:700">0% × '+g.c0+'</span>'+
+          '</div>'+
+          '<div style="height:6px;background:#E5E4DE;margin-top:8px;display:flex;overflow:hidden">'+
+            (g.c100>0?'<div style="width:'+(g.c100/g.total*100)+'%;background:#4E8C5A"></div>':'')+
+            (g.c50>0?'<div style="width:'+(g.c50/g.total*100)+'%;background:'+INK+'"></div>':'')+
+            (g.c0>0?'<div style="width:'+(g.c0/g.total*100)+'%;background:#D64B3F"></div>':'')+
+          '</div>'+
+        '</div>';
+      }).join('')+
+    '</div>';
+  }
+
+  var listSorted=items.slice().sort(function(a,b){return b.ts-a.ts;});
+  var listH=listSorted.map(function(r){
+    var isc=LCID===r.id;
+    var delbtns=isc?
+      '<div style="display:flex;gap:6px;flex-shrink:0"><button class="delbtn cfm" onclick="fdel(\''+r.id+'\')">刪</button><button class="delbtn" onclick="LCID=null;re()">取消</button></div>':
+      '<button class="delbtn" style="flex-shrink:0" onclick="LCID=\''+r.id+'\';re()">X</button>';
+    var rdate=dateStr(r.ts),isToday=rdate===dateStr();
+    var cardBg=isToday?'#DDDCD6':'#F5F4F0';
+    var meta='<div style="font-size:10px;color:#807F78;text-align:right;line-height:1.5">'+fd(r.ts)+'<br>'+ft(r.ts)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
+    var fcol=r.finish===100?'#4E8C5A':r.finish===0?'#D64B3F':INK;
+    var main='<span style="font-size:13px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
+      '<div style="font-size:10px;color:#807F78;margin-top:2px">'+
+        '<span style="color:'+fcol+';font-weight:700">'+r.finish+'%</span> · '+(r.speed||'')+
+      '</div>';
+    return '<div style="padding:9px 18px;border-top:1px solid rgba(0,0,0,.08);background:'+cardBg+';display:flex;align-items:center;gap:10px">'+
+      '<div style="flex:1;min-width:0">'+main+(r.note?'<div style="font-size:10px;color:#807F78;margin-top:2px">'+r.note+'</div>':'')+'</div>'+
+      meta+delbtns+
+    '</div>';
+  }).join('');
+
+  return subTabsH+statsH+
+    '<button onclick="ftoggledetail()" style="width:100%;background:none;border:none;display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px;cursor:pointer">'+
+      '<span class="ey" style="margin-bottom:0">明細'+(items.length?' / '+items.length+' 筆':'')+'</span>'+
+      '<span style="font-size:11px;color:#807F78">'+(FDETAIL?'收合 ▲':'展開 ▼')+'</span>'+
+    '</button>'+
+    (FDETAIL?'<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:#807F78;font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>':'');
+}
+
+function renderFoodItemList(){
+  var items=D.foodItems.filter(function(r){return r.type===FOODSUB;});
+  var rank={'喜歡':0,'普通':1,'不喜歡':2};
+  var sorted=items.slice().sort(function(a,b){
+    var ra=rank[a.like]!==undefined?rank[a.like]:1,rb=rank[b.like]!==undefined?rank[b.like]:1;
+    if(ra!==rb)return ra-rb;
+    return b.ts-a.ts;
+  });
+  var listH=sorted.map(function(r){
+    var isc=LCID===r.id;
+    var ised=LEDIT===r.id;
+    var actBtns=isc?
+      '<div style="display:flex;gap:6px;flex-shrink:0"><button class="delbtn cfm" onclick="fidel(\''+r.id+'\')">刪</button><button class="delbtn" onclick="LCID=null;re()">取消</button></div>':
+      '<div style="display:flex;gap:6px;flex-shrink:0">'+
+        '<button class="delbtn" onclick="LEDIT=(LEDIT===\''+r.id+'\'?null:\''+r.id+'\');LCID=null;re()" style="width:auto;padding:0 10px;font-size:10px">編輯</button>'+
+        '<button class="delbtn" onclick="LCID=\''+r.id+'\';LEDIT=null;re()">X</button>'+
+      '</div>';
+    var col=r.like==='喜歡'?'#4E8C5A':r.like==='不喜歡'?'#D64B3F':INK;
+    var likeTag='<span style="font-size:10px;font-weight:700;color:'+col+'">'+r.like+'</span>';
+    var main='<span style="font-size:13px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
+      '<div style="font-size:10px;color:#807F78;margin-top:2px">'+likeTag+(r.note?(' · '+r.note):'')+'</div>';
+    var editPanel=ised?
+      '<div style="padding:10px 18px;background:#EDECE6;display:flex;gap:6px">'+
+        ['喜歡','普通','不喜歡'].map(function(l){
+          var lcol=l==='喜歡'?'#4E8C5A':l==='不喜歡'?'#D64B3F':INK;
+          var on=r.like===l;
+          var style=on?('border-color:'+lcol+';color:#F4F3EF;background:'+lcol+';'):('border-color:'+lcol+';color:'+lcol+';');
+          return '<button class="pill" onclick="filike(\''+r.id+'\',\''+l+'\')" style="'+style+'flex:1;text-align:center">'+l+'</button>';
+        }).join('')+
+      '</div>':'';
+    return '<div style="padding:10px 18px;border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center;gap:10px">'+
+      '<div style="flex:1;min-width:0">'+main+'</div>'+
+      actBtns+
+    '</div>'+editPanel;
+  }).join('');
+  return '<div class="ey" style="padding:14px 18px 0">已建檔 / '+items.length+' 項</div>'+
+    '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:#807F78;font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>';
+}
+
+function medsHero(tr){
+  // 養氣狀態
+  var yanqiMorn=tr?(tr.morn||0):0, yanqiEve=tr?(tr.eve||0):0;
+  var yanqiDone=yanqiMorn>0&&yanqiEve>0;
+  var yanqiPart=yanqiMorn>0||yanqiEve>0;
+  var yanqiColor=yanqiDone?'#4E8C5A':yanqiPart?'#E84204':'#AEADA6';
+  var yanqiStatus=yanqiDone?'早晚完整':yanqiMorn>0?'待記晚餐':yanqiEve>0?'待記早餐':'今日未記';
+  // 胺寶狀態（目標每次2ml，1–2次/天 = 2–4ml/天）
+  var aminoMorn=tr?(tr.aminoMorn||0):0, aminoEve=tr?(tr.aminoEve||0):0;
+  var aminoTotal=aminoMorn+aminoEve;
+  var aminoColor=aminoTotal>=4?'#4E8C5A':aminoTotal>=2?'#4E8C5A':aminoTotal>0?'#E84204':'#AEADA6';
+  var aminoStatus=aminoTotal>=4?'達上限 4ml':aminoTotal>=2?'達最低 2ml':aminoTotal>0?'低於 2ml 建議量':'今日未記';
+  return '<div style="display:flex;gap:8px;padding:10px 18px 6px;align-items:stretch">'+
+    '<div style="flex:1;background:#F5F4F0;padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between">'+
+      '<div>'+
+        '<div class="ey">養氣 今日</div>'+
+        '<div style="font-size:12px;color:#15140F;line-height:1.8">'+
+          '<span style="color:'+(yanqiMorn>0?'#15140F':'#BEBDB6')+'">早 '+yanqiMorn+' 顆</span>'+
+          ' · '+
+          '<span style="color:'+(yanqiEve>0?'#15140F':'#BEBDB6')+'">晚 '+yanqiEve+' 顆</span>'+
+        '</div>'+
+      '</div>'+
+      '<div style="font-size:11px;font-weight:700;color:'+yanqiColor+';margin-top:8px">'+yanqiStatus+'</div>'+
+    '</div>'+
+    '<div style="flex:1;background:#F5F4F0;padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between">'+
+      '<div>'+
+        '<div class="ey">胺寶 今日</div>'+
+        '<div style="font-size:12px;color:#15140F;line-height:1.8">'+
+          '<span style="color:'+(aminoMorn>0?'#15140F':'#BEBDB6')+'">早 '+aminoMorn+'ml</span>'+
+          ' · '+
+          '<span style="color:'+(aminoEve>0?'#15140F':'#BEBDB6')+'">晚 '+aminoEve+'ml</span>'+
+        '</div>'+
+      '</div>'+
+      '<div>'+
+        '<div style="font-size:11px;font-weight:700;color:'+aminoColor+'">'+aminoStatus+'</div>'+
+        '<div style="font-size:9px;color:#AEADA6;margin-top:2px">目標 2–4ml/天</div>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+}
+
+/* ── Log ── */
+function renderLog(){
+  var recs=LTAB==='breath'?D.breaths:LTAB==='weight'?D.weights:LTAB==='meds'?D.meds:LTAB==='vomit'?D.vomits:D.foods;
+  var list=recs.slice().reverse();
+  var hval='—',halt=false,heroLabel='最新',heroSub='';
+  var s1={lbl:'',val:'—',unit:''},s2={lbl:'',val:'—',unit:'',alt:false};
+  var medsHeroHTML='<div class="log-hero"><div><div class="ey">今日養氣 · 顆</div>'+pxsvg('-',11,'#807F78',false)+'</div></div>';
+  if(LTAB==='breath'&&D.breaths.length){
+    var last=D.breaths[D.breaths.length-1];
+    var all=D.breaths.map(function(r){return r.bpm;});
+    var avg=Math.round(all.reduce(function(a,b){return a+b;},0)/all.length);
+    var slp=D.breaths.filter(function(r){return r.state==='asleep';}).map(function(r){return r.bpm;});
+    hval=String(avg);halt=judge(avg,'')==='high';heroLabel='全部平均 · 次/分';
+    s1={lbl:'最新',val:String(last.bpm),unit:'次/分'};
+    s2={lbl:'熟睡最高',val:slp.length?String(Math.max.apply(null,slp)):'—',unit:'次/分',alt:slp.length>0&&Math.max.apply(null,slp)>=30};
+  }else if(LTAB==='weight'&&D.weights.length){
+    var wl=D.weights[D.weights.length-1],wf=D.weights[0];
+    var wp=D.weights.length>=2?(wl.kg-wf.kg)/wf.kg*100:0;
+    var wAvg=D.weights.reduce(function(a,r){return a+r.kg;},0)/D.weights.length;
+    hval=wAvg.toFixed(2);halt=false;heroLabel='全部平均 · kg';heroSub=baseW()!=null?'基準 '+baseW().toFixed(2)+'kg':'';
+    s1={lbl:'最新',val:wl.kg.toFixed(2),unit:'kg'};
+    s2={lbl:'累計變化',val:(wp>=0?'+':'')+wp.toFixed(1)+'%',unit:'',alt:wp<=-5};
+  }else if(LTAB==='meds'&&D.meds.length){
+    var today2=dateStr(),tr2=todayMeds();
+    var tc2=tr2?(tr2.morn||0)+(tr2.eve||0):0;
+    var ma=D.meds.map(function(r){return (r.morn||0)+(r.eve||0);});
+    var maAmino=D.meds.map(function(r){return (r.aminoMorn||0)+(r.aminoEve||0);});
+    var mavg=(ma.reduce(function(a,b){return a+b;},0)/ma.length).toFixed(1);
+    var maAminoAvg=(maAmino.reduce(function(a,b){return a+b;},0)/maAmino.length).toFixed(1);
+    var yMorn=tr2?(tr2.morn||0):0,yEve=tr2?(tr2.eve||0):0;
+    var yDone=yMorn>0&&yEve>0,yPart=yMorn>0||yEve>0;
+    var yStatus=yDone?'早晚完整':yMorn>0?'待記晚餐':yEve>0?'待記早餐':'今日未記';
+    var aMorn=tr2?(tr2.aminoMorn||0):0,aEve=tr2?(tr2.aminoEve||0):0;
+    var aTotal=aMorn+aEve;
+    var aStatus=aTotal>=4?'達上限':aTotal>=2?'達最低劑量':aTotal>0?'低於建議量':'今日未記';
+    var yanqiColor=yDone?'#4E8C5A':yPart?'#E84204':'#AEADA6';
+    var aminoColor=aTotal>=2?'#4E8C5A':aTotal>0?'#E84204':'#AEADA6';
+    var yanqiPct=yDone?100:yPart?50:0;
+    var aminoPct=Math.min(100,aTotal/4*100);
+    function mkBC(lbl,pct,fillC,detail){
+      var barW=Math.max(0,Math.min(100,pct));
+      var numColor=barW>0?'rgba(21,20,15,0.7)':'rgba(200,198,190,0.5)';
+      var numSvg=pxsvg(String(Math.round(barW))+'%',11,numColor,false);
+      var rTextC=barW>=85?'rgba(21,20,15,0.7)':'rgba(255,255,255,0.7)';
+      return '<div style="display:block;width:100%;position:relative;overflow:hidden;height:90px;box-sizing:border-box">'+
+        '<div style="position:absolute;inset:0;background:#3A3935"></div>'+
+        (barW>0?'<div style="position:absolute;left:0;top:0;height:100%;width:'+barW.toFixed(1)+'%;background:'+fillC+'"></div>':'')+
+        '<div style="position:absolute;left:14px;top:50%;transform:translateY(-50%)">'+numSvg+'</div>'+
+        '<div style="position:absolute;top:10px;right:14px;font-size:13px;font-weight:700;letter-spacing:1px;color:'+rTextC+'">'+lbl+'</div>'+
+        '<div style="position:absolute;bottom:8px;right:14px;font-size:10px;text-align:right;color:'+rTextC+';opacity:0.75">'+detail+'</div>'+
+      '</div>';
+    }
+    var yanqiFillC=yanqiPct>0?'#9FF700':'#5A5952';
+    var aminoFillC=aminoPct>0?'#9FF700':'#5A5952';
+    medsHeroHTML=
+      '<div style="display:flex;flex-direction:column;gap:4px;padding:10px 18px 0">'+
+        mkBC('養氣',yanqiPct,yanqiFillC,yStatus+' · 早'+yMorn+'顆 晚'+yEve+'顆')+
+        mkBC('胺寶',aminoPct,aminoFillC,aStatus+' · '+(aTotal>0?aTotal+'ml':'—')+' / 目標 4ml')+
+      '</div>'+
+      '<div style="height:8px"></div>';
+    hval=String(tc2);heroLabel='今日養氣 · 顆';
+    s1={lbl:'養氣每日均',val:mavg,unit:'顆'};
+    s2={lbl:'胺寶每日均',val:maAminoAvg,unit:'ml',alt:false};
+  }else if(LTAB==='vomit'&&D.vomits.length){
+    var today3=dateStr();
+    var vc=D.vomits.filter(function(r){return (r.date||dateStr(r.ts))===today3;}).length;
+    var vl=D.vomits[D.vomits.length-1];
+    hval=String(vc);heroLabel='今日嘔吐次數';halt=vc>=3;
+    s1={lbl:'累計總次',val:String(D.vomits.length),unit:'次'};
+    s2={lbl:'最近一次',val:fd(vl.ts)+' '+ft(vl.ts),unit:'',alt:false};
+  }
+  var chart='';
+  var chartRecs=recs;
+  if(LTAB==='breath'){
+    chartRecs=(GRAN==='raw')?filterByRange(D.breaths):aggregateRecs(D.breaths,'bpm',GRAN);
+    chart=chartBreath(chartRecs,CHARTSEL.breath);
+  }
+  else if(LTAB==='weight'){
+    chartRecs=(GRAN==='raw')?filterByRange(D.weights):aggregateRecs(D.weights,'kg',GRAN);
+    chart=chartWeight(chartRecs,CHARTSEL.weight);
+  }
+  else if(LTAB==='meds')chart=chartMeds(D.meds);
+  else if(LTAB==='vomit')chart=chartVomit(D.vomits);
+  var listH='';
+  list.forEach(function(r){
+    var isc=LCID===r.id;
+    var delfn=LTAB==='breath'?'dbr':LTAB==='weight'?'dbw':LTAB==='meds'?'dbm':LTAB==='vomit'?'dbv':'fdel';
+    var delbtns=isc?
+      '<div style="display:flex;gap:6px;flex-shrink:0"><button class="delbtn cfm" onclick="'+delfn+'(\''+r.id+'\')">刪</button><button class="delbtn" onclick="LCID=null;re()">取消</button></div>':
+      '<button class="delbtn" style="flex-shrink:0" onclick="LCID=\''+r.id+'\';re()">X</button>';
+    var rdate=r.date||dateStr(r.ts);
+    var isToday=rdate===dateStr();
+    var cardBg=isToday?'#DDDCD6':'#F5F4F0';
+    var meta='<div style="font-size:10px;color:#807F78;text-align:right;line-height:1.5">'+(r.ts?fd(r.ts)+'<br>'+ft(r.ts):rdate)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
+    function rowWrap(main,note){
+      return '<div style="padding:9px 18px;border-top:1px solid rgba(0,0,0,.08);background:'+cardBg+';display:flex;align-items:center;gap:10px">'+
+        '<div style="flex:1;min-width:0">'+main+(note?'<div style="font-size:10px;color:#807F78;margin-top:2px">'+note+'</div>':'')+'</div>'+
+        meta+delbtns+
+      '</div>';
+    }
+    if(LTAB==='breath'){
+      var lv=judge(r.bpm,r.state),hi=lv==='high';
+      listH+=rowWrap(
+        '<div style="display:flex;align-items:baseline;gap:5px;flex-wrap:wrap">'+
+          '<span style="font-size:22px;font-weight:250;letter-spacing:-0.5px;color:'+(hi?ORG:INK)+'">'+r.bpm+'</span>'+
+          '<span style="font-size:10px;color:#807F78">次/分</span>'+
+          '<span style="font-size:10px;color:#BEBDB6">·</span>'+
+          '<span style="font-size:10px;color:#807F78">'+(STATES[r.state]||r.state)+'</span>'+
+          '<span style="font-size:10px;font-weight:700;color:'+(hi?ORG:'#4E8C5A')+'">'+SH[lv]+'</span>'+
+        '</div>',r.note);
+    }else if(LTAB==='weight'){
+      listH+=rowWrap(
+        '<div style="display:flex;align-items:baseline;gap:5px">'+
+          '<span style="font-size:22px;font-weight:250;letter-spacing:-0.5px;color:'+INK+'">'+r.kg.toFixed(2)+'</span>'+
+          '<span style="font-size:10px;color:#807F78">kg</span>'+
+          '<span style="font-size:10px;font-weight:600;color:#807F78">'+wdifftxt(r)+'</span>'+
+        '</div>',r.note);
+    }else if(LTAB==='meds'){
+      var tot=(r.morn||0)+(r.eve||0),aTotal=(r.aminoMorn||0)+(r.aminoEve||0);
+      listH+=rowWrap(
+        '<div style="display:flex;align-items:center;gap:0">'+
+          '<div style="flex:1;padding-right:10px">'+
+            '<span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#807F78">養氣</span> '+
+            '<span style="font-size:11px;color:'+(r.morn>0?INK:'#BEBDB6')+'">早'+(r.morn||0)+'</span>'+
+            '<span style="font-size:11px;color:#BEBDB6"> · </span>'+
+            '<span style="font-size:11px;color:'+(r.eve>0?INK:'#BEBDB6')+'">晚'+(r.eve||0)+'</span>'+
+            '<span style="font-size:11px;color:#807F78"> 顆</span>'+
+          '</div>'+
+          '<div style="width:1px;background:rgba(0,0,0,.12);align-self:stretch;flex-shrink:0"></div>'+
+          '<div style="flex:1;padding-left:10px">'+
+            '<span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#807F78">胺寶</span> '+
+            (aTotal>0?
+              '<span style="font-size:11px;color:'+(r.aminoMorn>0?INK:'#BEBDB6')+'">早'+(r.aminoMorn||0)+'ml</span>'+
+              '<span style="font-size:11px;color:#BEBDB6"> · </span>'+
+              '<span style="font-size:11px;color:'+(r.aminoEve>0?INK:'#BEBDB6')+'">晚'+(r.aminoEve||0)+'ml</span>':
+              '<span style="font-size:11px;color:#BEBDB6">未記錄</span>')+
+          '</div>'+
+        '</div>',r.note);
+    }else if(LTAB==='vomit'){
+      var ct=r.content&&r.content.length?r.content.join('、'):'(未填)';
+      listH+=rowWrap('<div style="font-size:12px;font-weight:600;color:'+INK+'">'+ct+'</div>',r.note);
+    }
+  });
+  return '<div class="log-wrap">'+
+    '<div class="log-tabs">'+
+      '<button class="pill'+(LTAB==='breath'?' on':'')+'" onclick="slt(\'breath\')">呼吸 '+D.breaths.length+'</button>'+
+      '<button class="pill'+(LTAB==='weight'?' on':'')+'" onclick="slt(\'weight\')">體重 '+D.weights.length+'</button>'+
+      '<button class="pill'+(LTAB==='meds'?' on':'')+'" onclick="slt(\'meds\')">用藥 '+D.meds.length+'</button>'+
+      '<button class="pill'+(LTAB==='vomit'?' on':'')+'" onclick="slt(\'vomit\')">嘔吐 '+D.vomits.length+'</button>'+
+      '<button class="pill'+(LTAB==='food'?' on':'')+'" onclick="slt(\'food\')">喜好食物 '+(D.foods.length+D.foodItems.length)+'</button>'+
+      '<button class="add-btn" onclick="addfl()" style="margin-left:auto;flex-shrink:0;width:36px;height:36px;font-size:18px">+</button>'+
+    '</div>'+
+    (LTAB==='food' ? renderFoodLog() :
+      (LTAB==='meds' ? medsHeroHTML :
+        '<div class="log-hero">'+
+          '<div><div class="ey">'+heroLabel+'</div>'+(recs.length?pxsvg(hval,11,INK,halt):pxsvg('-',11,'#807F78',false))+(heroSub?'<div style="font-size:10px;color:#807F78;margin-top:4px;letter-spacing:.5px">'+heroSub+'</div>':'')+'</div>'+
+        '</div>'
+      )+
+      ((LTAB==='breath'||LTAB==='weight')?
+        '<div class="pills" style="padding:8px 18px 0">'+
+          [['raw','逐筆'],['week','週'],['month','月']].map(function(p){return '<button class="pill'+(GRAN===p[0]?' on':'')+'" onclick="setGran(\''+p[0]+'\')" style="font-size:10px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
+        '</div>'+
+        (GRAN==='raw'?
+          '<div class="pills" style="padding:6px 18px 0">'+
+            [['all','全部'],['7d','7天'],['30d','30天']].map(function(p){return '<button class="pill'+(CRANGE===p[0]?' on':'')+'" onclick="setRange(\''+p[0]+'\')" style="font-size:10px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
+          '</div>':'')
+        :''
+      )+
+      (LTAB!=='meds'?'<div class="log-chart">'+(chartRecs.length>=2?chart:'<div style="text-align:center;color:#807F78;font-size:12px;padding:36px 0;letter-spacing:1px">至少 2 筆才會顯示趨勢圖</div>')+'</div>':'')+
+      '<div class="log-stats">'+
+        '<div class="stat"><div class="stat-lbl">'+s1.lbl+'</div><div class="stat-val"><span class="stat-n">'+s1.val+'</span>'+(s1.unit?'<span class="stat-u">'+s1.unit+'</span>':'')+'</div></div>'+
+        '<div class="stat"><div class="stat-lbl">'+s2.lbl+'</div><div class="stat-val"><span class="stat-n" style="'+(s2.alt?'color:'+ORG:'')+'">'+s2.val+'</span>'+(s2.unit?'<span class="stat-u">'+s2.unit+'</span>':'')+'</div>'+(s2.alt?'<span class="stat-arr">v</span>':'')+'</div>'+
+      '</div>'+
+      '<div style="padding:14px 18px 0">'+
+        '<button class="pill" onclick="cpv()" style="width:100%;justify-content:center;padding:10px">複製全部</button>'+
+      '</div>'+
+      '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:#807F78;font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>'
+    )+
+  '</div>';
+}
+
+/* ── Actions ── */
+function gv(v){VIEW=v;LCID=null;re();}
+function tc(id){
+  var opening=(OPEN!==id&&id==='meds');
+  OPEN=OPEN===id?null:id;
+  if(opening){var tr=todayMeds();MMORN=tr?(tr.morn||0):0;MEVE=tr?(tr.eve||0):0;MNOTE=tr?(tr.note||''):'';MAMORN=tr?(tr.aminoMorn||0):0;MAEVE=tr?(tr.aminoEve||0):0;}
+  if(OPEN==='vomit'){VCONTENT=[];VNOTE='';VTIME='';}
+  if(OPEN==='food'){FBRAND='';FFLAVOR='';FTYPE='罐頭';FFINISH=100;FSPEED='立刻';FLIKE='喜歡';FNOTE='';}
+  re();
+}
+function slt(t){LTAB=t;LCID=null;LEDIT=null;CRANGE='all';GRAN='raw';CHARTSEL.breath=null;CHARTSEL.weight=null;if(t==='food'){FBRAND='';FFLAVOR='';FTYPE='罐頭';FFINISH=100;FSPEED='立刻';FLIKE='喜歡';FNOTE='';}re();}
+function addfl(){OPEN=LTAB;gv('home');}
+
+function sbm(m){BMODE=m;re();}
+function sbd(d){BDUR=d;re();}
+function bss(s){
+  BSTATE=s;
+  document.querySelectorAll('#stbns .pill').forEach(function(b){b.className='pill'+(b.getAttribute('onclick').indexOf("'"+s+"'")>-1?' on':'');});
+  var hw=document.getElementById('bhw');if(hw)hw.style.display=(s==='asleep'&&BBPM&&judge(BBPM,s)==='high')?'':'none';
+}
+function breset(){BP='idle';BNOTE='';BMANUAL='';BBPM=null;re();}
+function bstart(){
+  BCNT=0;BCNTREF=0;BTIME=BDUR;BP='counting';re();
+  var t0=Date.now();clearInterval(BTIMER);
+  BTIMER=setInterval(function(){
+    var left=BDUR-Math.floor((Date.now()-t0)/1000);BTIME=Math.max(left,0);
+    var el=document.getElementById('ctm');if(el)el.textContent='剩餘 '+BTIME+'s';
+    if(left<=0){clearInterval(BTIMER);BBPM=Math.round(BCNTREF*(60/BDUR));BP='result';re();}
+  },200);
+}
+function btap(){
+  BCNTREF++;BCNT=BCNTREF;
+  var n=document.getElementById('cnum');if(n)n.textContent=BCNT;
+  var fl=document.getElementById('cfl');if(fl){fl.style.opacity='.4';fl.style.animation='none';void fl.offsetWidth;fl.style.animation='tapflash .35s ease-out forwards';}
+  if(navigator.vibrate)navigator.vibrate(10);
+}
+function bcancel(){clearInterval(BTIMER);BP='idle';re();}
+function bcm(){var v=parseInt(BMANUAL,10);if(!v||v<4||v>200){toast('請輸入合理的數字');return;}BBPM=v;BP='result';re();}
+function bsave(){
+  D.breaths.push({id:uid('b'),ts:Date.now(),bpm:BBPM,state:BSTATE,note:BNOTE.trim(),method:BMODE==='tap'?'點按 '+BDUR+'s':'手動'});
+  D.breaths.sort(function(a,b){return a.ts-b.ts;});saveData();
+  BP='idle';BNOTE='';BMANUAL='';BBPM=null;OPEN=null;toast('已儲存呼吸');re();
+}
+
+function swmode(m){WMODE=m;re();}
+function swl(l){
+  WLOC=l;
+  document.querySelectorAll('#wloc-pills .pill').forEach(function(b){var m=b.getAttribute('onclick').match(/'(\w+)'/);if(m)b.className='pill'+(m[1]===l?' on':'');});
+  var cw=document.getElementById('wcustom-wrap');if(cw)cw.style.display=l==='custom'?'':'none';
+}
+function wcalc(){
+  var my=parseFloat(WMYKG),combo=parseFloat(WCOMBO);
+  var valid=!isNaN(my)&&!isNaN(combo)&&combo>my;
+  var cat=valid?Math.round((combo-my)*100)/100:NaN;
+  var rv=document.getElementById('wcalc-val');if(rv){rv.textContent=valid?cat.toFixed(2):'—';rv.style.color=valid?INK:'#BEBDB6';}
+  wdiffupd(valid?cat:NaN);
+  var sb=document.getElementById('wsave');if(sb)sb.disabled=!valid;
+}
+function wdirect(){
+  var v=parseFloat(WKG);var valid=!isNaN(v)&&v>0.5&&v<20;
+  wdiffupd(valid?Math.round(v*100)/100:NaN);
+  var sb=document.getElementById('wsave');if(sb)sb.disabled=!valid;
+}
+function wdiffupd(fkg){
+  var last=D.weights.length?D.weights[D.weights.length-1]:null;
+  var dd=document.getElementById('wdiff');if(!dd)return;
+  var valid=!isNaN(fkg)&&fkg>0.5&&fkg<20;
+  if(valid&&last){
+    var diff=fkg-last.kg,pct=diff/last.kg*100,al=pct<=-5;
+    dd.innerHTML='<div style="margin-top:12px"><span class="pill '+(al?'acc':'oc')+'" style="'+(al?'':'border-color:'+INK+';color:'+INK)+'">'+(diff>=0?'+':'')+diff.toFixed(2)+' kg · '+(pct>=0?'+':'')+pct.toFixed(1)+'%</span>'+
+      (pct<=-5?'<p class="hint alt">降幅 ≥5%,對腎貓是警訊,回診請主動告知。</p>':'')+
+      (pct>-5&&pct<=-2?'<p class="hint">體重往下走,建議拉近測量間隔、留意食慾。</p>':'')+
+    '</div>';
+  }else{dd.innerHTML='';}
+}
+function wsave(){
+  var fkg=NaN;
+  if(WMODE==='calc'){var my=parseFloat(WMYKG),combo=parseFloat(WCOMBO);if(!isNaN(my)&&!isNaN(combo)&&combo>my)fkg=Math.round((combo-my)*100)/100;}
+  else{fkg=Math.round(parseFloat(WKG)*100)/100;}
+  if(isNaN(fkg)||fkg<=0.5||fkg>=20)return;
+  var note=WLOC==='custom'?WCUSTOM.trim():WLOC==='home'?'在家抱著量':'醫院量';
+  D.weights.push({id:uid('w'),ts:Date.now(),kg:fkg,note:note});
+  D.weights.sort(function(a,b){return a.ts-b.ts;});saveData();
+  WKG='';WMYKG='';WCOMBO='';WCUSTOM='';WLOC='home';OPEN=null;toast('已儲存體重');re();
+}
+
+function adjm(meal,delta){
+  if(meal==='morn')MMORN=Math.max(0,MMORN+delta);else MEVE=Math.max(0,MEVE+delta);
+  var el=document.getElementById(meal==='morn'?'mmorn-val':'meve-val');if(el)el.textContent=meal==='morn'?MMORN:MEVE;
+}
+function adjA(meal,delta){
+  if(meal==='morn')MAMORN=Math.round(Math.max(0,MAMORN+delta)*10)/10;
+  else MAEVE=Math.round(Math.max(0,MAEVE+delta)*10)/10;
+  var el=document.getElementById(meal==='morn'?'amino-morn-val':'amino-eve-val');
+  if(el)el.textContent=meal==='morn'?MAMORN:MAEVE;
+}
+function aminoStp(id,val,meal){
+  return '<div style="display:flex;align-items:center">'+
+    '<button onclick="adjA(\''+meal+'\',-0.5)" style="width:44px;height:44px;border:none;background:#C3C2BB;font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
+    '<span id="'+id+'" style="width:48px;text-align:center;font-size:28px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
+    '<button onclick="adjA(\''+meal+'\',0.5)" style="width:44px;height:44px;border:none;background:#C3C2BB;font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
+  '</div>';
+}
+function msave(){
+  var today=dateStr(),idx=-1;
+  for(var i=0;i<D.meds.length;i++){if((D.meds[i].date||dateStr(D.meds[i].ts))===today){idx=i;break;}}
+  var rec={id:idx>=0?D.meds[idx].id:uid('m'),ts:Date.now(),date:today,morn:MMORN,eve:MEVE,aminoMorn:MAMORN,aminoEve:MAEVE,note:MNOTE.trim()};
+  if(idx>=0)D.meds[idx]=rec;else D.meds.push(rec);
+  D.meds.sort(function(a,b){return a.ts-b.ts;});saveData();
+  MMORN=0;MEVE=0;MNOTE='';MAMORN=0;MAEVE=0;OPEN=null;toast('已儲存用藥');re();
+}
+
+function vtoggle(p){
+  var i=VCONTENT.indexOf(p);if(i>=0)VCONTENT.splice(i,1);else VCONTENT.push(p);
+  var wrap=document.getElementById('vpreset');if(!wrap)return;
+  var groups=[
+    {label:'食物類',items:['未消化食物','食物殘渣(半消化)','草/植物']},
+    {label:'液體類',items:['透明黏液','白色泡沫','黃色胃液','黃綠色膽汁']},
+    {label:'固體類',items:['毛球']},
+    {label:'警示類',items:['含血絲','含異物','含寄生蟲']}
+  ];
+  var groupH='';
+  groups.forEach(function(g){
+    var isAlert=g.label==='警示類';
+    groupH+='<div style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'#D64B3F':'#807F78')+';margin:12px 0 6px">'+g.label+'</div>'+
+      '<div class="pills">'+
+        g.items.map(function(pr){
+          var on=VCONTENT.indexOf(pr)>=0;
+          var style=isAlert?'border-color:'+(on?'#E84204':'#D64B3F')+';color:'+(on?'#F4F3EF':'#D64B3F')+';background:'+(on?'#E84204':'transparent')+';':'';
+          return '<button class="pill'+(on&&!isAlert?' on':'')+'" onclick="vtoggle(\''+pr+'\')" style="'+style+'">'+pr+'</button>';
+        }).join('')+
+      '</div>';
+  });
+  wrap.innerHTML=groupH;
+}
+function vsave(){
+  var ts=VTIME?new Date(VTIME).getTime():Date.now();
+  D.vomits.push({id:uid('v'),ts:ts,date:dateStr(ts),content:VCONTENT.slice(),note:VNOTE.trim()});
+  D.vomits.sort(function(a,b){return a.ts-b.ts;});saveData();
+  VCONTENT=[];VNOTE='';VTIME='';OPEN=null;toast('已儲存嘔吐紀錄');re();
+}
+
+function ftype(t){FTYPE=t;re();}
+function ffinish(p){FFINISH=p;re();}
+function fspeed(s){FSPEED=s;re();}
+function flike(l){FLIKE=l;re();}
+function fsub(s){FOODSUB=s;LCID=null;LEDIT=null;re();}
+function ftoggledetail(){FDETAIL=!FDETAIL;re();}
+function fsave(){
+  if(!FBRAND.trim()&&!FFLAVOR.trim()){toast('請至少填寫品牌或口味');return;}
+  if(FTYPE==='罐頭'){
+    D.foods.push({id:uid('f'),ts:Date.now(),type:FTYPE,brand:FBRAND.trim(),flavor:FFLAVOR.trim(),finish:FFINISH,speed:FSPEED,note:FNOTE.trim()});
+  }else{
+    var b=FBRAND.trim(),fl=FFLAVOR.trim();
+    var existing=D.foodItems.find(function(r){return r.type===FTYPE&&norm(r.brand)===norm(b)&&norm(r.flavor)===norm(fl);});
+    if(existing){
+      existing.like=FLIKE;existing.note=FNOTE.trim();existing.ts=Date.now();
+    }else{
+      D.foodItems.push({id:uid('fi'),ts:Date.now(),type:FTYPE,brand:b,flavor:fl,like:FLIKE,note:FNOTE.trim()});
+    }
+  }
+  saveData();
+  FBRAND='';FFLAVOR='';FTYPE='罐頭';FFINISH=100;FSPEED='立刻';FLIKE='喜歡';FNOTE='';OPEN=null;toast('已儲存');re();
+}
+function fdel(id){D.foods=D.foods.filter(function(r){return r.id!==id;});saveData();toast('已刪除');re();}
+function fidel(id){D.foodItems=D.foodItems.filter(function(r){return r.id!==id;});saveData();LEDIT=null;toast('已刪除');re();}
+function filike(id,l){var r=D.foodItems.find(function(x){return x.id===id;});if(r){r.like=l;saveData();LEDIT=null;re();}}
+
+function dbr(id){D.breaths=D.breaths.filter(function(r){return r.id!==id;});saveData();LCID=null;toast('已刪除');re();}
+function dbw(id){D.weights=D.weights.filter(function(r){return r.id!==id;});saveData();LCID=null;toast('已刪除');re();}
+function dbm(id){D.meds=D.meds.filter(function(r){return r.id!==id;});saveData();LCID=null;toast('已刪除');re();}
+function dbv(id){D.vomits=D.vomits.filter(function(r){return r.id!==id;});saveData();LCID=null;toast('已刪除');re();}
+
+function wdifftxt(rec){
+  var i=D.weights.findIndex(function(x){return x.id===rec.id;});if(i<=0)return'首筆';
+  var p=D.weights[i-1],d=rec.kg-p.kg,pct=d/p.kg*100;
+  return '較上次 '+(d>=0?'+':'')+d.toFixed(2)+' kg('+(pct>=0?'+':'')+pct.toFixed(1)+'%)';
+}
+
+function cpv(){
+  var bL=D.breaths.map(function(r){return ff(r.ts)+' '+ft(r.ts)+'\t'+r.bpm+' 次/分('+( STATES[r.state]||r.state)+')'+(r.note?'\t'+r.note:'');});
+  var wL=D.weights.map(function(r){return ff(r.ts)+'\t'+r.kg.toFixed(2)+' kg'+(r.note?'\t'+r.note:'');});
+  var mL=D.meds.map(function(r){return (r.date||ff(r.ts))+'\t養氣 早'+(r.morn||0)+'顆 晚'+(r.eve||0)+'顆'+(((r.aminoMorn||0)+(r.aminoEve||0)>0)?(' · 胺寶 早'+(r.aminoMorn||0)+'ml 晚'+(r.aminoEve||0)+'ml'):'')+( r.note?'\t'+r.note:'');});
+  var vL=D.vomits.map(function(r){return ff(r.ts)+' '+ft(r.ts)+'\t'+(r.content&&r.content.length?r.content.join('、'):'(未填)')+(r.note?'\t'+r.note:'');});
+  var bs=D.breaths.map(function(r){return r.bpm;});
+  var bst=bs.length?'平均 '+Math.round(bs.reduce(function(a,b){return a+b;},0)/bs.length)+' 範圍 '+Math.min.apply(null,bs)+'-'+Math.max.apply(null,bs):'';
+  var text='蝦子健康紀錄\n\n【呼吸】('+D.breaths.length+' 筆)'+(bst?'\t'+bst:'')+'\n'+(bL.join('\n')||'(無)')+
+    '\n\n【體重】('+D.weights.length+' 筆)'+(D.weights.length?'\t最新 '+D.weights[D.weights.length-1].kg.toFixed(2)+' kg'+(baseW()!=null?' / 基準 '+baseW().toFixed(2):''):'')+'\n'+(wL.join('\n')||'(無)')+
+    '\n\n【養氣用藥】('+D.meds.length+' 筆)\n'+(mL.join('\n')||'(無)')+
+    '\n\n【嘔吐紀錄】('+D.vomits.length+' 筆)\n'+(vL.join('\n')||'(無)');
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){toast('已複製');}).catch(function(){fb(text);});}else{fb(text);}
+}
+function fb(text){
+  var t=document.createElement('textarea');
+  t.value=text;
+  t.style.position='fixed';
+  t.style.top='-9999px';
+  t.style.left='-9999px';
+  t.style.opacity='0';
+  document.body.appendChild(t);
+  t.select();
+  try{document.execCommand('copy');toast('已複製');}catch(e){toast('複製失敗');}
+  finally{t.remove();}
+}
+
+function expbk(){
+  var blob=new Blob([JSON.stringify({app:'shrimp-health',exported:new Date().toISOString(),breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exam:D.exam},null,2)],{type:'application/json'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  var d=new Date();a.download='蝦app備份-'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'.json';
+  a.click();URL.revokeObjectURL(a.href);toast('已下載備份');
+}
+document.getElementById('imp').addEventListener('change',function(e){
+  var f=e.target.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){
+    try{
+      var o=JSON.parse(r.result);
+      if(!o)throw 0;
+      var bi=new Set(D.breaths.map(function(r){return r.id;}));
+      var wi=new Set(D.weights.map(function(r){return r.id;}));
+      var mi=new Set(D.meds.map(function(r){return r.id;}));
+      var vi=new Set(D.vomits.map(function(r){return r.id;}));
+      var fi=new Set(D.foods.map(function(r){return r.id;}));
+      var fii=new Set(D.foodItems.map(function(r){return r.id;}));
+      (o.breaths||[]).forEach(function(r){if(r&&r.id&&!bi.has(r.id))D.breaths.push(r);});
+      (o.weights||[]).forEach(function(r){if(r&&r.id&&!wi.has(r.id))D.weights.push(r);});
+      (o.meds||[]).forEach(function(r){if(r&&r.id&&!mi.has(r.id))D.meds.push(r);});
+      (o.vomits||[]).forEach(function(r){if(r&&r.id&&!vi.has(r.id))D.vomits.push(r);});
+      (o.foods||[]).forEach(function(r){if(r&&r.id&&!fi.has(r.id))D.foods.push(r);});
+      (o.foodItems||[]).forEach(function(r){if(r&&r.id&&!fii.has(r.id))D.foodItems.push(r);});
+      D.breaths.sort(function(a,b){return a.ts-b.ts;});
+      D.weights.sort(function(a,b){return a.ts-b.ts;});
+      D.meds.sort(function(a,b){return a.ts-b.ts;});
+      D.vomits.sort(function(a,b){return a.ts-b.ts;});
+      D.foods.sort(function(a,b){return a.ts-b.ts;});
+      D.foodItems.sort(function(a,b){return a.ts-b.ts;});
+      if(o.profile)D.profile=Object.assign({},DEFAULT_PROFILE,o.profile);
+      if(o.exam)D.exam=Object.assign({},DEFAULT_EXAM,o.exam);
+      saveData();toast('已還原並合併');re();
+    }catch(err){toast('備份格式不正確');}
+    e.target.value='';
+  };
+  r.readAsText(f);
+});
+
+load();re();syncInit();
+setInterval(function(){var el=document.getElementById('clk');if(el)el.textContent=nc();},30000);
+
+/* ── 背景檢查新版本(不阻擋畫面顯示) ── */
+(function checkForUpdate(){
+  try{
+    var curVer=document.querySelector('meta[name="build-version"]');
+    curVer=curVer?curVer.content:'';
+    fetch(location.href,{cache:'no-cache'}).then(function(resp){return resp.text();}).then(function(freshHtml){
+      var m=freshHtml.match(/<meta name="build-version" content="([^"]*)">/);
+      var freshVer=m?m[1]:'';
+      if(freshVer&&freshVer!==curVer){
+        toast('有新版本,重新整理即可更新');
+      }
+    }).catch(function(){});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
