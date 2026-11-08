@@ -10,7 +10,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="蝦app">
-<meta name="build-version" content="20261108-sync">
+<meta name="build-version" content="20261108-exam-history">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAnElEQVR4nOWVSw6AIAwFW6Nn0PPoufU8egZNcFHTRYOkkFRAZsWCQOY9PuicA0s609UBoNdMOpaBBuN6xm5gbpA7IgpHJMOJEeHcMhm8teoVCvP7khERAPb5mVbiPUDxFokjSEzbRQNWITRC9ZesikiJN7HPDTSELYVH/SWrfjQBh6A5EYUZRNVLNFJyQjJMYTe5yT855bGLwtzgBnPiPDcd22hLAAAAAElFTkSuQmCC">
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACR0lEQVR4nO3dwU3DQBRF0RhBDVAP1A31QA0gmQa4YhaxJuOcs7bASFd/80Sy7ft+gb88zH4Bbpc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDtLj7Be4sq+3p8Enn9+/D32TE3A5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SGussnO31vHfPm6JTdjlIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIE1eZQcHz7lb6xIL6hFcDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xr9Dbts2+OTn6+hfdLdz2jiXgyQOkjhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg7Tt+371H3rEp7oOevn4GXxyfL8dd7Kl1+UgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgnW2VPZm5M6/LQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQTpklT2ZJUbmI/Zbl4MkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xvfKzjU+eC6x345zOUjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEj3u8ousaD6BGNulDhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg3S24W2JOe0ye1Eb5HKQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQ7verQ8f32yUW1CO4HCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKT7XWX5l8tBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRB+gXCaD1f7bk96QAAAABJRU5ErkJggg==">
 <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACeElEQVR4nO3dQUrEQBBAUSN6Bj2PnlvPo2dQaJduk/k0kw7vrZuhBz616YJsY4wHuNXjvS/A2gREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCRP977AXN/vz/sPv3z8zLvJVZlAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIJL11jnOsKFx6A6HLLdSYgKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREMkpXuPP8MB+6BrLvZnPYwKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASE6xznHItm37D3+9HfiDljRuYAKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASLYxxqSfnvdBif1eP3/3Hz60+7HftbdETCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQycXXOa7tDIsiJhCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkUx8jb+w5RYN5r3bm0AkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkilfh7i8Q9sRy+1+HGICkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEisc/xbbu/CtzJYnoBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiOTi6xw2NGYzgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZBtj3PsOZ7H/6X65N/N5TCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiXUOEhOIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERPIH6Fc9d13R//MAAAAASUVORK5CYII=">
@@ -134,12 +134,15 @@ var SH={ok:'正常',watch:'警告',high:'危險'};
 
 /* ── Data ── */
 var DEFAULT_PROFILE={birthday:'',baseWeight:null};
-var DEFAULT_EXAM={date:'',weight:null,diagnosis:'',notes:[],procyte:[],catalyst:[],imaging:[]};
-var D={breaths:[],weights:[],meds:[],vomits:[],foods:[],foodItems:[],profile:{birthday:'',baseWeight:null},exam:{date:'',weight:null,diagnosis:'',notes:[],procyte:[],catalyst:[],imaging:[]}};
+var D={breaths:[],weights:[],meds:[],vomits:[],foods:[],foodItems:[],profile:{birthday:'',baseWeight:null},exams:[]};
+var EXAMSEL=null;
 function baseW(){return D.profile&&typeof D.profile.baseWeight==='number'?D.profile.baseWeight:null;}
 function bdDisp(){var bd=D.profile&&D.profile.birthday;if(!bd)return'—';var d=new Date(bd);return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
+function normExams(o){if(o&&o.exams&&o.exams.length)return o.exams;if(o&&o.exam&&(o.exam.date||(o.exam.procyte&&o.exam.procyte.length)))return[o.exam];return[];}
+function sortedExams(){var a=(D.exams||[]).slice();a.sort(function(x,y){return(new Date(y.date)).getTime()-(new Date(x.date)).getTime();});return a;}
+function selExam(d){EXAMSEL=d;re();}
 function load(){
-  try{var s=localStorage.getItem(KEY);if(s){var p=JSON.parse(s);D={breaths:p.breaths||[],weights:p.weights||[],meds:p.meds||[],vomits:p.vomits||[],foods:p.foods||[],foodItems:p.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,p.profile||{}),exam:Object.assign({},DEFAULT_EXAM,p.exam||{})};}}catch(e){}
+  try{var s=localStorage.getItem(KEY);if(s){var p=JSON.parse(s);D={breaths:p.breaths||[],weights:p.weights||[],meds:p.meds||[],vomits:p.vomits||[],foods:p.foods||[],foodItems:p.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,p.profile||{}),exams:normExams(p)};}}catch(e){}
 }
 function saveData(){
   try{localStorage.setItem(KEY,JSON.stringify(D));}catch(e){toast('儲存失敗');}
@@ -169,10 +172,10 @@ function isBusyEditing(){
 }
 function gatherSync(){
   return{app:'shrimp-health',_syncedAt:new Date().toISOString(),
-    breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exam:D.exam};
+    breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exams:D.exams};
 }
 function applySync(o){
-  D={breaths:o.breaths||[],weights:o.weights||[],meds:o.meds||[],vomits:o.vomits||[],foods:o.foods||[],foodItems:o.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,o.profile||{}),exam:Object.assign({},DEFAULT_EXAM,o.exam||{})};
+  D={breaths:o.breaths||[],weights:o.weights||[],meds:o.meds||[],vomits:o.vomits||[],foods:o.foods||[],foodItems:o.foodItems||[],profile:Object.assign({},DEFAULT_PROFILE,o.profile||{}),exams:normExams(o)};
   ['breaths','weights','meds','vomits','foods','foodItems'].forEach(function(k){
     D[k].sort(function(a,b){return(a.ts||0)-(b.ts||0);});
   });
@@ -710,7 +713,8 @@ function chartVomit(recs){
 var TAG_COLORS={
   '血糖':'#D4742A', '腎臟':'#4E7CB5', '肝臟':'#4E8C5A',
   '心/肌':'#C04E4E', '血液':'#8B5E8B', '免疫':'#5A7A8C',
-  '凝血':'#8C5A5A', '骨髓':'#7A6A3E', '過敏':'#8C7A2A'
+  '凝血':'#8C5A5A', '骨髓':'#7A6A3E', '過敏':'#8C7A2A',
+  '電解質':'#4E8C8C', '代謝':'#8C6A4E'
 };
 
 function examSt(item){
@@ -760,16 +764,23 @@ function examRow(item,idx){
   return h;
 }
 function renderExam(){
-  var ex=D.exam||{};
-  var hasAny=(ex.procyte&&ex.procyte.length)||(ex.catalyst&&ex.catalyst.length)||(ex.imaging&&ex.imaging.length)||ex.date||ex.diagnosis||(ex.notes&&ex.notes.length);
-  if(!hasAny){
+  var exs=sortedExams();
+  if(!exs.length){
     return '<div style="padding:70px 28px;text-align:center">'+
       '<div style="font-size:14px;font-weight:700;letter-spacing:1px;color:#15140F">尚無健檢資料</div>'+
       '<p class="hint" style="margin-top:10px">用上方「還原」匯入含健檢的備份檔,或啟用雲端同步後會自動帶入。</p>'+
     '</div>';
   }
+  var ex=null;
+  if(EXAMSEL){for(var i=0;i<exs.length;i++){if(exs[i].date===EXAMSEL){ex=exs[i];break;}}}
+  if(!ex)ex=exs[0];
   var h='<div style="padding-bottom:32px">';
-  h+='<div style="padding:16px 20px 14px;border-bottom:1.5px solid #15140F">'+
+  if(exs.length>1){
+    h+='<div style="display:flex;gap:7px;flex-wrap:wrap;padding:14px 20px 2px">'+
+      exs.map(function(e){return '<button class="pill'+(e.date===ex.date?' on':'')+'" style="font-size:11px;padding:6px 12px" onclick="selExam(\''+e.date+'\')">'+e.date+'</button>';}).join('')+
+    '</div>';
+  }
+  h+='<div style="padding:12px 20px 14px;border-bottom:1.5px solid #15140F">'+
     '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:#807F78">健康檢查 · EXAM</div>'+
     '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:5px">'+
       '<div style="font-size:24px;font-weight:300;letter-spacing:-0.5px">'+(ex.date||'—')+'</div>'+
@@ -1679,7 +1690,7 @@ function fb(text){
 }
 
 function expbk(){
-  var blob=new Blob([JSON.stringify({app:'shrimp-health',exported:new Date().toISOString(),breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exam:D.exam},null,2)],{type:'application/json'});
+  var blob=new Blob([JSON.stringify({app:'shrimp-health',exported:new Date().toISOString(),breaths:D.breaths,weights:D.weights,meds:D.meds,vomits:D.vomits,foods:D.foods,foodItems:D.foodItems,profile:D.profile,exams:D.exams},null,2)],{type:'application/json'});
   var a=document.createElement('a');a.href=URL.createObjectURL(blob);
   var d=new Date();a.download='蝦app備份-'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'.json';
   a.click();URL.revokeObjectURL(a.href);toast('已下載備份');
@@ -1710,7 +1721,7 @@ document.getElementById('imp').addEventListener('change',function(e){
       D.foods.sort(function(a,b){return a.ts-b.ts;});
       D.foodItems.sort(function(a,b){return a.ts-b.ts;});
       if(o.profile)D.profile=Object.assign({},DEFAULT_PROFILE,o.profile);
-      if(o.exam)D.exam=Object.assign({},DEFAULT_EXAM,o.exam);
+      var _im=normExams(o);if(_im.length)D.exams=_im;
       saveData();toast('已還原並合併');re();
     }catch(err){toast('備份格式不正確');}
     e.target.value='';
