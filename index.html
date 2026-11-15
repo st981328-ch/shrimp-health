@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="color-scheme" content="light dark">
 <title>蝦app</title>
 <meta name="theme-color" content="#C3C2BB" media="(prefers-color-scheme:light)">
@@ -11,7 +11,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="蝦app">
-<meta name="build-version" content="20261115-ui2">
+<meta name="build-version" content="20261115-ui3">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAnElEQVR4nOWVSw6AIAwFW6Nn0PPoufU8egZNcFHTRYOkkFRAZsWCQOY9PuicA0s609UBoNdMOpaBBuN6xm5gbpA7IgpHJMOJEeHcMhm8teoVCvP7khERAPb5mVbiPUDxFokjSEzbRQNWITRC9ZesikiJN7HPDTSELYVH/SWrfjQBh6A5EYUZRNVLNFJyQjJMYTe5yT855bGLwtzgBnPiPDcd22hLAAAAAElFTkSuQmCC">
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACR0lEQVR4nO3dwU3DQBRF0RhBDVAP1A31QA0gmQa4YhaxJuOcs7bASFd/80Sy7ft+gb88zH4Bbpc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDtLj7Be4sq+3p8Enn9+/D32TE3A5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SGussnO31vHfPm6JTdjlIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIE1eZQcHz7lb6xIL6hFcDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xr9Dbts2+OTn6+hfdLdz2jiXgyQOkjhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg7Tt+371H3rEp7oOevn4GXxyfL8dd7Kl1+UgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgnW2VPZm5M6/LQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQTpklT2ZJUbmI/Zbl4MkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xvfKzjU+eC6x345zOUjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEj3u8ousaD6BGNulDhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg3S24W2JOe0ye1Eb5HKQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQ7verQ8f32yUW1CO4HCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKT7XWX5l8tBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRB+gXCaD1f7bk96QAAAABJRU5ErkJggg==">
 <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACeElEQVR4nO3dQUrEQBBAUSN6Bj2PnlvPo2dQaJduk/k0kw7vrZuhBz616YJsY4wHuNXjvS/A2gREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCRP977AXN/vz/sPv3z8zLvJVZlAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIJL11jnOsKFx6A6HLLdSYgKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREMkpXuPP8MB+6BrLvZnPYwKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASE6xznHItm37D3+9HfiDljRuYAKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASLYxxqSfnvdBif1eP3/3Hz60+7HftbdETCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQycXXOa7tDIsiJhCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkUx8jb+w5RYN5r3bm0AkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkilfh7i8Q9sRy+1+HGICkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEisc/xbbu/CtzJYnoBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiOTi6xw2NGYzgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZBtj3PsOZ7H/6X65N/N5TCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiXUOEhOIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERPIH6Fc9d13R//MAAAAASUVORK5CYII=">
@@ -39,6 +39,8 @@
 html,body{height:100%;background:var(--bg)}
 body{font-family:"Helvetica Neue",Arial,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;justify-content:center}
 #app{width:100%;max-width:460px;min-height:100vh;background:var(--bg);display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
+.ios-standalone #app{padding-top:max(env(safe-area-inset-top),60px)}
+@media (display-mode:standalone){#app{padding-top:max(env(safe-area-inset-top),60px)}}
 button,input,textarea{font-family:inherit;outline:none;-webkit-appearance:none;appearance:none}
 button{background:none;border:none}
 input[type=number]{-moz-appearance:textfield}
@@ -142,7 +144,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 .dot{transition:background .2s ease}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
+<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t);if(window.navigator.standalone)document.documentElement.classList.add('ios-standalone');}catch(e){}</script>
 </head>
 <body>
 <div id="app"></div>
@@ -168,7 +170,8 @@ var D={breaths:[],weights:[],meds:[],vomits:[],foods:[],foodItems:[],profile:{bi
 var EXAMSEL=null;
 function baseW(){return D.profile&&typeof D.profile.baseWeight==='number'?D.profile.baseWeight:null;}
 function bdDisp(){var bd=D.profile&&D.profile.birthday;if(!bd)return'—';var d=new Date(bd);return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
-function appIcon(){var l=document.querySelector('link[rel="icon"][sizes="192x192"]');return l?l.href:'';}
+var APP_ICON='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACiCAYAAACAsWWMAAAB70lEQVR4nO3dQWqDYBhFUVPMHlxPF571uIcK7bR3qgb713PmgoXLl8GjyWMazPo5f+19dnltz3Pf5v/5uPoF+FsEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhDEY7rAaBP2euB9j7jib3UhCEEQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhDzdI3vvQ+un/O299k7zdh7uRCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEQQiCeFz1Pc57La9tvmI6v8vk7kIQgiAEQQiCEAQhCEIQhCAIQRCCIARBCIIQBCEIQhDzdI3vvQ+un/O299k7zdh7uRCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEQQiCEARh/n6zdbDp3IUgBEEIghAEIQhCEIQgCEEQgiAEQQiCEAQhCEIQ3Hf+Hm2KPsJ3XXMKHxmEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEwdjztwn7vVwIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgmDstfOKpXR5bc/pJlwIQhCEIAhBEIIgBEEIghAEIQhCEIQgCEEQgiAEwfTbDyz2No8v70TpAAAAAElFTkSuQmCC';
+function appIcon(){return APP_ICON;}
 function normExams(o){if(o&&o.exams&&o.exams.length)return o.exams;if(o&&o.exam&&(o.exam.date||(o.exam.procyte&&o.exam.procyte.length)))return[o.exam];return[];}
 function sortedExams(){var a=(D.exams||[]).slice();a.sort(function(x,y){return(new Date(y.date)).getTime()-(new Date(x.date)).getTime();});return a;}
 function selExam(d){EXAMSEL=d;re();}
@@ -996,7 +999,7 @@ function re(){
 function renderHdr(){
   return '<div class="hdr">'+
     '<div>'+
-    '<img src="'+appIcon()+'" alt="蝦app" style="width:32px;height:32px;display:block;border-radius:7px">'+
+    '<img src="'+appIcon()+'" alt="蝦app" style="height:34px;width:auto;display:block">'+
     '<div class="hdr-date">'+nd()+'</div>'+
     '</div>'+
     '<div class="hdr-right">'+
