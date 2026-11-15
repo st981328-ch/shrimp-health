@@ -2,16 +2,16 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="color-scheme" content="light dark">
 <title>蝦app</title>
-<meta name="theme-color" content="#B2B1AA" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#C3C2BB" media="(prefers-color-scheme:light)">
 <meta name="theme-color" content="#191812" media="(prefers-color-scheme:dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="蝦app">
-<meta name="build-version" content="20261115-topfix">
+<meta name="build-version" content="20261115-ui2">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAnElEQVR4nOWVSw6AIAwFW6Nn0PPoufU8egZNcFHTRYOkkFRAZsWCQOY9PuicA0s609UBoNdMOpaBBuN6xm5gbpA7IgpHJMOJEeHcMhm8teoVCvP7khERAPb5mVbiPUDxFokjSEzbRQNWITRC9ZesikiJN7HPDTSELYVH/SWrfjQBh6A5EYUZRNVLNFJyQjJMYTe5yT855bGLwtzgBnPiPDcd22hLAAAAAElFTkSuQmCC">
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACR0lEQVR4nO3dwU3DQBRF0RhBDVAP1A31QA0gmQa4YhaxJuOcs7bASFd/80Sy7ft+gb88zH4Bbpc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDtLj7Be4sq+3p8Enn9+/D32TE3A5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SGussnO31vHfPm6JTdjlIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIE1eZQcHz7lb6xIL6hFcDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xr9Dbts2+OTn6+hfdLdz2jiXgyQOkjhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg7Tt+371H3rEp7oOevn4GXxyfL8dd7Kl1+UgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgnW2VPZm5M6/LQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQTpklT2ZJUbmI/Zbl4MkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0xvfKzjU+eC6x345zOUjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEj3u8ousaD6BGNulDhI4iCJgyQOkjhI4iCJgyQOkjhI4iCJg3S24W2JOe0ye1Eb5HKQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQ7verQ8f32yUW1CO4HCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKT7XWX5l8tBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRB+gXCaD1f7bk96QAAAABJRU5ErkJggg==">
 <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACeElEQVR4nO3dQUrEQBBAUSN6Bj2PnlvPo2dQaJduk/k0kw7vrZuhBz616YJsY4wHuNXjvS/A2gREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCRP977AXN/vz/sPv3z8zLvJVZlAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIJL11jnOsKFx6A6HLLdSYgKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREMkpXuPP8MB+6BrLvZnPYwKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASE6xznHItm37D3+9HfiDljRuYAKRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASLYxxqSfnvdBif1eP3/3Hz60+7HftbdETCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQycXXOa7tDIsiJhCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkUx8jb+w5RYN5r3bm0AkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkilfh7i8Q9sRy+1+HGICkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEisc/xbbu/CtzJYnoBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiOTi6xw2NGYzgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZBtj3PsOZ7H/6X65N/N5TCASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiXUOEhOIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERPIH6Fc9d13R//MAAAAASUVORK5CYII=">
@@ -44,92 +44,91 @@ button{background:none;border:none}
 input[type=number]{-moz-appearance:textfield}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
 .hdr{display:flex;align-items:flex-start;justify-content:space-between;padding:18px 20px 10px}
-@media (display-mode:standalone){.hdr{padding-top:max(calc(env(safe-area-inset-top) + 6px),64px)}}
-.hdr-title{font-size:13px;font-weight:700;letter-spacing:1.5px}
-.hdr-date{font-size:10px;color:var(--muted);margin-top:2px;letter-spacing:1px}
+.hdr-title{font-size:14.9px;font-weight:700;letter-spacing:1.5px}
+.hdr-date{font-size:11.5px;color:var(--muted);margin-top:2px;letter-spacing:1px}
 .hdr-right{display:flex;align-items:center;gap:12px}
 
-.hdr-clock{font-size:11px;color:var(--muted);letter-spacing:1px}
+.hdr-clock{font-size:12.6px;color:var(--muted);letter-spacing:1px}
 .nav{display:flex;gap:4px}
-.nbtn{border:none;border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;background:transparent;color:var(--muted)}
+.nbtn{border:none;border-radius:999px;padding:5px 12px;font-size:12.6px;font-weight:700;letter-spacing:1px;cursor:pointer;background:transparent;color:var(--muted)}
 .nbtn.on{background:var(--ink);color:var(--paper)}
 .bio{display:flex;align-items:flex-end;gap:24px;padding:0 20px 12px;border-bottom:1.5px solid var(--ink)}
 .bio-item{}
-.bio-lbl{font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--muted)}
-.bio-val{font-size:13px;font-weight:700;letter-spacing:.5px;margin-top:2px}
+.bio-lbl{font-size:10.3px;font-weight:700;letter-spacing:1.5px;color:var(--muted)}
+.bio-val{font-size:14.9px;font-weight:700;letter-spacing:.5px;margin-top:2px}
 .cards{border-top:1.5px solid var(--ink)}
 .card{border-bottom:1.5px solid var(--ink);transition:background .15s}
 .card.closed{background:var(--bg)}
 .card.open{background:var(--surf3)}
 .chdr{width:100%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:20px;text-align:left;color:var(--ink)}
-.ctitle{font-size:38px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:var(--ink)}
+.ctitle{font-size:43.7px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:var(--ink)}
 .csum-val{display:flex;align-items:flex-end;gap:6px;justify-content:flex-end;white-space:nowrap}
-.csum-val .n{font-size:30px;font-weight:250;letter-spacing:-1.5px}
-.csum-val .u{font-size:11px;color:var(--muted);font-weight:500}
+.csum-val .n{font-size:34.5px;font-weight:250;letter-spacing:-1.5px}
+.csum-val .u{font-size:12.6px;color:var(--muted);font-weight:500}
 .csum-status{display:flex;align-items:center;gap:5px;justify-content:flex-end;margin-top:3px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex-shrink:0}
 .dot.alert{background:var(--org)}
-.stxt{font-size:10.5px;font-weight:700;letter-spacing:1px;color:var(--ok);white-space:nowrap}
+.stxt{font-size:12.1px;font-weight:700;letter-spacing:1px;color:var(--ok);white-space:nowrap}
 .stxt.alert{color:var(--org)}
-.norec{font-size:11px;color:var(--muted);letter-spacing:1px}
+.norec{font-size:12.6px;color:var(--muted);letter-spacing:1px}
 .cbody{padding:2px 20px 22px}
-.cfooter{font-size:10.5px;color:var(--muted);letter-spacing:1px;padding:14px 20px;border-bottom:1.5px solid var(--ink)}
-.ey{font-size:9.5px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:9px}
+.cfooter{font-size:12.1px;color:var(--muted);letter-spacing:1px;padding:14px 20px;border-bottom:1.5px solid var(--ink)}
+.ey{font-size:10.9px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:9px}
 .pills{display:flex;gap:7px;flex-wrap:wrap}
-.pill{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border-radius:999px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.5px;white-space:nowrap;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.pill{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border-radius:999px;cursor:pointer;font-size:13.8px;font-weight:700;letter-spacing:.5px;white-space:nowrap;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
 .pill.on{background:var(--ink);color:var(--paper)}
 .pill.acc{background:var(--org);border-color:var(--org);color:var(--ink)}
 .pill.oc{background:transparent}
-.bbtn{width:100%;padding:15px 18px;border:none;background:var(--ink);color:var(--paper);font-size:14px;font-weight:700;letter-spacing:1px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center}
+.bbtn{width:100%;padding:15px 18px;border:none;background:var(--ink);color:var(--paper);font-size:16.1px;font-weight:700;letter-spacing:1px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center}
 .bbtn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .bbtn:disabled{opacity:.35;cursor:default}
 .bare{border:none;border-bottom:2px solid var(--ink);background:transparent;color:var(--ink);width:100%;display:block}
 .bare::placeholder{color:var(--bg)}
-.tarea{width:100%;border:1.5px solid var(--hair16);padding:12px;font-size:14px;min-height:54px;resize:vertical;background:var(--surf2);color:var(--ink)}
+.tarea{width:100%;border:1.5px solid var(--hair16);padding:12px;font-size:16.1px;min-height:54px;resize:vertical;background:var(--surf2);color:var(--ink)}
 .cnt{width:100%;border:none;background:var(--ink);color:var(--paper);cursor:pointer;text-align:left;padding:20px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;touch-action:manipulation}
 .cnt-top{display:flex;justify-content:space-between;width:100%;position:relative;z-index:1}
-.cnt-lbl{font-size:9.5px;font-weight:700;letter-spacing:2px;opacity:.7}
-.cnt-time{font-size:13px;font-weight:500}
+.cnt-lbl{font-size:10.9px;font-weight:700;letter-spacing:2px;opacity:.7}
+.cnt-time{font-size:14.9px;font-weight:500}
 .cnt-num{font-size:120px;font-weight:200;letter-spacing:-5px;line-height:.85;position:relative;z-index:1}
-.cnt-hint{font-size:11.5px;font-weight:500;opacity:.8;position:relative;z-index:1}
+.cnt-hint{font-size:13.2px;font-weight:500;opacity:.8;position:relative;z-index:1}
 .cnt-flash{position:absolute;inset:0;background:var(--org);z-index:0;opacity:0;pointer-events:none}
 @keyframes tapflash{0%{opacity:.4}100%{opacity:0}}
 .res-hdr{background:var(--ink);color:var(--paper);padding:18px 20px}
-.res-lbl{font-size:9.5px;font-weight:700;letter-spacing:2px;opacity:.7;margin-bottom:4px}
+.res-lbl{font-size:10.9px;font-weight:700;letter-spacing:2px;opacity:.7;margin-bottom:4px}
 .res-row{display:flex;align-items:flex-end;gap:10px}
 .res-num{font-size:90px;font-weight:200;letter-spacing:-4px;line-height:.8}
 .g{height:18px}.gsm{height:10px}
 .log-wrap{padding:6px 0 32px}
 .log-tabs{display:flex;gap:6px;padding:0 18px 8px;flex-wrap:wrap;align-items:center}
 .log-hero{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 18px 4px}
-.add-btn{width:46px;height:46px;border-radius:50%;border:none;background:var(--ink);color:var(--paper);font-size:22px;font-weight:300;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.add-btn{width:46px;height:46px;border-radius:50%;border:none;background:var(--ink);color:var(--paper);font-size:25.3px;font-weight:300;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .log-chart{padding:8px 14px 0}
 .log-stats{display:flex;gap:8px;padding:12px 14px 0}
 .stat{flex:1;background:var(--surf5);padding:14px 14px 16px;position:relative}
-.stat-lbl{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted)}
+.stat-lbl{font-size:11.5px;font-weight:700;letter-spacing:1px;color:var(--muted)}
 .stat-val{display:flex;align-items:flex-end;gap:4px;margin-top:8px}
-.stat-n{font-size:36px;font-weight:200;letter-spacing:-2px;line-height:.9}
-.stat-u{font-size:10px;color:var(--muted);margin-bottom:4px}
-.stat-arr{position:absolute;top:14px;right:14px;color:var(--org);font-size:14px}
+.stat-n{font-size:41.4px;font-weight:200;letter-spacing:-2px;line-height:.9}
+.stat-u{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.stat-arr{position:absolute;top:14px;right:14px;color:var(--org);font-size:16.1px}
 .log-act{padding:14px 18px 0;display:flex;flex-direction:column;gap:8px}
 .rlist{margin-top:14px}
 .rrow{display:flex;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--hair10);background:var(--surf1);color:var(--ink)}
 .rrow.today{background:var(--surf2)}
-.rn{font-size:28px;font-weight:250;letter-spacing:-1.5px;color:var(--ink)}
-.ru{font-size:9px;font-weight:700;color:var(--muted);margin-left:2px}
+.rn{font-size:32.2px;font-weight:250;letter-spacing:-1.5px;color:var(--ink)}
+.ru{font-size:10.3px;font-weight:700;color:var(--muted);margin-left:2px}
 .rinfo{flex:1;min-width:0}
-.rt1{font-size:13px;font-weight:700;color:var(--ink)}
-.rt2{font-size:11.5px;color:var(--muted);margin-top:2px}
-.rnote{font-size:11.5px;color:var(--muted);margin-top:2px;overflow-wrap:break-word}
-.delbtn{border:1.5px solid var(--hair18);background:transparent;color:var(--muted);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.rt1{font-size:14.9px;font-weight:700;color:var(--ink)}
+.rt2{font-size:13.2px;color:var(--muted);margin-top:2px}
+.rnote{font-size:13.2px;color:var(--muted);margin-top:2px;overflow-wrap:break-word}
+.delbtn{border:1.5px solid var(--hair18);background:transparent;color:var(--muted);border-radius:999px;padding:6px 10px;font-size:13.8px;font-weight:700;cursor:pointer;white-space:nowrap}
 .delbtn.cfm{border-color:var(--org);color:var(--org)}
-.hint{font-size:12px;color:var(--muted);line-height:1.7;margin-top:10px}
+.hint{font-size:13.8px;color:var(--muted);line-height:1.7;margin-top:10px}
 .hint.alt{color:var(--org)}
-.scale-row{display:flex;gap:8px;padding:8px 0;border-top:1px solid var(--hair10);font-size:12.5px;align-items:baseline}
+.scale-row{display:flex;gap:8px;padding:8px 0;border-top:1px solid var(--hair10);font-size:14.4px;align-items:baseline}
 .scale-row:first-child{border-top:none}
 .scale-key{font-weight:700;white-space:nowrap;margin-right:10px}
 .scale-val{color:var(--muted);margin-left:auto;text-align:right}
-#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1px;z-index:100;white-space:nowrap;display:none}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:999px;font-size:14.4px;font-weight:700;letter-spacing:1px;z-index:100;white-space:nowrap;display:none}
 @keyframes toastin{from{transform:translate(-50%,12px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @keyframes appFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
@@ -169,6 +168,7 @@ var D={breaths:[],weights:[],meds:[],vomits:[],foods:[],foodItems:[],profile:{bi
 var EXAMSEL=null;
 function baseW(){return D.profile&&typeof D.profile.baseWeight==='number'?D.profile.baseWeight:null;}
 function bdDisp(){var bd=D.profile&&D.profile.birthday;if(!bd)return'—';var d=new Date(bd);return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();}
+function appIcon(){var l=document.querySelector('link[rel="icon"][sizes="192x192"]');return l?l.href:'';}
 function normExams(o){if(o&&o.exams&&o.exams.length)return o.exams;if(o&&o.exam&&(o.exam.date||(o.exam.procyte&&o.exam.procyte.length)))return[o.exam];return[];}
 function sortedExams(){var a=(D.exams||[]).slice();a.sort(function(x,y){return(new Date(y.date)).getTime()-(new Date(x.date)).getTime();});return a;}
 function selExam(d){EXAMSEL=d;re();}
@@ -365,13 +365,13 @@ function syncSectionHTML(){
   if(!syncOn()){
     return '<p class="hint" style="margin:4px 0 14px">貼上你的 GitHub Token(需 gist 權限)。資料會存到你帳號底下的「私密 Gist」,多台裝置自動同步。Token 只存在這台瀏覽器,不會外流。</p>'+
        '<div class="ey">GITHUB TOKEN</div>'+
-       '<input id="syncPatInput" class="bare" placeholder="ghp_… 或 github_pat_…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="font-size:14px;padding:6px 0;margin:4px 0 16px">'+
+       '<input id="syncPatInput" class="bare" placeholder="ghp_… 或 github_pat_…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="font-size:16.1px;padding:6px 0;margin:4px 0 16px">'+
        '<button class="bbtn" onclick="syncEnable(document.getElementById(\'syncPatInput\').value)">啟用雲端同步 <span>→</span></button>'+
        '<p class="hint" style="margin-top:14px">拿 Token:GitHub → Settings → Developer settings → Personal access tokens,建立時勾選 <b>gist</b> 權限即可。</p>';
   }
   var stt=_syncing?'同步中…':_localDirty?'有變更待上傳…':'已同步';
   var dotC=_syncing||_localDirty?ORG:'var(--ok)';
-  return '<div style="display:flex;align-items:center;gap:8px;margin:2px 0 2px"><span style="width:8px;height:8px;border-radius:50%;background:'+dotC+';flex-shrink:0"></span><span style="font-size:13px;font-weight:700">'+stt+'</span></div>'+
+  return '<div style="display:flex;align-items:center;gap:8px;margin:2px 0 2px"><span style="width:8px;height:8px;border-radius:50%;background:'+dotC+';flex-shrink:0"></span><span style="font-size:14.9px;font-weight:700">'+stt+'</span></div>'+
      '<p class="hint" style="margin:4px 0 12px">上次同步:'+fmtSyncTime(_lastSyncAt)+'</p>'+
      '<button class="bbtn" style="margin-bottom:8px" onclick="syncPush({manual:true})">立即上傳 <span>↑</span></button>'+
      '<button class="bbtn ghost" style="margin-bottom:8px" onclick="syncPull({manual:true})">從雲端拉取 <span>↓</span></button>'+
@@ -382,8 +382,8 @@ function renderSettings(){
   var b=document.getElementById('syncModalBody');if(!b)return;
   var mo=themeMode();
   b.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">'+
-      '<div style="font-size:20px;font-weight:900;letter-spacing:-0.5px">設定</div>'+
-      '<button class="pill" style="font-size:11px;padding:5px 13px" onclick="closeSync()">關閉</button></div>'+
+      '<div style="font-size:23px;font-weight:900;letter-spacing:-0.5px">設定</div>'+
+      '<button class="pill" style="font-size:12.6px;padding:5px 13px" onclick="closeSync()">關閉</button></div>'+
     '<div class="ey" style="margin-bottom:8px">外觀</div>'+
     '<div class="pills" style="margin-bottom:22px">'+
       '<button class="pill'+(mo==='light'?' on':'')+'" onclick="setThemeMode(\'light\')">淺色</button>'+
@@ -429,34 +429,34 @@ function renderEdit(){
   var r=findRec(EDITREC.type,EDITREC.id);if(!r){closeEdit();return;}
   var t=EDITREC.type,tm={breath:'呼吸',weight:'體重',meds:'用藥',vomit:'嘔吐',food:'罐頭',fooditem:'喜好食物'};
   var h='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">'+
-        '<div style="font-size:20px;font-weight:900;letter-spacing:-0.5px">編輯 · '+(tm[t]||'')+'</div>'+
-        '<button class="pill" style="font-size:11px;padding:5px 13px" onclick="closeEdit()">取消</button></div>';
+        '<div style="font-size:23px;font-weight:900;letter-spacing:-0.5px">編輯 · '+(tm[t]||'')+'</div>'+
+        '<button class="pill" style="font-size:12.6px;padding:5px 13px" onclick="closeEdit()">取消</button></div>';
   if(t==='breath'){
-    h+=_el('每分鐘次數')+'<input id="ed-bpm" type="number" inputmode="numeric" class="bare" value="'+(r.bpm!=null?r.bpm:'')+'" style="font-size:34px;font-weight:250;padding:2px 0;margin-bottom:16px">'+
+    h+=_el('每分鐘次數')+'<input id="ed-bpm" type="number" inputmode="numeric" class="bare" value="'+(r.bpm!=null?r.bpm:'')+'" style="font-size:39.1px;font-weight:250;padding:2px 0;margin-bottom:16px">'+
        _el('狀態')+'<div class="pills" style="margin-bottom:16px">'+Object.keys(STATES).map(function(k){return '<button class="pill'+(EDITSTATE===k?' on':'')+'" data-st="'+k+'" onclick="editSetState(\''+k+'\')">'+STATES[k]+'</button>';}).join('')+'</div>'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }else if(t==='weight'){
-    h+=_el('體重 (kg)')+'<input id="ed-kg" type="number" inputmode="decimal" step="0.01" class="bare" value="'+(r.kg!=null?r.kg:'')+'" style="font-size:34px;font-weight:250;padding:2px 0;margin-bottom:16px">'+
+    h+=_el('體重 (kg)')+'<input id="ed-kg" type="number" inputmode="decimal" step="0.01" class="bare" value="'+(r.kg!=null?r.kg:'')+'" style="font-size:39.1px;font-weight:250;padding:2px 0;margin-bottom:16px">'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }else if(t==='meds'){
     h+='<div style="display:flex;gap:12px;margin-bottom:14px">'+
-         '<div style="flex:1">'+_el('養氣早 (顆)')+'<input id="ed-morn" type="number" inputmode="numeric" class="bare" value="'+(r.morn||0)+'" style="font-size:26px;font-weight:250;padding:2px 0"></div>'+
-         '<div style="flex:1">'+_el('養氣晚 (顆)')+'<input id="ed-eve" type="number" inputmode="numeric" class="bare" value="'+(r.eve||0)+'" style="font-size:26px;font-weight:250;padding:2px 0"></div></div>'+
+         '<div style="flex:1">'+_el('養氣早 (顆)')+'<input id="ed-morn" type="number" inputmode="numeric" class="bare" value="'+(r.morn||0)+'" style="font-size:29.9px;font-weight:250;padding:2px 0"></div>'+
+         '<div style="flex:1">'+_el('養氣晚 (顆)')+'<input id="ed-eve" type="number" inputmode="numeric" class="bare" value="'+(r.eve||0)+'" style="font-size:29.9px;font-weight:250;padding:2px 0"></div></div>'+
        '<div style="display:flex;gap:12px;margin-bottom:14px">'+
-         '<div style="flex:1">'+_el('胺寶早 (ml)')+'<input id="ed-amorn" type="number" inputmode="decimal" step="0.5" class="bare" value="'+(r.aminoMorn||0)+'" style="font-size:26px;font-weight:250;padding:2px 0"></div>'+
-         '<div style="flex:1">'+_el('胺寶晚 (ml)')+'<input id="ed-aeve" type="number" inputmode="decimal" step="0.5" class="bare" value="'+(r.aminoEve||0)+'" style="font-size:26px;font-weight:250;padding:2px 0"></div></div>'+
+         '<div style="flex:1">'+_el('胺寶早 (ml)')+'<input id="ed-amorn" type="number" inputmode="decimal" step="0.5" class="bare" value="'+(r.aminoMorn||0)+'" style="font-size:29.9px;font-weight:250;padding:2px 0"></div>'+
+         '<div style="flex:1">'+_el('胺寶晚 (ml)')+'<input id="ed-aeve" type="number" inputmode="decimal" step="0.5" class="bare" value="'+(r.aminoEve||0)+'" style="font-size:29.9px;font-weight:250;padding:2px 0"></div></div>'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }else if(t==='vomit'){
     h+=_el('內容(以、分隔)')+'<textarea id="ed-content" class="tarea" style="margin-bottom:14px">'+((r.content||[]).join('、'))+'</textarea>'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }else if(t==='food'){
-    h+=_el('品牌')+'<input id="ed-brand" class="bare" value="'+(r.brand||'')+'" style="font-size:18px;padding:4px 0;margin-bottom:14px">'+
-       _el('口味')+'<input id="ed-flavor" class="bare" value="'+(r.flavor||'')+'" style="font-size:18px;padding:4px 0;margin-bottom:14px">'+
-       _el('完食 %')+'<input id="ed-finish" type="number" inputmode="numeric" class="bare" value="'+(r.finish!=null?r.finish:'')+'" style="font-size:22px;padding:4px 0;margin-bottom:14px">'+
+    h+=_el('品牌')+'<input id="ed-brand" class="bare" value="'+(r.brand||'')+'" style="font-size:20.7px;padding:4px 0;margin-bottom:14px">'+
+       _el('口味')+'<input id="ed-flavor" class="bare" value="'+(r.flavor||'')+'" style="font-size:20.7px;padding:4px 0;margin-bottom:14px">'+
+       _el('完食 %')+'<input id="ed-finish" type="number" inputmode="numeric" class="bare" value="'+(r.finish!=null?r.finish:'')+'" style="font-size:25.3px;padding:4px 0;margin-bottom:14px">'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }else{
-    h+=_el('品牌')+'<input id="ed-brand" class="bare" value="'+(r.brand||'')+'" style="font-size:18px;padding:4px 0;margin-bottom:14px">'+
-       _el('品項/口味')+'<input id="ed-flavor" class="bare" value="'+(r.flavor||'')+'" style="font-size:18px;padding:4px 0;margin-bottom:14px">'+
+    h+=_el('品牌')+'<input id="ed-brand" class="bare" value="'+(r.brand||'')+'" style="font-size:20.7px;padding:4px 0;margin-bottom:14px">'+
+       _el('品項/口味')+'<input id="ed-flavor" class="bare" value="'+(r.flavor||'')+'" style="font-size:20.7px;padding:4px 0;margin-bottom:14px">'+
        _el('備註')+'<textarea id="ed-note" class="tarea">'+(r.note||'')+'</textarea>';
   }
   h+='<div style="height:14px"></div><button class="bbtn" onclick="saveEdit()">儲存變更</button>';
@@ -875,16 +875,18 @@ function miniSpark(pts,w,hh){
   return '<svg viewBox="0 0 '+w+' '+hh+'" style="width:100%;height:'+hh+'px;display:block"><polyline points="'+d+'" fill="none" stroke="var(--org)" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><circle cx="'+fx(pts.length-1).toFixed(1)+'" cy="'+fy(pts[pts.length-1].v).toFixed(1)+'" r="2.3" fill="var(--org)"/></svg>';
 }
 function deltaLabel(d){var r=Math.round(d*100)/100;return d>0?'▲ +'+r:d<0?'▼ '+r:'→ 0';}
+var MARK_NAMES={CREA:'肌酸酐 · 腎',BUN:'尿素氮 · 腎',PHOS:'磷 · 腎',GLOB:'球蛋白 · 免疫',WBC:'白血球 · 免疫',PLT:'血小板 · 凝血'};
 function trendStripHTML(){
   var codes=['CREA','BUN','PHOS','GLOB','WBC','PLT'],cards=[];
   codes.forEach(function(c){
     var s=examSeries(c);if(s.length<2)return;
     var last=s[s.length-1].v,prev=s[s.length-2].v;
-    cards.push('<div style="flex:0 0 auto;width:94px;background:var(--surf1);border:1px solid var(--hair10);border-radius:9px;padding:9px 10px 8px">'+
-      '<div style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.5px">'+c+'</div>'+
-      '<div style="font-size:17px;font-weight:300;letter-spacing:-0.5px;color:var(--ink);margin:2px 0 5px">'+last+'</div>'+
-      miniSpark(s,78,22)+
-      '<div style="font-size:9px;font-weight:700;color:var(--muted);margin-top:4px">'+deltaLabel(last-prev)+'</div>'+
+    cards.push('<div style="flex:0 0 auto;width:112px;background:var(--surf1);border:1px solid var(--hair10);border-radius:9px;padding:10px 11px 9px">'+
+      '<div style="font-size:13.8px;font-weight:700;color:var(--ink);letter-spacing:.5px">'+c+'</div>'+
+      '<div style="font-size:11.5px;color:var(--muted);margin-top:1px;white-space:nowrap">'+(MARK_NAMES[c]||'')+'</div>'+
+      '<div style="font-size:21.8px;font-weight:300;letter-spacing:-0.5px;color:var(--ink);margin:4px 0 6px">'+last+'</div>'+
+      miniSpark(s,88,24)+
+      '<div style="font-size:11.5px;font-weight:700;color:var(--muted);margin-top:5px">'+deltaLabel(last-prev)+'</div>'+
     '</div>');
   });
   if(!cards.length)return'';
@@ -895,31 +897,31 @@ function examRow(item,idx,prev){
   var bt=idx>0?'border-top:1px solid var(--hair07);':'';
   var bg=idx%2===0?'background:var(--surf1);':'background:var(--surf6);';
   var tagColor=TAG_COLORS[item.tag]||'var(--muted)';
-  var tagBadge=item.tag?'<span style="font-size:8px;font-weight:700;color:'+tagColor+';border:1px solid '+tagColor+';border-radius:2px;padding:1px 4px;margin-left:5px;white-space:nowrap">'+item.tag+'</span>':'';
+  var tagBadge=item.tag?'<span style="font-size:9.2px;font-weight:700;color:'+tagColor+';border:1px solid '+tagColor+';border-radius:2px;padding:1px 4px;margin-left:5px;white-space:nowrap">'+item.tag+'</span>':'';
   var trH='';
   if(typeof prev==='number'&&typeof item.value==='number'){
     var dd=Math.round((item.value-prev)*100)/100,sym=dd>0?'▲':dd<0?'▼':'→';
-    trH='<span style="font-size:9px;font-weight:700;color:var(--muted);white-space:nowrap">'+sym+(dd>0?' +'+dd:dd<0?' '+dd:'')+' <span style="opacity:.6;font-weight:600">上次 '+prev+'</span></span>';
+    trH='<span style="font-size:10.3px;font-weight:700;color:var(--muted);white-space:nowrap">'+sym+(dd>0?' +'+dd:dd<0?' '+dd:'')+' <span style="opacity:.6;font-weight:600">上次 '+prev+'</span></span>';
   }
   var h='<div style="display:flex;align-items:center;padding:10px 20px;'+bt+bg+'">';
   h+='<div style="flex:1;min-width:0;padding-right:8px">'+
-    '<span style="font-size:12px;font-weight:700;color:var(--ink)">'+item.code+'</span>'+tagBadge+
-    '<br><span style="font-size:10px;color:var(--muted)">'+item.name+'</span>';
-  if(item.note)h+='<div style="font-size:9.5px;color:var(--muted);margin-top:2px;line-height:1.4">'+item.note+'</div>';
+    '<span style="font-size:13.8px;font-weight:700;color:var(--ink)">'+item.code+'</span>'+tagBadge+
+    '<br><span style="font-size:11.5px;color:var(--muted)">'+item.name+'</span>';
+  if(item.note)h+='<div style="font-size:10.9px;color:var(--muted);margin-top:2px;line-height:1.4">'+item.note+'</div>';
   h+='</div>';
   h+='<div style="flex-shrink:0;text-align:right">';
   if(item.noBar){
-    h+='<span style="font-size:16px;font-weight:250;color:var(--muted)">'+item.value+'</span>'+(trH?'<div style="margin-top:2px">'+trH+'</div>':'');
+    h+='<span style="font-size:18.4px;font-weight:250;color:var(--muted)">'+item.value+'</span>'+(trH?'<div style="margin-top:2px">'+trH+'</div>':'');
   }else{
     var st=examSt(item);
     h+='<div style="display:flex;align-items:baseline;justify-content:flex-end;gap:4px;margin-bottom:4px">'+
-      '<span style="font-size:17px;font-weight:250;letter-spacing:-0.5px;color:'+st.color+'">'+item.value+'</span>'+
-      '<span style="font-size:10px;color:var(--muted)">'+item.unit+'</span>'+
-      '<span style="font-size:10px;font-weight:700;color:'+st.color+'">'+st.text+'</span>'+
+      '<span style="font-size:19.5px;font-weight:250;letter-spacing:-0.5px;color:'+st.color+'">'+item.value+'</span>'+
+      '<span style="font-size:11.5px;color:var(--muted)">'+item.unit+'</span>'+
+      '<span style="font-size:11.5px;font-weight:700;color:'+st.color+'">'+st.text+'</span>'+
     '</div>';
     if(trH)h+='<div style="margin:-2px 0 4px">'+trH+'</div>';
     h+=barCSS(item);
-    h+='<div style="display:flex;justify-content:space-between;width:112px;font-size:8.5px;color:var(--surf3);margin-top:2px"><span>低</span><span>高</span></div>';
+    h+='<div style="display:flex;justify-content:space-between;width:112px;font-size:9.8px;color:var(--surf3);margin-top:2px"><span>低</span><span>高</span></div>';
   }
   h+='</div></div>';
   return h;
@@ -928,7 +930,7 @@ function renderExam(){
   var exs=sortedExams();
   if(!exs.length){
     return '<div style="padding:70px 28px;text-align:center">'+
-      '<div style="font-size:14px;font-weight:700;letter-spacing:1px;color:var(--ink)">尚無健檢資料</div>'+
+      '<div style="font-size:16.1px;font-weight:700;letter-spacing:1px;color:var(--ink)">尚無健檢資料</div>'+
       '<p class="hint" style="margin-top:10px">用上方「還原」匯入含健檢的備份檔,或啟用雲端同步後會自動帶入。</p>'+
     '</div>';
   }
@@ -940,43 +942,43 @@ function renderExam(){
   var h='<div style="padding-bottom:32px">';
   if(exs.length>1){
     h+='<div style="display:flex;gap:7px;flex-wrap:wrap;padding:14px 20px 2px">'+
-      exs.slice().reverse().map(function(e){return '<button class="pill'+(e.date===ex.date?' on':'')+'" style="font-size:11px;padding:6px 12px" onclick="selExam(\''+e.date+'\')">'+e.date+'</button>';}).join('')+
+      exs.slice().reverse().map(function(e){return '<button class="pill'+(e.date===ex.date?' on':'')+'" style="font-size:12.6px;padding:6px 12px" onclick="selExam(\''+e.date+'\')">'+e.date+'</button>';}).join('')+
     '</div>';
   }
   if(ci===0)h+=trendStripHTML();
   h+='<div style="padding:12px 20px 14px;border-bottom:1.5px solid var(--ink)">'+
-    '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted)">健康檢查 · EXAM</div>'+
+    '<div style="font-size:10.3px;font-weight:700;letter-spacing:2px;color:var(--muted)">健康檢查 · EXAM</div>'+
     '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:5px">'+
-      '<div style="font-size:24px;font-weight:300;letter-spacing:-0.5px">'+(ex.date||'—')+'</div>'+
-      (ex.weight!=null?'<div style="font-size:11px;color:var(--muted);font-weight:700">體重 '+ex.weight.toFixed(2)+' kg</div>':'')+
+      '<div style="font-size:27.6px;font-weight:300;letter-spacing:-0.5px">'+(ex.date||'—')+'</div>'+
+      (ex.weight!=null?'<div style="font-size:12.6px;color:var(--muted);font-weight:700">體重 '+ex.weight.toFixed(2)+' kg</div>':'')+
     '</div>'+
   '</div>';
   if(ex.procyte&&ex.procyte.length){
     h+='<div style="padding:8px 20px;background:var(--surf2);display:flex;align-items:center">'+
-      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted)">ProCyte One · 血液學</div></div>';
+      '<div style="font-size:10.3px;font-weight:700;letter-spacing:2px;color:var(--muted)">ProCyte One · 血液學</div></div>';
     ex.procyte.forEach(function(item,idx){h+=examRow(item,idx,pv(item.code));});
   }
   if(ex.catalyst&&ex.catalyst.length){
     h+='<div style="padding:8px 20px;background:var(--surf2);border-top:1.5px solid var(--ink);margin-top:2px;display:flex;align-items:center">'+
-      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted)">Catalyst One · 生化</div></div>';
+      '<div style="font-size:10.3px;font-weight:700;letter-spacing:2px;color:var(--muted)">Catalyst One · 生化</div></div>';
     ex.catalyst.forEach(function(item,idx){h+=examRow(item,idx,pv(item.code));});
   }
   if(ex.imaging&&ex.imaging.length){
     h+='<div style="border-top:1.5px solid var(--ink);padding:14px 20px 8px;margin-top:2px">'+
-      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:10px">影像檢查 · IMAGING</div>';
+      '<div style="font-size:10.3px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:10px">影像檢查 · IMAGING</div>';
     ex.imaging.forEach(function(im,i){
       h+='<div style="display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-top:'+(i>0?'1px solid var(--hair08)':'none')+'">'+
-        '<span style="font-size:13px;font-weight:700;color:var(--ink)">'+im.area+'</span>'+
-        '<span style="font-size:12.5px;color:var(--muted);text-align:right;max-width:60%">'+im.finding+'</span>'+
+        '<span style="font-size:14.9px;font-weight:700;color:var(--ink)">'+im.area+'</span>'+
+        '<span style="font-size:14.4px;color:var(--muted);text-align:right;max-width:60%">'+im.finding+'</span>'+
       '</div>';
     });
     h+='</div>';
   }
   if(ex.diagnosis||(ex.notes&&ex.notes.length)){
     h+='<div style="border-top:1.5px solid var(--ink);padding:14px 20px">'+
-      '<div style="font-size:9px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:10px">獸醫囑咐 · NOTES</div>'+
-      (ex.diagnosis?'<div style="font-size:13px;font-weight:700;margin-bottom:6px">'+ex.diagnosis+'</div>':'')+
-      ((ex.notes&&ex.notes.length)?'<div style="font-size:12.5px;color:var(--muted);line-height:2">'+ex.notes.join('<br>')+'</div>':'')+
+      '<div style="font-size:10.3px;font-weight:700;letter-spacing:2px;color:var(--muted);margin-bottom:10px">獸醫囑咐 · NOTES</div>'+
+      (ex.diagnosis?'<div style="font-size:14.9px;font-weight:700;margin-bottom:6px">'+ex.diagnosis+'</div>':'')+
+      ((ex.notes&&ex.notes.length)?'<div style="font-size:14.4px;color:var(--muted);line-height:2">'+ex.notes.join('<br>')+'</div>':'')+
     '</div>';
   }
   h+='</div>';
@@ -994,7 +996,7 @@ function re(){
 function renderHdr(){
   return '<div class="hdr">'+
     '<div>'+
-    '<div class="hdr-title">蝦app</div>'+
+    '<img src="'+appIcon()+'" alt="蝦app" style="width:32px;height:32px;display:block;border-radius:7px">'+
     '<div class="hdr-date">'+nd()+'</div>'+
     '</div>'+
     '<div class="hdr-right">'+
@@ -1010,7 +1012,7 @@ function renderHdr(){
     '<div class="bio-item"><div class="bio-lbl">生日</div><div class="bio-val">'+bdDisp()+'</div></div>'+
     '<div class="bio-item"><div class="bio-lbl">年齡</div><div class="bio-val">'+(catAge()||'—')+'</div></div>'+
     '<div style="margin-left:auto;display:flex;gap:6px;align-items:center">'+
-      '<button class="pill" style="font-size:14px;padding:4px 12px;line-height:1" onclick="openSettings()" aria-label="設定">⚙</button>'+
+      '<button class="pill" style="padding:5px 11px;display:inline-flex;align-items:center;justify-content:center" onclick="openSettings()" aria-label="設定"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg></button>'+
     '</div>'+
   '</div>';
 }
@@ -1096,7 +1098,7 @@ function renderBreath(){
     :
     '<div class="ey">每分鐘次數 / BPM</div>'+
     '<div style="display:flex;align-items:flex-end;gap:8px">'+
-      '<input type="number" inputmode="numeric" class="bare" value="'+BMANUAL+'" placeholder="40" oninput="BMANUAL=this.value" style="font-size:42px;font-weight:250;letter-spacing:-2px;padding:2px 0">'+
+      '<input type="number" inputmode="numeric" class="bare" value="'+BMANUAL+'" placeholder="40" oninput="BMANUAL=this.value" style="font-size:48.3px;font-weight:250;letter-spacing:-2px;padding:2px 0">'+
       '<button class="pill on" onclick="bcm()">確認</button>'+
     '</div><p class="hint">數 30 秒的話,記得 ×2 再輸入。</p>';
   return '<div class="ey">方式 / MODE</div>'+
@@ -1122,18 +1124,18 @@ function renderWeight(){
     '</div>';
   }
   var calcH='<div class="ey">我的體重 (kg)</div>'+
-    '<input type="number" inputmode="decimal" step="0.1" class="bare" value="'+WMYKG+'" placeholder="55.0" oninput="WMYKG=this.value;wcalc()" style="font-size:38px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid var(--ink);margin-bottom:16px">'+
+    '<input type="number" inputmode="decimal" step="0.1" class="bare" value="'+WMYKG+'" placeholder="55.0" oninput="WMYKG=this.value;wcalc()" style="font-size:43.7px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid var(--ink);margin-bottom:16px">'+
     '<div class="ey">抱著蝦子的體重 (kg)</div>'+
-    '<input type="number" inputmode="decimal" step="0.01" class="bare" value="'+WCOMBO+'" placeholder="61.2" oninput="WCOMBO=this.value;wcalc()" style="font-size:38px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid var(--ink)">'+
+    '<input type="number" inputmode="decimal" step="0.01" class="bare" value="'+WCOMBO+'" placeholder="61.2" oninput="WCOMBO=this.value;wcalc()" style="font-size:43.7px;font-weight:200;letter-spacing:-2px;padding:0;border-bottom:2px solid var(--ink)">'+
     '<div style="margin-top:14px;padding:14px 16px;background:var(--surf3);display:flex;align-items:baseline;gap:8px">'+
-      '<span style="font-size:9.5px;font-weight:700;letter-spacing:2px;color:var(--muted);white-space:nowrap">蝦子體重 =</span>'+
-      '<span id="wcalc-val" style="font-size:42px;font-weight:200;letter-spacing:-2px;line-height:1;color:'+(valid?INK:'var(--surf4)')+'">'+(valid?fkg.toFixed(2):'—')+'</span>'+
-      '<span style="font-size:14px;color:var(--muted);font-weight:500">kg</span>'+
+      '<span style="font-size:10.9px;font-weight:700;letter-spacing:2px;color:var(--muted);white-space:nowrap">蝦子體重 =</span>'+
+      '<span id="wcalc-val" style="font-size:48.3px;font-weight:200;letter-spacing:-2px;line-height:1;color:'+(valid?INK:'var(--surf4)')+'">'+(valid?fkg.toFixed(2):'—')+'</span>'+
+      '<span style="font-size:16.1px;color:var(--muted);font-weight:500">kg</span>'+
     '</div>';
   var directH='<div class="ey">今日體重 (kg)</div>'+
     '<div style="display:flex;align-items:flex-end;gap:10px">'+
       '<input type="number" inputmode="decimal" step="0.01" class="bare" value="'+WKG+'" placeholder="'+(baseW()!=null?baseW().toFixed(2):'0.00')+'" oninput="WKG=this.value;wdirect()" style="font-size:56px;font-weight:200;letter-spacing:-3px;padding:0">'+
-      '<span style="font-size:16px;color:var(--muted);font-weight:500;margin-bottom:10px">kg</span>'+
+      '<span style="font-size:18.4px;color:var(--muted);font-weight:500;margin-bottom:10px">kg</span>'+
     '</div>';
   return '<div class="ey">輸入方式</div>'+
     '<div class="pills" style="margin-bottom:18px">'+
@@ -1149,7 +1151,7 @@ function renderWeight(){
       '<button class="pill'+(WLOC==='custom'?' on':'')+'" onclick="swl(\'custom\')">自己輸入</button>'+
     '</div>'+
     '<div id="wcustom-wrap" style="'+(WLOC==='custom'?'':'display:none')+'">'+
-      '<input type="text" class="bare" placeholder="輸入備註⋯" value="'+WCUSTOM+'" oninput="WCUSTOM=this.value" style="font-size:14px;border-bottom:1.5px solid var(--hair18);padding:8px 0;margin-top:10px">'+
+      '<input type="text" class="bare" placeholder="輸入備註⋯" value="'+WCUSTOM+'" oninput="WCUSTOM=this.value" style="font-size:16.1px;border-bottom:1.5px solid var(--hair18);padding:8px 0;margin-top:10px">'+
     '</div>'+
     '<div class="g"></div>'+
     '<button class="bbtn" id="wsave" onclick="wsave()"'+(valid?'':' disabled')+'>儲存體重 SAVE</button>'+
@@ -1161,52 +1163,52 @@ function renderMeds(){
   var tr=todayMeds();
   var sbar='';
   if(tr){
-    if(tr.morn>0&&tr.eve>0)sbar='<div style="padding:10px 14px;background:var(--ink);color:var(--paper);font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早晚已記錄,可在下方修改</div>';
-    else if(tr.morn>0)sbar='<div style="padding:10px 14px;background:var(--surf3);font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早餐已記 '+tr.morn+' 顆，記完晚餐再存一次</div>';
+    if(tr.morn>0&&tr.eve>0)sbar='<div style="padding:10px 14px;background:var(--ink);color:var(--paper);font-size:13.8px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早晚已記錄,可在下方修改</div>';
+    else if(tr.morn>0)sbar='<div style="padding:10px 14px;background:var(--surf3);font-size:13.8px;font-weight:700;letter-spacing:1px;margin-bottom:16px">早餐已記 '+tr.morn+' 顆，記完晚餐再存一次</div>';
   }
   function stp(id,val,meal){
     return '<div style="display:flex;align-items:center">'+
-      '<button onclick="adjm(\''+meal+'\',-1)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
-      '<span id="'+id+'" style="width:52px;text-align:center;font-size:32px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
-      '<button onclick="adjm(\''+meal+'\',1)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
+      '<button onclick="adjm(\''+meal+'\',-1)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:25.3px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
+      '<span id="'+id+'" style="width:52px;text-align:center;font-size:36.8px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
+      '<button onclick="adjm(\''+meal+'\',1)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:25.3px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
     '</div>';
   }
   return sbar+
     (D.meds.length?'<button class="bbtn ghost" style="margin-bottom:16px" onclick="fillLastMeds()">沿用上次劑量 ⟲</button>':'')+
     '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'+
-      '<span style="font-size:13px;font-weight:700;letter-spacing:1px">養氣</span>'+
-      '<span style="font-size:10px;color:var(--muted);letter-spacing:1px">寵特寶養氣 · Opti-Airwei</span>'+
+      '<span style="font-size:14.9px;font-weight:700;letter-spacing:1px">養氣</span>'+
+      '<span style="font-size:11.5px;color:var(--muted);letter-spacing:1px">寵特寶養氣 · Opti-Airwei</span>'+
     '</div>'+
     '<div style="height:1px;background:var(--hair10);margin-bottom:14px"></div>'+
     '<div style="display:flex;gap:0;margin-bottom:18px">'+
       '<div style="flex:1">'+
         '<div class="ey">早餐</div>'+
         stp('mmorn-val',MMORN,'morn')+
-        '<div style="font-size:10px;color:var(--muted);margin-top:3px;padding-left:4px">顆</div>'+
+        '<div style="font-size:11.5px;color:var(--muted);margin-top:3px;padding-left:4px">顆</div>'+
       '</div>'+
       '<div style="width:1px;background:var(--hair10);margin:0 14px"></div>'+
       '<div style="flex:1">'+
         '<div class="ey">晚餐</div>'+
         stp('meve-val',MEVE,'eve')+
-        '<div style="font-size:10px;color:var(--muted);margin-top:3px;padding-left:4px">顆</div>'+
+        '<div style="font-size:11.5px;color:var(--muted);margin-top:3px;padding-left:4px">顆</div>'+
       '</div>'+
     '</div>'+
     '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;margin-top:4px">'+
-      '<span style="font-size:13px;font-weight:700;letter-spacing:1px">胺寶</span>'+
-      '<span style="font-size:10px;color:var(--muted);letter-spacing:1px">每 5kg · 每次最多 2ml</span>'+
+      '<span style="font-size:14.9px;font-weight:700;letter-spacing:1px">胺寶</span>'+
+      '<span style="font-size:11.5px;color:var(--muted);letter-spacing:1px">每 5kg · 每次最多 2ml</span>'+
     '</div>'+
     '<div style="height:1px;background:var(--hair10);margin-bottom:14px"></div>'+
     '<div style="display:flex;gap:0;margin-bottom:18px">'+
       '<div style="flex:1">'+
         '<div class="ey">早餐</div>'+
         aminoStp('amino-morn-val',MAMORN,'morn')+
-        '<div style="font-size:10px;color:var(--muted);margin-top:3px;padding-left:4px">ml</div>'+
+        '<div style="font-size:11.5px;color:var(--muted);margin-top:3px;padding-left:4px">ml</div>'+
       '</div>'+
       '<div style="width:1px;background:var(--hair10);margin:0 14px"></div>'+
       '<div style="flex:1">'+
         '<div class="ey">晚餐</div>'+
         aminoStp('amino-eve-val',MAEVE,'eve')+
-        '<div style="font-size:10px;color:var(--muted);margin-top:3px;padding-left:4px">ml</div>'+
+        '<div style="font-size:11.5px;color:var(--muted);margin-top:3px;padding-left:4px">ml</div>'+
       '</div>'+
     '</div>'+
     '<div class="ey">備註(選填)</div>'+
@@ -1232,7 +1234,7 @@ function renderVomit(){
   var groupH='';
   groups.forEach(function(g){
     var isAlert=g.label==='警示類';
-    groupH+='<div style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'var(--red)':'var(--muted)')+';margin:12px 0 6px">'+g.label+'</div>'+
+    groupH+='<div style="font-size:10.3px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'var(--red)':'var(--muted)')+';margin:12px 0 6px">'+g.label+'</div>'+
       '<div class="pills">'+
         g.items.map(function(p){
           var on=VCONTENT.indexOf(p)>=0;
@@ -1242,7 +1244,7 @@ function renderVomit(){
       '</div>';
   });
   return '<div class="ey">嘔吐時間 / TIME</div>'+
-    '<input type="datetime-local" class="bare" value="'+timeVal+'" oninput="VTIME=this.value" style="font-size:15px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:4px">'+
+    '<input type="datetime-local" class="bare" value="'+timeVal+'" oninput="VTIME=this.value" style="font-size:17.2px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:4px">'+
     '<div class="ey">內容物(可多選)</div>'+
     '<div id="vpreset">'+groupH+'</div>'+
     '<div class="ey" style="margin-top:16px">其他補充</div>'+
@@ -1288,9 +1290,9 @@ function renderFoodForm(){
     typeH+
     datalistH+
     '<div class="ey">品牌</div>'+
-    '<input type="text" class="bare" list="brandlist" value="'+FBRAND+'" placeholder="例:毛掌醫學" oninput="FBRAND=this.value" style="font-size:16px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:14px;width:100%">'+
+    '<input type="text" class="bare" list="brandlist" value="'+FBRAND+'" placeholder="例:毛掌醫學" oninput="FBRAND=this.value" style="font-size:18.4px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:14px;width:100%">'+
     '<div class="ey">口味</div>'+
-    '<input type="text" class="bare" list="flavorlist" value="'+FFLAVOR+'" placeholder="例:雞肉口味" oninput="FFLAVOR=this.value" style="font-size:16px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:14px;width:100%">'+
+    '<input type="text" class="bare" list="flavorlist" value="'+FFLAVOR+'" placeholder="例:雞肉口味" oninput="FFLAVOR=this.value" style="font-size:18.4px;font-weight:600;padding:8px 0;border-bottom:2px solid var(--ink);margin-bottom:14px;width:100%">'+
     (isCan?(finishH+speedH):likeH)+
     '<div class="ey">備註(選填)</div>'+
     '<textarea class="tarea" placeholder="例:第一次吃接受度高⋯" oninput="FNOTE=this.value" style="margin-bottom:14px">'+FNOTE+'</textarea>'+
@@ -1342,10 +1344,10 @@ function renderFoodLog(){
         var pct100=Math.round(g.c100/g.total*100);
         return '<div style="padding:12px 0;border-top:1px solid var(--hair08)">'+
           '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">'+
-            '<span style="font-size:13px;font-weight:700;color:'+INK+'">'+g.brand+(g.flavor?(' · '+g.flavor):'')+'</span>'+
-            '<span style="font-size:10px;color:var(--muted);flex-shrink:0">餵了 '+g.total+' 次</span>'+
+            '<span style="font-size:14.9px;font-weight:700;color:'+INK+'">'+g.brand+(g.flavor?(' · '+g.flavor):'')+'</span>'+
+            '<span style="font-size:11.5px;color:var(--muted);flex-shrink:0">餵了 '+g.total+' 次</span>'+
           '</div>'+
-          '<div style="display:flex;gap:10px;margin-top:6px;font-size:11px">'+
+          '<div style="display:flex;gap:10px;margin-top:6px;font-size:12.6px">'+
             '<span style="color:#4E8C5A;font-weight:700">100% × '+g.c100+'</span>'+
             '<span style="color:'+INK+'">50% × '+g.c50+'</span>'+
             '<span style="color:var(--red);font-weight:700">0% × '+g.c0+'</span>'+
@@ -1368,14 +1370,14 @@ function renderFoodLog(){
       '<button class="delbtn" style="flex-shrink:0" onclick="LCID=\''+r.id+'\';re()">X</button>';
     var rdate=dateStr(r.ts),isToday=rdate===dateStr();
     var cardBg=isToday?'var(--surf2)':'var(--surf1)';
-    var meta='<div style="font-size:10px;color:var(--muted);text-align:right;line-height:1.5">'+fd(r.ts)+'<br>'+ft(r.ts)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
+    var meta='<div style="font-size:11.5px;color:var(--muted);text-align:right;line-height:1.5">'+fd(r.ts)+'<br>'+ft(r.ts)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
     var fcol=r.finish===100?'#4E8C5A':r.finish===0?'var(--red)':INK;
-    var main='<span style="font-size:13px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
-      '<div style="font-size:10px;color:var(--muted);margin-top:2px">'+
+    var main='<span style="font-size:14.9px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
+      '<div style="font-size:11.5px;color:var(--muted);margin-top:2px">'+
         '<span style="color:'+fcol+';font-weight:700">'+r.finish+'%</span> · '+(r.speed||'')+
       '</div>';
     return '<div style="padding:9px 18px;border-top:1px solid var(--hair08);background:'+cardBg+';display:flex;align-items:center;gap:10px">'+
-      '<div style="flex:1;min-width:0">'+main+(r.note?'<div style="font-size:10px;color:var(--muted);margin-top:2px">'+r.note+'</div>':'')+'</div>'+
+      '<div style="flex:1;min-width:0">'+main+(r.note?'<div style="font-size:11.5px;color:var(--muted);margin-top:2px">'+r.note+'</div>':'')+'</div>'+
       meta+delbtns+
     '</div>';
   }).join('');
@@ -1383,9 +1385,9 @@ function renderFoodLog(){
   return subTabsH+statsH+
     '<button onclick="ftoggledetail()" style="width:100%;background:none;border:none;display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px;cursor:pointer">'+
       '<span class="ey" style="margin-bottom:0">明細'+(items.length?' / '+items.length+' 筆':'')+'</span>'+
-      '<span style="font-size:11px;color:var(--muted)">'+(FDETAIL?'收合 ▲':'展開 ▼')+'</span>'+
+      '<span style="font-size:12.6px;color:var(--muted)">'+(FDETAIL?'收合 ▲':'展開 ▼')+'</span>'+
     '</button>'+
-    (FDETAIL?'<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>':'');
+    (FDETAIL?'<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:13.8px;letter-spacing:1px">尚無紀錄</div>')+'</div>':'');
 }
 
 function renderFoodItemList(){
@@ -1402,13 +1404,13 @@ function renderFoodItemList(){
     var actBtns=isc?
       '<div style="display:flex;gap:6px;flex-shrink:0"><button class="delbtn cfm" onclick="fidel(\''+r.id+'\')">刪</button><button class="delbtn" onclick="LCID=null;re()">取消</button></div>':
       '<div style="display:flex;gap:6px;flex-shrink:0">'+
-        '<button class="delbtn" onclick="LEDIT=(LEDIT===\''+r.id+'\'?null:\''+r.id+'\');LCID=null;re()" style="width:auto;padding:0 10px;font-size:10px">編輯</button>'+
+        '<button class="delbtn" onclick="LEDIT=(LEDIT===\''+r.id+'\'?null:\''+r.id+'\');LCID=null;re()" style="width:auto;padding:0 10px;font-size:11.5px">編輯</button>'+
         '<button class="delbtn" onclick="LCID=\''+r.id+'\';LEDIT=null;re()">X</button>'+
       '</div>';
     var col=r.like==='喜歡'?'#4E8C5A':r.like==='不喜歡'?'var(--red)':INK;
-    var likeTag='<span style="font-size:10px;font-weight:700;color:'+col+'">'+r.like+'</span>';
-    var main='<span style="font-size:13px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
-      '<div style="font-size:10px;color:var(--muted);margin-top:2px">'+likeTag+(r.note?(' · '+r.note):'')+'</div>';
+    var likeTag='<span style="font-size:11.5px;font-weight:700;color:'+col+'">'+r.like+'</span>';
+    var main='<span style="font-size:14.9px;font-weight:700;color:'+INK+'">'+(r.brand||'(未填品牌)')+(r.flavor?(' · '+r.flavor):'')+'</span>'+
+      '<div style="font-size:11.5px;color:var(--muted);margin-top:2px">'+likeTag+(r.note?(' · '+r.note):'')+'</div>';
     var editPanel=ised?
       '<div style="padding:10px 18px;background:var(--surf7);display:flex;gap:6px">'+
         ['喜歡','普通','不喜歡'].map(function(l){
@@ -1424,7 +1426,7 @@ function renderFoodItemList(){
     '</div>'+editPanel;
   }).join('');
   return '<div class="ey" style="padding:14px 18px 0">已建檔 / '+items.length+' 項</div>'+
-    '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>';
+    '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:13.8px;letter-spacing:1px">尚無紀錄</div>')+'</div>';
 }
 
 function medsHero(tr){
@@ -1443,26 +1445,26 @@ function medsHero(tr){
     '<div style="flex:1;background:var(--surf1);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between">'+
       '<div>'+
         '<div class="ey">養氣 今日</div>'+
-        '<div style="font-size:12px;color:var(--ink);line-height:1.8">'+
+        '<div style="font-size:13.8px;color:var(--ink);line-height:1.8">'+
           '<span style="color:'+(yanqiMorn>0?'var(--ink)':'var(--surf4)')+'">早 '+yanqiMorn+' 顆</span>'+
           ' · '+
           '<span style="color:'+(yanqiEve>0?'var(--ink)':'var(--surf4)')+'">晚 '+yanqiEve+' 顆</span>'+
         '</div>'+
       '</div>'+
-      '<div style="font-size:11px;font-weight:700;color:'+yanqiColor+';margin-top:8px">'+yanqiStatus+'</div>'+
+      '<div style="font-size:12.6px;font-weight:700;color:'+yanqiColor+';margin-top:8px">'+yanqiStatus+'</div>'+
     '</div>'+
     '<div style="flex:1;background:var(--surf1);padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between">'+
       '<div>'+
         '<div class="ey">胺寶 今日</div>'+
-        '<div style="font-size:12px;color:var(--ink);line-height:1.8">'+
+        '<div style="font-size:13.8px;color:var(--ink);line-height:1.8">'+
           '<span style="color:'+(aminoMorn>0?'var(--ink)':'var(--surf4)')+'">早 '+aminoMorn+'ml</span>'+
           ' · '+
           '<span style="color:'+(aminoEve>0?'var(--ink)':'var(--surf4)')+'">晚 '+aminoEve+'ml</span>'+
         '</div>'+
       '</div>'+
       '<div>'+
-        '<div style="font-size:11px;font-weight:700;color:'+aminoColor+'">'+aminoStatus+'</div>'+
-        '<div style="font-size:9px;color:var(--surf3);margin-top:2px">目標 2–4ml/天</div>'+
+        '<div style="font-size:12.6px;font-weight:700;color:'+aminoColor+'">'+aminoStatus+'</div>'+
+        '<div style="font-size:10.3px;color:var(--surf3);margin-top:2px">目標 2–4ml/天</div>'+
       '</div>'+
     '</div>'+
   '</div>';
@@ -1516,8 +1518,8 @@ function renderLog(){
         '<div style="position:absolute;inset:0;background:#3A3935"></div>'+
         (barW>0?'<div style="position:absolute;left:0;top:0;height:100%;width:'+barW.toFixed(1)+'%;background:'+fillC+'"></div>':'')+
         '<div style="position:absolute;left:14px;top:50%;transform:translateY(-50%)">'+numSvg+'</div>'+
-        '<div style="position:absolute;top:10px;right:14px;font-size:13px;font-weight:700;letter-spacing:1px;color:'+rTextC+'">'+lbl+'</div>'+
-        '<div style="position:absolute;bottom:8px;right:14px;font-size:10px;text-align:right;color:'+rTextC+';opacity:0.75">'+detail+'</div>'+
+        '<div style="position:absolute;top:10px;right:14px;font-size:14.9px;font-weight:700;letter-spacing:1px;color:'+rTextC+'">'+lbl+'</div>'+
+        '<div style="position:absolute;bottom:8px;right:14px;font-size:11.5px;text-align:right;color:'+rTextC+';opacity:0.75">'+detail+'</div>'+
       '</div>';
     }
     var yanqiFillC=yanqiPct>0?'var(--ok)':'#5A5952';
@@ -1556,17 +1558,17 @@ function renderLog(){
     var isc=LCID===r.id;
     var delfn=LTAB==='breath'?'dbr':LTAB==='weight'?'dbw':LTAB==='meds'?'dbm':LTAB==='vomit'?'dbv':'fdel';
     var etype=LTAB==='breath'?'breath':LTAB==='weight'?'weight':LTAB==='meds'?'meds':LTAB==='vomit'?'vomit':'';
-    var editBtn=etype?'<button class="delbtn" style="width:auto;padding:0 10px;font-size:10px" onclick="openEditRec(\''+etype+'\',\''+r.id+'\')">編輯</button>':'';
+    var editBtn=etype?'<button class="delbtn" style="width:auto;padding:0 10px;font-size:11.5px" onclick="openEditRec(\''+etype+'\',\''+r.id+'\')">編輯</button>':'';
     var delbtns=isc?
       '<div style="display:flex;gap:6px;flex-shrink:0"><button class="delbtn cfm" onclick="'+delfn+'(\''+r.id+'\')">刪</button><button class="delbtn" onclick="LCID=null;re()">取消</button></div>':
       '<div style="display:flex;gap:6px;flex-shrink:0">'+editBtn+'<button class="delbtn" onclick="LCID=\''+r.id+'\';re()">X</button></div>';
     var rdate=r.date||dateStr(r.ts);
     var isToday=rdate===dateStr();
     var cardBg=isToday?'var(--surf2)':'var(--surf1)';
-    var meta='<div style="font-size:10px;color:var(--muted);text-align:right;line-height:1.5">'+(r.ts?fd(r.ts)+'<br>'+ft(r.ts):rdate)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
+    var meta='<div style="font-size:11.5px;color:var(--muted);text-align:right;line-height:1.5">'+(r.ts?fd(r.ts)+'<br>'+ft(r.ts):rdate)+(isToday?'<br><span style="font-weight:700">今天</span>':'')+'</div>';
     function rowWrap(main,note){
       return '<div style="padding:9px 18px;border-top:1px solid var(--hair08);background:'+cardBg+';display:flex;align-items:center;gap:10px">'+
-        '<div style="flex:1;min-width:0">'+main+(note?'<div style="font-size:10px;color:var(--muted);margin-top:2px">'+note+'</div>':'')+'</div>'+
+        '<div style="flex:1;min-width:0">'+main+(note?'<div style="font-size:11.5px;color:var(--muted);margin-top:2px">'+note+'</div>':'')+'</div>'+
         meta+delbtns+
       '</div>';
     }
@@ -1574,43 +1576,43 @@ function renderLog(){
       var lv=judge(r.bpm,r.state),hi=lv==='high';
       listH+=rowWrap(
         '<div style="display:flex;align-items:baseline;gap:5px;flex-wrap:wrap">'+
-          '<span style="font-size:22px;font-weight:250;letter-spacing:-0.5px;color:'+(hi?ORG:INK)+'">'+r.bpm+'</span>'+
-          '<span style="font-size:10px;color:var(--muted)">次/分</span>'+
-          '<span style="font-size:10px;color:var(--surf4)">·</span>'+
-          '<span style="font-size:10px;color:var(--muted)">'+(STATES[r.state]||r.state)+'</span>'+
-          '<span style="font-size:10px;font-weight:700;color:'+(hi?ORG:'#4E8C5A')+'">'+SH[lv]+'</span>'+
+          '<span style="font-size:25.3px;font-weight:250;letter-spacing:-0.5px;color:'+(hi?ORG:INK)+'">'+r.bpm+'</span>'+
+          '<span style="font-size:11.5px;color:var(--muted)">次/分</span>'+
+          '<span style="font-size:11.5px;color:var(--surf4)">·</span>'+
+          '<span style="font-size:11.5px;color:var(--muted)">'+(STATES[r.state]||r.state)+'</span>'+
+          '<span style="font-size:11.5px;font-weight:700;color:'+(hi?ORG:'#4E8C5A')+'">'+SH[lv]+'</span>'+
         '</div>',r.note);
     }else if(LTAB==='weight'){
       listH+=rowWrap(
         '<div style="display:flex;align-items:baseline;gap:5px">'+
-          '<span style="font-size:22px;font-weight:250;letter-spacing:-0.5px;color:'+INK+'">'+r.kg.toFixed(2)+'</span>'+
-          '<span style="font-size:10px;color:var(--muted)">kg</span>'+
-          '<span style="font-size:10px;font-weight:600;color:var(--muted)">'+wdifftxt(r)+'</span>'+
+          '<span style="font-size:25.3px;font-weight:250;letter-spacing:-0.5px;color:'+INK+'">'+r.kg.toFixed(2)+'</span>'+
+          '<span style="font-size:11.5px;color:var(--muted)">kg</span>'+
+          '<span style="font-size:11.5px;font-weight:600;color:var(--muted)">'+wdifftxt(r)+'</span>'+
         '</div>',r.note);
     }else if(LTAB==='meds'){
       var tot=(r.morn||0)+(r.eve||0),aTotal=(r.aminoMorn||0)+(r.aminoEve||0);
       listH+=rowWrap(
         '<div style="display:flex;align-items:center;gap:0">'+
           '<div style="flex:1;padding-right:10px">'+
-            '<span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--muted)">養氣</span> '+
-            '<span style="font-size:11px;color:'+(r.morn>0?INK:'var(--surf4)')+'">早'+(r.morn||0)+'</span>'+
-            '<span style="font-size:11px;color:var(--surf4)"> · </span>'+
-            '<span style="font-size:11px;color:'+(r.eve>0?INK:'var(--surf4)')+'">晚'+(r.eve||0)+'</span>'+
-            '<span style="font-size:11px;color:var(--muted)"> 顆</span>'+
+            '<span style="font-size:10.3px;font-weight:700;letter-spacing:1.5px;color:var(--muted)">養氣</span> '+
+            '<span style="font-size:12.6px;color:'+(r.morn>0?INK:'var(--surf4)')+'">早'+(r.morn||0)+'</span>'+
+            '<span style="font-size:12.6px;color:var(--surf4)"> · </span>'+
+            '<span style="font-size:12.6px;color:'+(r.eve>0?INK:'var(--surf4)')+'">晚'+(r.eve||0)+'</span>'+
+            '<span style="font-size:12.6px;color:var(--muted)"> 顆</span>'+
           '</div>'+
           '<div style="width:1px;background:var(--hair12);align-self:stretch;flex-shrink:0"></div>'+
           '<div style="flex:1;padding-left:10px">'+
-            '<span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--muted)">胺寶</span> '+
+            '<span style="font-size:10.3px;font-weight:700;letter-spacing:1.5px;color:var(--muted)">胺寶</span> '+
             (aTotal>0?
-              '<span style="font-size:11px;color:'+(r.aminoMorn>0?INK:'var(--surf4)')+'">早'+(r.aminoMorn||0)+'ml</span>'+
-              '<span style="font-size:11px;color:var(--surf4)"> · </span>'+
-              '<span style="font-size:11px;color:'+(r.aminoEve>0?INK:'var(--surf4)')+'">晚'+(r.aminoEve||0)+'ml</span>':
-              '<span style="font-size:11px;color:var(--surf4)">未記錄</span>')+
+              '<span style="font-size:12.6px;color:'+(r.aminoMorn>0?INK:'var(--surf4)')+'">早'+(r.aminoMorn||0)+'ml</span>'+
+              '<span style="font-size:12.6px;color:var(--surf4)"> · </span>'+
+              '<span style="font-size:12.6px;color:'+(r.aminoEve>0?INK:'var(--surf4)')+'">晚'+(r.aminoEve||0)+'ml</span>':
+              '<span style="font-size:12.6px;color:var(--surf4)">未記錄</span>')+
           '</div>'+
         '</div>',r.note);
     }else if(LTAB==='vomit'){
       var ct=r.content&&r.content.length?r.content.join('、'):'(未填)';
-      listH+=rowWrap('<div style="font-size:12px;font-weight:600;color:'+INK+'">'+ct+'</div>',r.note);
+      listH+=rowWrap('<div style="font-size:13.8px;font-weight:600;color:'+INK+'">'+ct+'</div>',r.note);
     }
   });
   return '<div class="log-wrap">'+
@@ -1620,25 +1622,25 @@ function renderLog(){
       '<button class="pill'+(LTAB==='meds'?' on':'')+'" onclick="slt(\'meds\')">用藥 '+D.meds.length+'</button>'+
       '<button class="pill'+(LTAB==='vomit'?' on':'')+'" onclick="slt(\'vomit\')">嘔吐 '+D.vomits.length+'</button>'+
       '<button class="pill'+(LTAB==='food'?' on':'')+'" onclick="slt(\'food\')">喜好食物 '+(D.foods.length+D.foodItems.length)+'</button>'+
-      '<button class="add-btn" onclick="addfl()" style="margin-left:auto;flex-shrink:0;width:36px;height:36px;font-size:18px">+</button>'+
+      '<button class="add-btn" onclick="addfl()" style="margin-left:auto;flex-shrink:0;width:36px;height:36px;font-size:20.7px">+</button>'+
     '</div>'+
     (LTAB==='food' ? renderFoodLog() :
       (LTAB==='meds' ? medsHeroHTML :
         '<div class="log-hero">'+
-          '<div><div class="ey">'+heroLabel+'</div>'+(recs.length?pxsvg(hval,11,INK,halt):pxsvg('-',11,'var(--muted)',false))+(heroSub?'<div style="font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.5px">'+heroSub+'</div>':'')+'</div>'+
+          '<div><div class="ey">'+heroLabel+'</div>'+(recs.length?pxsvg(hval,11,INK,halt):pxsvg('-',11,'var(--muted)',false))+(heroSub?'<div style="font-size:11.5px;color:var(--muted);margin-top:4px;letter-spacing:.5px">'+heroSub+'</div>':'')+'</div>'+
         '</div>'
       )+
       ((LTAB==='breath'||LTAB==='weight')?
         '<div class="pills" style="padding:8px 18px 0">'+
-          [['raw','逐筆'],['week','週'],['month','月']].map(function(p){return '<button class="pill'+(GRAN===p[0]?' on':'')+'" onclick="setGran(\''+p[0]+'\')" style="font-size:10px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
+          [['raw','逐筆'],['week','週'],['month','月']].map(function(p){return '<button class="pill'+(GRAN===p[0]?' on':'')+'" onclick="setGran(\''+p[0]+'\')" style="font-size:11.5px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
         '</div>'+
         (GRAN==='raw'?
           '<div class="pills" style="padding:6px 18px 0">'+
-            [['all','全部'],['7d','7天'],['30d','30天']].map(function(p){return '<button class="pill'+(CRANGE===p[0]?' on':'')+'" onclick="setRange(\''+p[0]+'\')" style="font-size:10px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
+            [['all','全部'],['7d','7天'],['30d','30天']].map(function(p){return '<button class="pill'+(CRANGE===p[0]?' on':'')+'" onclick="setRange(\''+p[0]+'\')" style="font-size:11.5px;padding:4px 10px">'+p[1]+'</button>';}).join('')+
           '</div>':'')
         :''
       )+
-      (LTAB!=='meds'?'<div class="log-chart">'+(chartRecs.length>=2?chart:'<div style="text-align:center;color:var(--muted);font-size:12px;padding:36px 0;letter-spacing:1px">至少 2 筆才會顯示趨勢圖</div>')+'</div>':'')+
+      (LTAB!=='meds'?'<div class="log-chart">'+(chartRecs.length>=2?chart:'<div style="text-align:center;color:var(--muted);font-size:13.8px;padding:36px 0;letter-spacing:1px">至少 2 筆才會顯示趨勢圖</div>')+'</div>':'')+
       '<div class="log-stats">'+
         '<div class="stat"><div class="stat-lbl">'+s1.lbl+'</div><div class="stat-val"><span class="stat-n">'+s1.val+'</span>'+(s1.unit?'<span class="stat-u">'+s1.unit+'</span>':'')+'</div></div>'+
         '<div class="stat"><div class="stat-lbl">'+s2.lbl+'</div><div class="stat-val"><span class="stat-n" style="'+(s2.alt?'color:'+ORG:'')+'">'+s2.val+'</span>'+(s2.unit?'<span class="stat-u">'+s2.unit+'</span>':'')+'</div>'+(s2.alt?'<span class="stat-arr">v</span>':'')+'</div>'+
@@ -1646,7 +1648,7 @@ function renderLog(){
       '<div style="padding:14px 18px 0">'+
         '<button class="pill" onclick="cpv()" style="width:100%;justify-content:center;padding:10px">複製全部</button>'+
       '</div>'+
-      '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:12px;letter-spacing:1px">尚無紀錄</div>')+'</div>'
+      '<div class="rlist">'+(listH||'<div style="text-align:center;padding:30px 0;color:var(--muted);font-size:13.8px;letter-spacing:1px">尚無紀錄</div>')+'</div>'
     )+
   '</div>';
 }
@@ -1749,9 +1751,9 @@ function adjA(meal,delta){
 }
 function aminoStp(id,val,meal){
   return '<div style="display:flex;align-items:center">'+
-    '<button onclick="adjA(\''+meal+'\',-0.5)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
-    '<span id="'+id+'" style="width:48px;text-align:center;font-size:28px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
-    '<button onclick="adjA(\''+meal+'\',0.5)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:22px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
+    '<button onclick="adjA(\''+meal+'\',-0.5)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:25.3px;font-weight:300;cursor:pointer;color:'+INK+'">-</button>'+
+    '<span id="'+id+'" style="width:48px;text-align:center;font-size:32.2px;font-weight:200;letter-spacing:-1px">'+val+'</span>'+
+    '<button onclick="adjA(\''+meal+'\',0.5)" style="width:44px;height:44px;border:none;background:var(--bg);font-size:25.3px;font-weight:300;cursor:pointer;color:'+INK+'">+</button>'+
   '</div>';
 }
 function msave(){
@@ -1775,7 +1777,7 @@ function vtoggle(p){
   var groupH='';
   groups.forEach(function(g){
     var isAlert=g.label==='警示類';
-    groupH+='<div style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'var(--red)':'var(--muted)')+';margin:12px 0 6px">'+g.label+'</div>'+
+    groupH+='<div style="font-size:10.3px;font-weight:700;letter-spacing:1.5px;color:'+(isAlert?'var(--red)':'var(--muted)')+';margin:12px 0 6px">'+g.label+'</div>'+
       '<div class="pills">'+
         g.items.map(function(pr){
           var on=VCONTENT.indexOf(pr)>=0;
